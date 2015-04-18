@@ -1,5 +1,6 @@
 db:
   image: mariadb:10.0
+  image: mysql:5.5
   environment:
     - MYSQL_ROOT_PASSWORD=root
     - MYSQL_USER=dbuser
@@ -23,9 +24,18 @@ php:
   links:
     - db:dbhost
   hostname: php_host
+    - .docker/etc/my.cnf:/etc/my.cnf
+  hostname: dbhost
+  expose:
+    - "3306"
+  dns:
+    - 8.8.8.8
+    - 8.8.4.4
 web:
-  image: davenuman/bowline-centos
-  command: httpd -D FOREGROUND -e debug
+  image: davenuman/bowline-web-php:latest
+  command: /start.sh
+  environment:
+    - COMPOSER_HOME=/.composer
   expose:
     - "80"
   links:
@@ -35,5 +45,12 @@ web:
     - php
   hostname: drupal
     - "80" # Exposed public port on deploy
+    - "9000"
   volumes:
     - .:/var/www
+  links:
+    - db:dbhost
+  hostname: drupal
+  dns:
+    - 8.8.8.8
+    - 8.8.4.4

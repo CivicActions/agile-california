@@ -41,6 +41,13 @@ bowline_init () {
     fi
   fi
   DCOMPOSE="$DCOMPOSE -p $SLUG"
+      DCOMPOSE="fig -f docker-compose.yml"
+    else
+      echo "Docker Compose is required for using Bowline"
+      exit 1
+    fi
+    echo "https://docs.docker.com/compose/install/"
+  fi
 
   cd $GIT_ROOT
 
