@@ -38,6 +38,7 @@ Try to find needs the state may not have recognized, but don’t invest too much
 - “If we’re lucky, what you share with us will help us help the state of - California eventually make it easier to be a foster parent.”
 - “We are in learning-and-listening mode.  The state has written some things that are not entirely clear to us. You may or may not be able to help us understand what they want and what makes sense.”
 - “However, we know being a foster parent is a tough and valuable job, but today we are restricting our discussion to things the state seems to want to address.”
+- "We would like to record this conversation for future reference, with your permission. May we have your permission to continue?"
 
 ####Background questions for use to understand their general situation:####
 
