@@ -60,7 +60,7 @@ sed -i'' -e "s/^web:/web:\n  ports:\n    - 80:80/" docker-compose.yml
 
   # Build site on remote host.
   #./bin/build
-  docker-compose up
+  docker-compose up -d
 )
 
 # Setup DNS and CDN.
