@@ -11,3 +11,5 @@
  8. Have a better definition/documentation of our process.
  9. use LoWErCase OnLY for file names, pick a single date format.
  10. Try and keep commit messages useful (since they are part of our deliverable)
+
+Original retrospective board: https://trello.com/b/cn0AuaG3/agile-ca-sprint-1-retrospective
