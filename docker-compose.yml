@@ -34,3 +34,6 @@ web:
   volumes_from:
     - php
   hostname: drupal
+    - "80" # Exposed public port on deploy
+  volumes:
+    - .:/var/www
