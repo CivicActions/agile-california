@@ -60,9 +60,8 @@ sed -i'' -e "s/^web:/web:\n  ports\n    - 80:80/" docker-compose.yml
 #./bin/build
 
 # Setup DNS and CDN.
-docker build -t cfcli devops/deployment/cfcli/
-docker run -it --rm cfcli cfcli --token="${CLOUDFLARE_TOKEN}" --email="${CLOUDFLARE_EMAIL}" --domain "${DOMAIN}" removerecord "${SUBDOMAIN}"
-docker run -it --rm cfcli cfcli --token="${CLOUDFLARE_TOKEN}" --email="${CLOUDFLARE_EMAIL}" --domain "${DOMAIN}" -a -t A addrecord "${SUBDOMAIN}" "${IP}"
+docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli removerecord "${SUBDOMAIN}"
+docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli -a -t A addrecord "${SUBDOMAIN}" "${IP}"
 echo
 echo "[deploy] Deployed to https://${SUBDOMAIN}.${DOMAIN}"
 
