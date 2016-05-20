@@ -49,15 +49,19 @@ ${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protoc
 # Deploy specific commit/tag to host.
 docker-machine ssh "${NAME}" "sudo git clone https://github.com/CivicActions/agile-california.git $PWD && cd $PWD && sudo git checkout \"${COMMIT}\""
 
-# Enable Docker client connection to remote Docker host.
-eval "$(docker-machine env "${NAME}")"
 
 # Publish web container port in Docker Compose.
 git checkout docker-compose.yml 
-sed -i'' -e "s/^web:/web:\n  ports\n    - 80:80/" docker-compose.yml
+sed -i'' -e "s/^web:/web:\n  ports:\n    - 80:80/" docker-compose.yml
 
-# Build site on remote host.
-#./bin/build
+# Enable (in subshell) Docker client connection to remote Docker host.
+(
+  eval "$(docker-machine env "${NAME}")"
+
+  # Build site on remote host.
+  #./bin/build
+  docker-compose up
+)
 
 # Setup DNS and CDN.
 docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli removerecord "${SUBDOMAIN}"
