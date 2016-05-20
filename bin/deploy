@@ -1,0 +1,70 @@
+#!/bin/sh
+set -e
+cd "$(git rev-parse --show-toplevel)"
+if [ "$2" = "" ]; then
+  echo "Usage ./bin/deploy [subdomain] [domain]"
+  exit 1
+fi
+SUBDOMAIN="$1"
+DOMAIN="$2"
+# Create host NAME combining git commit hash+subdomain+domain.
+COMMIT=$(git rev-parse --short HEAD)
+NAME="${COMMIT}-${SUBDOMAIN}.${DOMAIN}"
+echo "[deploy] Attempting to create host ${NAME}"
+TAG="${DOMAIN}"
+AWS='docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_VPC_ID -e AWS_DEFAULT_REGION -e AWS_ZONE -e AWS_SUBNET_ID anigeo/awscli'
+
+# Remove instances tagged as old.
+echo "[deploy] Removing instances tagged as old"
+OLD=$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG}-old"|grep INSTANCES|awk '{print $7}')
+# TODO: Add check for FATAL error if connection to docker instance fails
+if [ ! -z "${OLD}" ]; then
+  echo "[deploy] Terminating instance ${OLD}"
+  ${AWS} ec2 terminate-instances --instance-ids "${OLD}"
+else
+  echo "[deploy] No instances tagged as old found"
+fi
+# Tag remaining instances as old before creating new.
+REMAINING=$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG}"|grep INSTANCES|awk '{print $7}')
+if [ ! -z "${REMAINING}" ]; then
+  echo "Setting tag to old for ${REMAINING}"
+  ${AWS} ec2 create-tags --resources "${REMAINING}" --tags "Key=Status,Value=${TAG}-old"
+fi
+
+# Provision a AWS Docker host.
+echo "[deploy] running command: docker-machine create ${NAME} --driver amazonec2"
+docker-machine create "${NAME}" --driver amazonec2
+echo "[deploy] Machine created. Waiting a few seconds before getting the IP and ID"
+sleep 10
+IP=$(docker-machine ip "${NAME}" 2>&1)
+PRIVATE_IP=$(docker-machine inspect --format='{{.Driver.PrivateIPAddress}}' "${NAME}" 2>&1)
+INSTANCE_ID=$(docker-machine inspect --format='{{.Driver.InstanceId}}' "${NAME}" 2>&1)
+echo "[deploy] Machine created at IP=${IP}, PRIVATE_IP=${PRIVATE_IP}, INSTANCE_ID=${INSTANCE_ID}"
+
+${AWS} ec2 create-tags --resources "${INSTANCE_ID}" --tags "Key=Status,Value=${TAG}"
+# Open port 80.
+${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
+${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
+
+# Deploy specific commit/tag to host.
+docker-machine ssh "${NAME}" "sudo git clone https://github.com/CivicActions/agile-california.git $PWD && cd $PWD && sudo git checkout \"${COMMIT}\""
+
+# Enable Docker client connection to remote Docker host.
+eval "$(docker-machine env "${NAME}")"
+
+# Assign our container to the appropriate IP in Docker Compose.
+sed -i'' -e "s/\"80\" # Exposed public port on deploy/${PRIVATE_IP}:80:80/" docker-compose.yml
+
+# Build site on remote host.
+#./bin/build
+
+# Setup DNS and CDN.
+docker build -t cfcli devops/deployment/cfcli/
+docker run -it --rm cfcli cfcli --token="${CLOUDFLARE_TOKEN}" --email="${CLOUDFLARE_EMAIL}" --domain "${DOMAIN}" removerecord "${SUBDOMAIN}"
+docker run -it --rm cfcli cfcli --token="${CLOUDFLARE_TOKEN}" --email="${CLOUDFLARE_EMAIL}" --domain "${DOMAIN}" -a -t A addrecord "${SUBDOMAIN}" "${IP}"
+echo
+echo "[deploy] Deployed to https://${SUBDOMAIN}.${DOMAIN}"
+
+# Purge CDN cache
+docker run -it --rm cfcli cfcli --token="${CLOUDFLARE_TOKEN}" --email="${CLOUDFLARE_EMAIL}" --domain "${DOMAIN}" purgecache
+echo "[deploy] Purging CloudFlare cache for ${DOMAIN}"

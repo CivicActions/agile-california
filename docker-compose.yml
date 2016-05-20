@@ -1,0 +1,7 @@
+web:
+  image: davenuman/bowline-centos
+  command: httpd -D FOREGROUND -e debug
+  expose:
+    - "80" # Exposed public port on deploy
+  volumes:
+    - .:/var/www
