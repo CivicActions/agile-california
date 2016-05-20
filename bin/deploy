@@ -66,5 +66,5 @@ echo
 echo "[deploy] Deployed to https://${SUBDOMAIN}.${DOMAIN}"
 
 # Purge CDN cache
-docker run -it --rm cfcli cfcli --token="${CLOUDFLARE_TOKEN}" --email="${CLOUDFLARE_EMAIL}" --domain "${DOMAIN}" purgecache
+docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli purgecache
 echo "[deploy] Purging CloudFlare cache for ${DOMAIN}"
