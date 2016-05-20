@@ -21,3 +21,12 @@ Sprint 1
  - Daily Stand up
  - Interviewed 3 foster parents ***(USDS Play #1)***
  - establish budget ***(USDS Play #5)***
+
+**Day  3: May 20, 2016**
+ - Daily Stand up
+ - Sprint demo
+	 - demo'd [user empathy map](https://docs.google.com/drawings/d/1vKltBbr4q1weOuKUVA5cYhGBy_1yYy6AIhU1l_RI1_M/edit)
+	 - presented [user stories](https://docs.google.com/document/d/1csq4ndL_YuYmlKHHJobWSGa3fFQEfRrcgWmAek61E0w/edit) gathered from user interviews
+	 - demo'd [hello world](http://agile-ca.civicactions.com/) application and showed a deploy of changed content
+ - [Sprint retrospective](https://trello.com/b/cn0AuaG3/agile-ca-sprint-1-retrospective) 
+ - Sprint 2 planning
