@@ -52,8 +52,9 @@ docker-machine ssh "${NAME}" "sudo git clone https://github.com/CivicActions/agi
 # Enable Docker client connection to remote Docker host.
 eval "$(docker-machine env "${NAME}")"
 
-# Assign our container to the appropriate IP in Docker Compose.
-sed -i'' -e "s/\"80\" # Exposed public port on deploy/${PRIVATE_IP}:80:80/" docker-compose.yml
+# Publish web container port in Docker Compose.
+git checkout docker-compose.yml 
+sed -i'' -e "s/^web:/web:\n  ports\n    - 80:80/" docker-compose.yml
 
 # Build site on remote host.
 #./bin/build
