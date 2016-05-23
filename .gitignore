@@ -45,3 +45,7 @@ tests/behat/local.yml
 *.sass-cache
 .drush
 .bash_history
+
+# Drupal #
+#########
+*/sites/default/files/
