@@ -30,3 +30,12 @@ Sprint 1
 	 - demo'd [hello world](http://agile-ca.civicactions.com/) application and showed a deploy of changed content
  - [Sprint retrospective](https://trello.com/b/cn0AuaG3/agile-ca-sprint-1-retrospective) 
  - Sprint 2 planning
+	 - Goal for this sprint: messaging. User interviews indicate this is the highest need to get in contact with case workers and is currently very problematic.
+
+Sprint 2
+--------
+**Day  4: May 23, 2016**
+- Daily Stand up
+- Discussing issue that users haven't expressed need for the residential facility information and will prioritize it last.. We imagine they may use it for an urgent care need and will surface it in later user interviews.
+- Meet w Rob, PO, to identify that we are writing user stories instead of just tasks to communicate work. 
+- Story map should be used for communicating with actual end users.
