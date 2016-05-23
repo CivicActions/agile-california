@@ -2,7 +2,7 @@
   "name": "group/project",
   "description": "The Project.",
   "require": {
-    "drush/drush": "8.*",
+    "drush/drush": "6.*",
     "drupal/coder": "~8.2"
   }
 }
