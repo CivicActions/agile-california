@@ -58,9 +58,14 @@ sed -i'' -e "s/^web:/web:\n  ports:\n    - 80:80/" docker-compose.yml
 (
   eval "$(docker-machine env "${NAME}")"
 
+  # Enable Bowline
+  source bin/activate
+
   # Build site on remote host.
-  #./bin/build
-  docker-compose up -d
+  build
+
+  # Initial install (later on this will also need to manage migration between old and new instances).
+  initial-install
 )
 
 # Setup DNS and CDN.
