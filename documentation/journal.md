@@ -39,3 +39,7 @@ Sprint 2
 - Discussing issue that users haven't expressed need for the residential facility information and will prioritize it last.. We imagine they may use it for an urgent care need and will surface it in later user interviews.
 - Meet w Rob, PO, to identify that we are writing user stories instead of just tasks to communicate work. 
 - Story map should be used for communicating with actual end users.
+
+**Day  5: May 24, 2016**
+- Daily Stand up
+- Review prototypes and determine MVP approach for messaging for demo tomorrow
