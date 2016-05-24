@@ -244,7 +244,10 @@
  *   );
  * @endcode
  */
-$config_directories = array();
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => '../config/sync',
+  CONFIG_ACTIVE_DIRECTORY => '../config/active',
+);
 
 /**
  * Settings:
@@ -722,15 +725,4 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 if (file_exists('/var/www/.docker/etc/settings.docker.php')) {
   require '/var/www/.docker/etc/settings.docker.php';
 }
-$databases['default']['default'] = array (
-  'database' => 'drupal',
-  'username' => 'dbuser',
-  'password' => 'dbpass',
-  'prefix' => '',
-  'host' => 'dbhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_rCpHiBWhMWol_0b9KyNSokHMD1DbQyS48JyHQVPx23V7u-MSBBh_KEPRZm_jm6lTiN00LHXvGg/sync';
