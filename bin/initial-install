@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+source $(dirname $0)/../lib/bowline/bowline
+assert_running
+
+echo 'Installing Drupal 8'
+chmod 644 docroot/sites/default/settings.php
+drush si -y --sites-subdir=default config_installer
