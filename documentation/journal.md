@@ -43,6 +43,7 @@ Sprint 2
 **Day  5: May 24, 2016**
 - Daily Stand up
 - Review prototypes and determine MVP approach for messaging for demo tomorrow
+- 
 **Day 6: May 25, 2016**
  - Daily Stand up
  - Sprint demo
