@@ -43,3 +43,18 @@ Sprint 2
 **Day  5: May 24, 2016**
 - Daily Stand up
 - Review prototypes and determine MVP approach for messaging for demo tomorrow
+**Day 6: May 25, 2016**
+ - Daily Stand up
+ - Sprint demo
+	 - Inbox 
+	- Story Map
+	- Personas
+	- Empathy Map
+	- Wireframe of: 
+		- mobile inbox 
+		- message 
+		- Create a message
+
+ - [Sprint retrospective](https://trello.com/b/UCOjNAkO/agile-ca-sprint-2-retrospective) 
+ - Sprint 3 planning
+	 - Goal for this sprint:  demo to foster parents in order to get valuable feedback so that we build something valuable for the end of this project.
