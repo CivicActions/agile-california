@@ -1,5 +1,7 @@
 seleniumchrome:
   image: selenium/standalone-chrome
+  volumes:
+    - /dev/shm:/dev/shm
   external_links:
     - agilecalifornia_web_1:web
 seleniumfirefox:
