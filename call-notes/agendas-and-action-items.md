@@ -1,4 +1,7 @@
-##5/18 Action items
+##5/26 Call Agenda
+* Finalize questions 
+* Press / blog campaign and update 
+* Steve / Elizabeth to update budget
 
 ##5/18 Call Agenda##
 * Designate Repo
