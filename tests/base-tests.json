@@ -1,0 +1,32 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://web/"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='site-branding__name']//a"
+      },
+      "text": "CHHS Foster Hub"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Log in"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
