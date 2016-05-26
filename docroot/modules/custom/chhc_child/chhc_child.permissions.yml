@@ -1,0 +1,19 @@
+add child entities:
+  title: 'Create new Child entities'
+
+administer child entities:
+  title: 'Administer Child entities'
+  description: 'Allow to access the administration form to configure Child entities.'
+  restrict access: true
+
+delete child entities:
+  title: 'Delete Child entities'
+
+edit child entities:
+  title: 'Edit Child entities'
+
+view published child entities:
+  title: 'View published Child entities'
+
+view unpublished child entities:
+  title: 'View unpublished Child entities'

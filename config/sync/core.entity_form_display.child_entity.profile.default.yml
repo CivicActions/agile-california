@@ -1,0 +1,50 @@
+uuid: ff2f7e67-0fe7-4228-b732-80bbcd3ec212
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhc_child.child_entity_type.profile
+    - field.field.child_entity.profile.field_case_worker
+    - field.field.child_entity.profile.field_foster_parent
+id: child_entity.profile.default
+targetEntityType: child_entity
+bundle: profile
+mode: default
+content:
+  field_case_worker:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_foster_parent:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  langcode:
+    type: language_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

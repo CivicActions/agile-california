@@ -1,0 +1,9 @@
+uuid: 8b89dfdd-dbd2-4047-a693-f587b2e96a73
+langcode: en
+status: true
+dependencies: {  }
+id: foster_parent
+label: 'Foster Parent'
+weight: 4
+is_admin: null
+permissions: {  }

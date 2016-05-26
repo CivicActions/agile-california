@@ -1,0 +1,9 @@
+uuid: 056f3e1d-1de3-4330-930b-495ca831bf56
+langcode: en
+status: true
+dependencies: {  }
+id: case_worker
+label: 'Case Worker'
+weight: 3
+is_admin: null
+permissions: {  }

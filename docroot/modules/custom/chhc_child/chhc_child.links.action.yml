@@ -1,0 +1,11 @@
+entity.child_entity.add_form:
+  route_name: 'child_entity.add_page'
+  title: 'Add Child'
+  appears_on:
+    - entity.child_entity.collection
+entity.child_entity_type.add_form:
+  route_name: 'entity.child_entity_type.add_form'
+  title: 'Add Child type'
+  appears_on:
+    - entity.child_entity_type.collection
+

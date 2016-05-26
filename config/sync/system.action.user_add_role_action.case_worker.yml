@@ -1,0 +1,14 @@
+uuid: e77739ba-82ec-474d-8cbc-8762adcc5f2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.case_worker
+  module:
+    - user
+id: user_add_role_action.case_worker
+label: 'Add the Case Worker role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: case_worker

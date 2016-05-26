@@ -1,0 +1,14 @@
+uuid: 2b3a2e89-81fe-4ff3-bfe7-306bae5b183e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.foster_parent
+  module:
+    - user
+id: user_remove_role_action.foster_parent
+label: 'Remove the Foster Parent role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: foster_parent

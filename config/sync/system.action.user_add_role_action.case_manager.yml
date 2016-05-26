@@ -1,0 +1,14 @@
+uuid: 39231963-6ed4-4760-8176-0afecbaf7de5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.case_manager
+  module:
+    - user
+id: user_add_role_action.case_manager
+label: 'Add the Case Manager role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: case_manager

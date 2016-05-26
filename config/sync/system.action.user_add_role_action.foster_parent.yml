@@ -1,0 +1,14 @@
+uuid: f09a03f2-d4aa-4b82-a2b2-e2effd37bb27
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.foster_parent
+  module:
+    - user
+id: user_add_role_action.foster_parent
+label: 'Add the Foster Parent role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: foster_parent

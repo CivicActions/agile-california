@@ -1,0 +1,9 @@
+uuid: b6d137e8-436c-4cac-a940-ea6376df43d1
+langcode: en
+status: true
+dependencies: {  }
+id: case_manager
+label: 'Case Manager'
+weight: 5
+is_admin: null
+permissions: {  }
