@@ -47,7 +47,9 @@ ${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol 
 ${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
 
 # Deploy specific commit/tag to host.
-docker-machine ssh "${NAME}" "sudo git clone https://github.com/CivicActions/agile-california.git $PWD && cd $PWD && sudo git checkout \"${COMMIT}\""
+docker-machine ssh "${NAME}" "sudo git clone https://github.com/CivicActions/agile-california.git ${PWD} && cd ${PWD} && sudo git checkout \"${COMMIT}\""
+# Change directory permissions to non-privileged user.
+docker-machine ssh "${NAME}" "sudo chown -R \${USER}:\${GROUP} ${PWD}"
 
 
 # Publish web container port in Docker Compose.
