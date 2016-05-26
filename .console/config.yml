@@ -1,0 +1,8 @@
+application:
+    environment: prod
+    language: en
+    editor: vim
+    temp: /tmp
+    develop: 'false'
+    command: about
+    checked: 'true'
