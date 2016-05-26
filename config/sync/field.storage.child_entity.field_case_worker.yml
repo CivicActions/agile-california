@@ -1,0 +1,20 @@
+uuid: 202aed70-afe6-4d8a-b857-461077838e79
+langcode: en
+status: true
+dependencies:
+  module:
+    - chhc_child
+    - user
+id: child_entity.field_case_worker
+field_name: field_case_worker
+entity_type: child_entity
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

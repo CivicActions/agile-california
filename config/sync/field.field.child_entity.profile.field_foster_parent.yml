@@ -1,0 +1,33 @@
+uuid: adfb962a-023b-4587-9ca7-8d6efb2e9f9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhc_child.child_entity_type.profile
+    - field.storage.child_entity.field_foster_parent
+id: child_entity.profile.field_foster_parent
+field_name: field_foster_parent
+entity_type: child_entity
+bundle: profile
+label: 'Foster Parent'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        foster_parent: foster_parent
+        administrator: '0'
+        case_worker: '0'
+        case_manager: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

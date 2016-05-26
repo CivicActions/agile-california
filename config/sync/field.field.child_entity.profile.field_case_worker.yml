@@ -1,0 +1,33 @@
+uuid: a76b60ac-4e06-4f05-b93f-565c2191cde2
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhc_child.child_entity_type.profile
+    - field.storage.child_entity.field_case_worker
+id: child_entity.profile.field_case_worker
+field_name: field_case_worker
+entity_type: child_entity
+bundle: profile
+label: 'Case Worker'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        case_worker: case_worker
+        administrator: '0'
+        foster_parent: '0'
+        case_manager: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

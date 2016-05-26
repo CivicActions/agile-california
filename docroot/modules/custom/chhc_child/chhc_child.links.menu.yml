@@ -1,0 +1,16 @@
+# Child menu items definition
+entity.child_entity.collection:
+  title: 'Child list'
+  route_name: entity.child_entity.collection
+  description: 'List Child entities'
+  parent: system.admin_structure
+  weight: 100
+
+# Child type menu items definition
+entity.child_entity_type.collection:
+  title: 'Child type'
+  route_name: entity.child_entity_type.collection
+  description: 'List Child type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

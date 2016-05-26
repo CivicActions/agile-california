@@ -1,0 +1,14 @@
+uuid: e6598267-6d19-4a10-b845-804975221170
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.case_manager
+  module:
+    - user
+id: user_remove_role_action.case_manager
+label: 'Remove the Case Manager role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: case_manager

@@ -1,0 +1,14 @@
+uuid: cc20bac6-6dfd-4130-add4-8d026f882273
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.case_worker
+  module:
+    - user
+id: user_remove_role_action.case_worker
+label: 'Remove the Case Worker role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: case_worker

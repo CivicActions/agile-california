@@ -1,0 +1,20 @@
+uuid: 9806dcb7-26fe-416e-a7dc-8221ecf26552
+langcode: en
+status: true
+dependencies:
+  module:
+    - chhc_child
+    - user
+id: child_entity.field_foster_parent
+field_name: field_foster_parent
+entity_type: child_entity
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
