@@ -59,3 +59,14 @@ Sprint 2
  - [Sprint retrospective](https://trello.com/b/UCOjNAkO/agile-ca-sprint-2-retrospective) 
  - Sprint 3 planning
 	 - Goal for this sprint:  demo to foster parents in order to get valuable feedback so that we build something valuable for the end of this project.
+
+Sprint 3
+--------
+**Day  7: May 26, 2016**
+ - Daily Stand up
+ - RFI questions submitted
+ - Send questions to foster parents on how to indicate priority of message
+ - Prep for demo and invite foster parents to join
+ - Implement Wireframe feedback
+ - Set up base theme
+ - Simple automated tests deployed
