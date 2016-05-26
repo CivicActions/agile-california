@@ -14,6 +14,7 @@ Is it easy for the state to match a youth to you? - asked us what age we preferr
 Signed up through county - would love to work with agency but would require a meeting every week and I don’t have time for that with full-time job
 
 **CASEWORKER COMMUNICATION**
+
 *Do you have a “case worker”? Or do the youths have a “case worker”?* 
 Yes, I have a county caseworker; each child has their own social worker; emergency worker for first 40 days; later a permanent social worker until they go to youth services; we have a recruitment / development support worker also - will be there for us for assistance / support
 Primary point of contact is the child’s social worker - they are supposed to respond within 24 hours, but we have had no response for 3 weeks - not communicating with us; leave messages with supervisors, etc. They have a lot of cases, so recruitment development team can help in those cases when we have trouble getting in touch with social worker = usually have a response from them within 2 hours
