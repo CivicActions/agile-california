@@ -2,6 +2,7 @@
 * Finalize questions 
 * Press / blog campaign and update 
 * Steve / Elizabeth to update budget
+* Let's get everything into github
 
 ##5/18 Call Agenda##
 * Designate Repo
