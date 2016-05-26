@@ -3,6 +3,7 @@
 * Press / blog campaign and update 
 * Steve / Elizabeth to update budget
 * Let's get everything into github
+* Plan for demo: 1) Time allotted, 2) showing product, 3) showing wireframe, 4) asking specific questions.
 
 ##5/18 Call Agenda##
 * Designate Repo
