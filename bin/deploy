@@ -11,37 +11,17 @@ DOMAIN="$2"
 COMMIT=$(git rev-parse --short HEAD)
 NAME="${COMMIT}-${SUBDOMAIN}.${DOMAIN}"
 echo "[deploy] Attempting to create host ${NAME}"
-TAG="${DOMAIN}"
+TAG_PREFIX="${SUBDOMAIN}.${DOMAIN}"
 AWS='docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_VPC_ID -e AWS_DEFAULT_REGION -e AWS_ZONE -e AWS_SUBNET_ID anigeo/awscli'
 
-# Remove instances tagged as old.
-echo "[deploy] Removing instances tagged as old"
-OLD=$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG}-old"|grep INSTANCES|awk '{print $7}')
-# TODO: Add check for FATAL error if connection to docker instance fails
-if [ ! -z "${OLD}" ]; then
-  echo "[deploy] Terminating instance ${OLD}"
-  ${AWS} ec2 terminate-instances --instance-ids "${OLD}"
-else
-  echo "[deploy] No instances tagged as old found"
-fi
-# Tag remaining instances as old before creating new.
-REMAINING=$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG}"|grep INSTANCES|awk '{print $7}')
-if [ ! -z "${REMAINING}" ]; then
-  echo "Setting tag to old for ${REMAINING}"
-  ${AWS} ec2 create-tags --resources "${REMAINING}" --tags "Key=Status,Value=${TAG}-old"
-fi
-
-# Provision a AWS Docker host.
-echo "[deploy] running command: docker-machine create ${NAME} --driver amazonec2"
-docker-machine create "${NAME}" --driver amazonec2
-echo "[deploy] Machine created. Waiting a few seconds before getting the IP and ID"
+# Provision a candidate AWS Docker machine.
+docker-machine create "${NAME}" --driver amazonec2 --engine-label "Status=${TAG_PREFIX}-candidate"
+echo "[deploy] Candidate Docker machine created. Waiting a few seconds before getting the IP and ID"
 sleep 10
 IP=$(docker-machine ip "${NAME}" 2>&1)
-PRIVATE_IP=$(docker-machine inspect --format='{{.Driver.PrivateIPAddress}}' "${NAME}" 2>&1)
 INSTANCE_ID=$(docker-machine inspect --format='{{.Driver.InstanceId}}' "${NAME}" 2>&1)
-echo "[deploy] Machine created at IP=${IP}, PRIVATE_IP=${PRIVATE_IP}, INSTANCE_ID=${INSTANCE_ID}"
+echo "[deploy] Machine created at IP=${IP}, INSTANCE_ID=${INSTANCE_ID}."
 
-${AWS} ec2 create-tags --resources "${INSTANCE_ID}" --tags "Key=Status,Value=${TAG}"
 # Open port 80.
 ${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
 ${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
@@ -50,7 +30,6 @@ ${AWS} ec2 authorize-security-group-ingress --group-name docker-machine --protoc
 docker-machine ssh "${NAME}" "sudo git clone https://github.com/CivicActions/agile-california.git ${PWD} && cd ${PWD} && sudo git checkout \"${COMMIT}\""
 # Change directory permissions to non-privileged user.
 docker-machine ssh "${NAME}" "sudo chown -R \${USER}:\${GROUP} ${PWD}"
-
 
 # Publish web container port in Docker Compose.
 git checkout docker-compose.yml 
@@ -65,17 +44,44 @@ sed -i'' -e "s/^web:/web:\n  ports:\n    - 80:80/" docker-compose.yml
 
   # Build site on remote host.
   build
+  composer install
 
   # Initial install (later on this will also need to manage migration between old and new instances).
   initial-install
+
+  # Run tests.
+  run-tests
+  if [ $? -eq 0 ]; then
+    echo "[deploy] Tests PASS, activating candidate build."
+  else
+    echo "[deploy] Tests FAIL, tagging 'candidate' as 'failed' - please review fails, fix and manually remove failed candidate before redeploying."
+    ${AWS} ec2 create-tags --resources "${INSTANCE_ID}" --tags "Key=Status,Value=${TAG_PREFIX}-failed"
+    echo "[deploy] Aborting build."
+    exit 1
+  fi
 )
+
+# Clean up - remove instances tagged as "old".
+echo "[deploy] Removing instances tagged as 'old'."
+docker-machine rm -y "$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG_PREFIX}-old" | grep -P "TAGS\tName" | awk '{print $3}')"
+
+# Tag existing "active" instance as "old", but leave running so we can roll back if needed.
+INITIAL_ACTIVE=$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG_PREFIX}-active" | grep 'INSTANCES' | awk '{print $7}')
+if [ ! -z "${INITIAL_ACTIVE}" ]; then
+  echo "[deploy] Setting tag from 'active' to 'old' for ${INITIAL_ACTIVE}."
+  ${AWS} ec2 create-tags --resources "${INITIAL_ACTIVE}" --tags "Key=Status,Value=${TAG_PREFIX}-old"
+fi
+
+# Tag candidate instance as active.
+echo "[deploy] Setting tag from 'candidate' to 'active' for ${INSTANCE_ID}."
+${AWS} ec2 create-tags --resources "${INSTANCE_ID}" --tags "Key=Status,Value=${TAG_PREFIX}-active"
 
 # Setup DNS and CDN.
 docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli removerecord "${SUBDOMAIN}"
 docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli -a -t A addrecord "${SUBDOMAIN}" "${IP}"
-echo
 echo "[deploy] Deployed to https://${SUBDOMAIN}.${DOMAIN}"
 
 # Purge CDN cache
 docker run -it --rm -e TOKEN="${CLOUDFLARE_TOKEN}" -e EMAIL="${CLOUDFLARE_EMAIL}" -e DOMAIN="${DOMAIN}" programmerq/cfcli cfcli purgecache
-echo "[deploy] Purging CloudFlare cache for ${DOMAIN}"
+echo "[deploy] Purging CloudFlare cache for ${DOMAIN}."
+echo "[deploy] Deploy success." 
