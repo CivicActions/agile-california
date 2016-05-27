@@ -70,3 +70,12 @@ Sprint 3
  - Implement Wireframe feedback
  - Set up base theme
  - Simple automated tests deployed
+ 
+**Day  8: May 27, 2016**
+ - Daily Stand up
+ - Demo
+	 - Invited Foster Mom Amy to get [feedback](https://docs.google.com/document/d/1R78M92rW6r0MWtqPMwES3GdxIQRMXx_hZMs_XJ4cUfo/edit?ts=57487340#heading=h.74uvvfivdo17)
+ - Sprint 4 planning:
+	 - Outcomes:
+		- MVP of messaging
+		- Integrate API for mapping respite locations
