@@ -1,0 +1,49 @@
+uuid: 39f530af-2830-433b-a1cf-6e09f1ca3382
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhc_message.message_entity_type.default
+    - field.field.message_entity.default.field_message
+    - field.field.message_entity.default.field_reply
+  module:
+    - comment
+    - text
+id: message_entity.default.default
+targetEntityType: message_entity
+bundle: default
+mode: default
+content:
+  field_message:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_reply:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+  langcode:
+    type: language_select
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

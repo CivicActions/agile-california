@@ -1,0 +1,17 @@
+# Message routing definition
+entity.message_entity.canonical:
+  route_name: entity.message_entity.canonical
+  base_route: entity.message_entity.canonical
+  title: 'View'
+
+entity.message_entity.edit_form:
+  route_name: entity.message_entity.edit_form
+  base_route: entity.message_entity.canonical
+  title: Edit
+
+entity.message_entity.delete_form:
+  route_name:  entity.message_entity.delete_form
+  base_route:  entity.message_entity.canonical
+  title: Delete
+  weight: 10
+

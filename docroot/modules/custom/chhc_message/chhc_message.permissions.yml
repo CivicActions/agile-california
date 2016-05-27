@@ -1,0 +1,19 @@
+add message entities:
+  title: 'Create new Message entities'
+
+administer message entities:
+  title: 'Administer Message entities'
+  description: 'Allow to access the administration form to configure Message entities.'
+  restrict access: true
+
+delete message entities:
+  title: 'Delete Message entities'
+
+edit message entities:
+  title: 'Edit Message entities'
+
+view published message entities:
+  title: 'View published Message entities'
+
+view unpublished message entities:
+  title: 'View unpublished Message entities'
