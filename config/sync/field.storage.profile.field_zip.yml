@@ -1,0 +1,21 @@
+uuid: 8363b302-fc4b-448c-b246-d287306af966
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_zip
+field_name: field_zip
+entity_type: profile
+type: string
+settings:
+  max_length: 32
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

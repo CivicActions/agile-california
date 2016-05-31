@@ -1,0 +1,36 @@
+uuid: 2a0018fb-d3b0-416a-9ecc-19dc24176a68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.social_worker.field_best_times
+    - field.field.profile.social_worker.field_shift_times
+    - field.field.profile.social_worker.field_since
+    - profile.type.social_worker
+  module:
+    - datetime
+id: profile.social_worker.default
+targetEntityType: profile
+bundle: social_worker
+mode: default
+content:
+  field_best_times:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: 'e.g. Early afternoon'
+    third_party_settings: {  }
+    type: string_textfield
+  field_shift_times:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: 'e.g. Tues-Sat, 8am-5pm'
+    third_party_settings: {  }
+    type: string_textfield
+  field_since:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+hidden: {  }

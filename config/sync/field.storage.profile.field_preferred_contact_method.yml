@@ -1,0 +1,33 @@
+uuid: d7d52dd6-e8ed-4e50-b57e-6e5e147a3d7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_preferred_contact_method
+field_name: field_preferred_contact_method
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: no-preference
+      label: 'No preference'
+    -
+      value: call
+      label: Call
+    -
+      value: text
+      label: Text
+    -
+      value: email
+      label: Email
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

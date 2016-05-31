@@ -1,0 +1,15 @@
+uuid: e50f2d9c-2ec1-46ff-9482-5a7380c5036e
+langcode: en
+status: true
+dependencies: {  }
+id: social_worker
+label: 'Social worker'
+registration: false
+multiple: false
+roles:
+  case_worker: case_worker
+  case_manager: case_manager
+  authenticated: '0'
+  administrator: '0'
+  foster_parent: '0'
+weight: 0

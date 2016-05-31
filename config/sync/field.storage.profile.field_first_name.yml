@@ -1,0 +1,21 @@
+uuid: c067d7c8-e762-4cda-bff9-39d66bb36605
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_first_name
+field_name: field_first_name
+entity_type: profile
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,40 @@
+uuid: e5d486cd-a4c9-464e-bae5-121c802b7674
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.foster_parent.field_foster_agencies
+    - field.field.profile.foster_parent.field_foster_agency
+    - field.field.profile.foster_parent.field_fostering_since
+    - field.field.profile.foster_parent.field_preferred_ages
+    - profile.type.foster_parent
+  module:
+    - datetime
+    - options
+id: profile.foster_parent.default
+targetEntityType: profile
+bundle: foster_parent
+mode: default
+content:
+  field_foster_agencies:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_fostering_since:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+    type: datetime_default
+  field_preferred_ages:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden:
+  field_foster_agency: true

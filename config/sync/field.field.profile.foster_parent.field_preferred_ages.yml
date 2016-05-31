@@ -1,0 +1,21 @@
+uuid: c368e4b5-49de-4a2c-8e23-15e16e0eadeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_preferred_ages
+    - profile.type.foster_parent
+  module:
+    - options
+id: profile.foster_parent.field_preferred_ages
+field_name: field_preferred_ages
+entity_type: profile
+bundle: foster_parent
+label: 'Preferred age(s) to foster'
+description: 'Select all ages that apply'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

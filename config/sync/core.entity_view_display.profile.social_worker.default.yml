@@ -1,0 +1,39 @@
+uuid: 4bdcd31d-9c02-48ab-9fb7-c298e62c38e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.social_worker.field_best_times
+    - field.field.profile.social_worker.field_shift_times
+    - field.field.profile.social_worker.field_since
+    - profile.type.social_worker
+  module:
+    - datetime
+id: profile.social_worker.default
+targetEntityType: profile
+bundle: social_worker
+mode: default
+content:
+  field_best_times:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_shift_times:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_since:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+    type: datetime_default
+hidden: {  }
