@@ -1,3 +1,13 @@
+##5/31 Call Agenda
+* Estimates on user stories
+* Reality check user stories to available time for our 2 day sprint 
+* Brief demo of geojason stuff
+* Publicity update 
+* Jen: any story mapping co-work / assistance Steve (or others) can provide?
+* Rob / Heather aftermeeting to discuss map integration 
+* Jen to design map/zip into user interface 
+* Plan and schedule for tomorrow's demo and SPM
+
 ##5/26 Call Agenda
 * Finalize questions 
 * Press / blog campaign and update 
