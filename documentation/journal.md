@@ -19,7 +19,7 @@ Sprint 1
 **Day  2: May 19, 2016**
 
  - Daily Stand up
- - Interviewed 3 foster parents ***(USDS Play #1)***
+ - Interviewed 3 foster parents ***(Attachment B 2.c, USDS Play #1)***
  - establish budget ***(USDS Play #5)***
 
 **Day  3: May 20, 2016**
@@ -46,7 +46,7 @@ Sprint 2
 
 **Day 6: May 25, 2016**
  - Daily Stand up
- - Sprint demo
+ - Sprint demo **(Attachment B 2.c, USDS Play #1)**
 	 - Inbox 
 	- Story Map
 	- Personas
@@ -73,9 +73,20 @@ Sprint 3
  
 **Day  8: May 27, 2016**
  - Daily Stand up
- - Demo
+ - Demo **(Attachment B 2.c, USDS Play #1)**
 	 - Invited Foster Mom Amy to get [feedback](https://docs.google.com/document/d/1R78M92rW6r0MWtqPMwES3GdxIQRMXx_hZMs_XJ4cUfo/edit?ts=57487340#heading=h.74uvvfivdo17)
  - Sprint 4 planning:
 	 - Outcomes:
 		- MVP of messaging
 		- Integrate API for mapping respite locations
+
+Sprint 4
+--------
+**Day  9: May 31, 2016**
+- Daily Stand up
+- Map integration demo for team
+- Contacting case workers for user feedback
+- update the compliance matrix
+- planning next demo
+- developers working on messaging
+		
