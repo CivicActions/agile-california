@@ -1,0 +1,8 @@
+uuid: 8dcb884d-823a-46f4-ab1e-5d4081aee8a3
+langcode: en
+status: true
+dependencies: {  }
+id: message_reply
+label: 'Message reply'
+target_entity_type_id: message_entity
+description: 'Allows replies to messages'

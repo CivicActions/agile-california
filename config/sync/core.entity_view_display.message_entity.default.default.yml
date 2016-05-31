@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - chhc_message.message_entity_type.default
+    - field.field.message_entity.default.field_comment
     - field.field.message_entity.default.field_message
   module:
+    - comment
     - text
     - user
 id: message_entity.default.default
@@ -13,6 +15,13 @@ targetEntityType: message_entity
 bundle: default
 mode: default
 content:
+  field_comment:
+    weight: 2
+    label: above
+    settings:
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
   field_message:
     weight: 1
     label: above
