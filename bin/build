@@ -8,5 +8,9 @@ $DCOMPOSE up -d --no-recreate
 EXIT=$?
 echo -e "\033[m Exit Status: $EXIT"
 
+echo "# INSTALLING COMPOSER LIBRARIES"
+assert_composer
+composer install
+
 bowline
 exit $EXIT

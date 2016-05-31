@@ -1,0 +1,17 @@
+seleniumchrome:
+  image: selenium/standalone-chrome
+  volumes:
+    - /dev/shm:/dev/shm
+  external_links:
+    - agilecalifornia_web_1:web
+seleniumfirefox:
+  image: selenium/standalone-firefox
+  external_links:
+    - agilecalifornia_web_1:web
+seinterpreter:
+  build: se-interpreter
+  volumes:
+    - .:/usr/src/tests
+  links:
+    - seleniumchrome
+    - seleniumfirefox
