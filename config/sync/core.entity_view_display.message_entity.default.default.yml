@@ -1,0 +1,35 @@
+uuid: c0048c48-76a3-4b1b-9f49-31791066283e
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhc_message.message_entity_type.default
+    - field.field.message_entity.default.field_message
+  module:
+    - text
+    - user
+id: message_entity.default.default
+targetEntityType: message_entity
+bundle: default
+mode: default
+content:
+  field_message:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  subject:
+    label: above
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -4,6 +4,7 @@ module:
   block_content: 0
   breakpoint: 0
   chhc_child: 0
+  chhc_message: 0
   ckeditor: 0
   color: 0
   comment: 0

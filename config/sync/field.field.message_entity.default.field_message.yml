@@ -1,0 +1,21 @@
+uuid: fd24e781-b282-498e-80f6-838830bd2380
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhc_message.message_entity_type.default
+    - field.storage.message_entity.field_message
+  module:
+    - text
+id: message_entity.default.field_message
+field_name: field_message
+entity_type: message_entity
+bundle: default
+label: Message
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

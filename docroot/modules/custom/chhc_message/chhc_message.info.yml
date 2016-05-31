@@ -1,0 +1,5 @@
+name: CHHC Message
+type: module
+description: Messaging for CHHC Foster Hub
+core: 8.x
+package: CHHC Foster Hub
