@@ -1,3 +1,10 @@
+##5/31 Action items
+* Rob to schedule mtg with April, Heather to discuss map integration
+* Rob and Henry to meet to discuss publicity 
+* Henry to contact Ronnie re: demo to case workers
+* Rob to keep Amy in the loop re: demo Friday, if there's sufficient new functionality to show
+
+
 ##5/31 Call Agenda
 * Estimates on user stories
 * Reality check user stories to available time for our 2 day sprint 
