@@ -15,12 +15,14 @@ TAG_PREFIX="${SUBDOMAIN}.${DOMAIN}"
 AWS='docker run --rm -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e AWS_VPC_ID -e AWS_DEFAULT_REGION -e AWS_ZONE -e AWS_SUBNET_ID anigeo/awscli'
 
 # Provision a candidate AWS Docker machine.
-docker-machine create "${NAME}" --driver amazonec2 --engine-label "Status=${TAG_PREFIX}-candidate"
+docker-machine create "${NAME}" --driver amazonec2
 echo "[deploy] Candidate Docker machine created. Waiting a few seconds before getting the IP and ID"
 sleep 10
 IP=$(docker-machine ip "${NAME}" 2>&1)
 INSTANCE_ID=$(docker-machine inspect --format='{{.Driver.InstanceId}}' "${NAME}" 2>&1)
 echo "[deploy] Machine created at IP=${IP}, INSTANCE_ID=${INSTANCE_ID}."
+echo "[deploy] Setting tag to 'candidate' for ${INSTANCE_ID}."
+${AWS} ec2 create-tags --resources "${INSTANCE_ID}" --tags "Key=Status,Value=${TAG_PREFIX}-candidate"
 
 # Open port 80.
 ${AWS} ec2 revoke-security-group-ingress --group-name docker-machine --protocol tcp --port 80 --cidr 0.0.0.0/0
@@ -62,8 +64,11 @@ sed -i'' -e "s/^web:/web:\n  ports:\n    - 80:80/" docker-compose.yml
 )
 
 # Clean up - remove instances tagged as "old".
-echo "[deploy] Removing instances tagged as 'old'."
-docker-machine rm -y "$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG_PREFIX}-old" | grep -P "TAGS\tName" | awk '{print $3}')"
+OLD=$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG_PREFIX}-old" | grep -P "TAGS\tName" | awk '{print $3}')
+if [ ! -z "${OLD}" ]; then
+  echo "[deploy] Removing instances tagged as 'old': ${OLD}"
+  docker-machine rm -y "${OLD}"
+fi
 
 # Tag existing "active" instance as "old", but leave running so we can roll back if needed.
 INITIAL_ACTIVE=$(${AWS} ec2 describe-instances --output text --filters "Name=tag:Status,Values=${TAG_PREFIX}-active" | grep 'INSTANCES' | awk '{print $7}')
