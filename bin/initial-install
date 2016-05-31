@@ -6,3 +6,6 @@ assert_running
 echo 'Installing Drupal 8'
 chmod 644 docroot/sites/default/settings.php
 drush si -y --sites-subdir=default config_installer
+
+echo 'Creating initial demo users'
+create-demo-users
