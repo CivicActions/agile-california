@@ -79,7 +79,23 @@
     </div>
   </body>
   <script>
-    var zip = "92867";
+    function GetURLParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
+    }
+// Enter a url like this: http://127.0.0.1:4000/?zip=94621 to set zip from the URL
+var zip_from_url = GetURLParameter('zip');
+var default_zip = "92867";
+
+var zip = zip_from_url || default_zip;
 
 function redraw_with_zip() {
     zip = $("#zipcode").val();
