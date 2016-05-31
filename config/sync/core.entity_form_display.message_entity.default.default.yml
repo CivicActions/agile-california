@@ -4,14 +4,21 @@ status: true
 dependencies:
   config:
     - chhc_message.message_entity_type.default
+    - field.field.message_entity.default.field_comment
     - field.field.message_entity.default.field_message
   module:
+    - comment
     - text
 id: message_entity.default.default
 targetEntityType: message_entity
 bundle: default
 mode: default
 content:
+  field_comment:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
   field_message:
     weight: 11
     settings:

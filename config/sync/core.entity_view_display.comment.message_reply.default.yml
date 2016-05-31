@@ -1,0 +1,23 @@
+uuid: ea802e21-331a-4c92-9b0b-df904aa2a6c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.message_reply
+    - field.field.comment.message_reply.comment_body
+  module:
+    - text
+id: comment.message_reply.default
+targetEntityType: comment
+bundle: message_reply
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }
