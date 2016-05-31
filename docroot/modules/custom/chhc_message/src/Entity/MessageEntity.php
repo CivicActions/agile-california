@@ -40,7 +40,7 @@ use Drupal\user\UserInterface;
  *   entity_keys = {
  *     "id" = "id",
  *     "bundle" = "type",
- *     "label" = "name",
+ *     "label" = "subject",
  *     "uuid" = "uuid",
  *     "uid" = "user_id",
  *     "langcode" = "langcode",
@@ -79,15 +79,15 @@ class MessageEntity extends ContentEntityBase implements MessageEntityInterface 
   /**
    * {@inheritdoc}
    */
-  public function getName() {
-    return $this->get('name')->value;
+  public function getSubject() {
+    return $this->get('subject')->value;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setName($name) {
-    $this->set('name', $name);
+  public function setSubject($subject) {
+    $this->set('subject', $subject);
     return $this;
   }
 
@@ -197,7 +197,7 @@ class MessageEntity extends ContentEntityBase implements MessageEntityInterface 
 
     $fields['subject'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Subject'))
-      ->setDescription(t('Message Subject'))
+      ->setDescription(t('Message Subject.'))
       ->setSettings(array(
         'max_length' => 50,
         'text_processing' => 0,

@@ -19,7 +19,7 @@ class MessageEntityListBuilder extends EntityListBuilder {
    */
   public function buildHeader() {
     $header['id'] = $this->t('Message ID');
-    $header['name'] = $this->t('Name');
+    $header['subject'] = $this->t('Subject');
     return $header + parent::buildHeader();
   }
 
@@ -29,7 +29,7 @@ class MessageEntityListBuilder extends EntityListBuilder {
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\chhc_message\Entity\MessageEntity */
     $row['id'] = $entity->id();
-    $row['name'] = $this->l(
+    $row['subject'] = $this->l(
       $entity->label(),
       new Url(
         'entity.message_entity.edit_form', array(

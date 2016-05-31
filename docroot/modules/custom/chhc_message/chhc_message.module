@@ -16,7 +16,7 @@ function chhc_message_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.chhc_message':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Messaging system for CHHC Foster Hub') . '</p>';
+      $output .= '<p>' . t('Messaging for CHHC Foster Hub') . '</p>';
       return $output;
 
     default:

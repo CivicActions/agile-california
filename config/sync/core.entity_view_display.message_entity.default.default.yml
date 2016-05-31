@@ -1,13 +1,11 @@
-uuid: 42aff08b-fec0-41e7-9c92-51b476d6485c
+uuid: c0048c48-76a3-4b1b-9f49-31791066283e
 langcode: en
 status: true
 dependencies:
   config:
     - chhc_message.message_entity_type.default
     - field.field.message_entity.default.field_message
-    - field.field.message_entity.default.field_reply
   module:
-    - comment
     - text
     - user
 id: message_entity.default.default
@@ -21,13 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-  field_reply:
-    weight: 2
-    label: above
-    settings:
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
   subject:
     label: above
     type: string

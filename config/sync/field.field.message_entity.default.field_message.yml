@@ -1,4 +1,4 @@
-uuid: 9742ca54-e5fb-4b82-a6dc-54fcde26304b
+uuid: fd24e781-b282-498e-80f6-838830bd2380
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ entity_type: message_entity
 bundle: default
 label: Message
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

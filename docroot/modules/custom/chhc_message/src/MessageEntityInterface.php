@@ -22,23 +22,23 @@ interface MessageEntityInterface extends ContentEntityInterface, EntityChangedIn
   public function getType();
 
   /**
-   * Gets the Message name.
+   * Gets the Message subject.
    *
    * @return string
-   *   Name of the Message.
+   *   Subject of the Message.
    */
-  public function getName();
+  public function getSubject();
 
   /**
-   * Sets the Message name.
+   * Sets the Message subject.
    *
-   * @param string $name
-   *   The Message name.
+   * @param string $subject
+   *   The Message subject.
    *
    * @return \Drupal\chhc_message\MessageEntityInterface
    *   The called Message entity.
    */
-  public function setName($name);
+  public function setSubject($subject);
 
   /**
    * Gets the Message creation timestamp.
