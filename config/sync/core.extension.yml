@@ -14,6 +14,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
   field: 0
   field_ui: 0
   file: 0
@@ -27,6 +28,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  profile: 0
   quickedit: 0
   rdf: 0
   search: 0

@@ -6,4 +6,12 @@ id: foster_parent
 label: 'Foster Parent'
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  0: 'view own foster_parent profile'
+  1: 'view own main profile'
+  3: 'add own foster_parent profile'
+  4: 'edit own foster_parent profile'
+  5: 'add own main profile'
+  6: 'edit own main profile'
+  7: 'view any main profile'
+  8: 'view any social_worker profile'

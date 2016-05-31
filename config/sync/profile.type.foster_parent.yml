@@ -1,0 +1,15 @@
+uuid: c94ef5ab-7e3d-4e08-8c96-06101f8fb79a
+langcode: en
+status: true
+dependencies: {  }
+id: foster_parent
+label: 'Foster parent'
+registration: true
+multiple: false
+roles:
+  foster_parent: foster_parent
+  authenticated: '0'
+  administrator: '0'
+  case_worker: '0'
+  case_manager: '0'
+weight: 0

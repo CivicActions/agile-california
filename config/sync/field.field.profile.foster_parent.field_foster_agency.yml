@@ -1,0 +1,23 @@
+uuid: 2670cd2b-0849-415e-91cd-7188eb069636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_foster_agency
+    - profile.type.foster_parent
+id: profile.foster_parent.field_foster_agency
+field_name: field_foster_agency
+entity_type: profile
+bundle: foster_parent
+label: 'I work with a foster agency'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

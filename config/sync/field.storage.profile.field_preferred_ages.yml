@@ -1,0 +1,30 @@
+uuid: a54011c6-730a-45ed-a923-45c83cffd424
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_preferred_ages
+field_name: field_preferred_ages
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '2'
+      label: '0-2 years'
+    -
+      value: '11'
+      label: '3-11 years'
+    -
+      value: '18'
+      label: '12-18+ years'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

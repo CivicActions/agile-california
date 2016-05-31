@@ -1,0 +1,19 @@
+uuid: f72f3868-c009-48fc-8b74-1507aacecbf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_foster_agencies
+field_name: field_foster_agencies
+entity_type: profile
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

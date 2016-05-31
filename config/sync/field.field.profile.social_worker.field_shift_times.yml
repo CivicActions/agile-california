@@ -1,0 +1,19 @@
+uuid: d771f8e4-bb59-4455-9513-b36fc5e34b6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_shift_times
+    - profile.type.social_worker
+id: profile.social_worker.field_shift_times
+field_name: field_shift_times
+entity_type: profile
+bundle: social_worker
+label: 'Shift times'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

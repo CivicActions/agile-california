@@ -6,4 +6,13 @@ id: case_manager
 label: 'Case Manager'
 weight: 5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'view any foster_parent profile'
+  - 'view own main profile'
+  - 'view own social_worker profile'
+  - 'add own main profile'
+  - 'edit own main profile'
+  - 'view any main profile'
+  - 'add own social_worker profile'
+  - 'edit own social_worker profile'
+  - 'view any social_worker profile'
