@@ -21,6 +21,7 @@ regions:
 
 libraries:
   - 'bootstrap/theme'
+  - 'bootstrap/map-js'
 
 libraries-extend:
   core/drupal.ajax:
