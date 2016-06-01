@@ -8,10 +8,10 @@
       "url": "http://web/"
     },
     {
-      "type": "verifyText",
+      "type": "verifyElementValue",
       "locator": {
-        "type": "xpath",
-        "value": "//a[@class='navbar-brand']"
+        "type": "css selector",
+        "value": ".navbar-brand"
       },
       "text": "CHHS Foster Hub"
     },
