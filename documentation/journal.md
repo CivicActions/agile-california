@@ -90,3 +90,9 @@ Sprint 4
 - planning next demo
 - developers working on messaging
 		
+**Day  10: June 1, 2016**
+- Daily Stand up
+- Sprint 4 demo
+- Sprint 4 retrospective [Trello board](https://trello.com/b/TDJOeV2E/agile-ca-sprint-4-retrospective)
+- Sprint 5 planning
+	- Goals for this sprint: get messaging and user profiles to Done. Demo the phone experience.
