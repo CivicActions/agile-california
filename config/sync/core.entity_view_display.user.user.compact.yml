@@ -16,12 +16,6 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
-  profile_foster_parent:
-    weight: 10
-  profile_main:
-    weight: 10
-  profile_social_worker:
-    weight: 10
   user_picture:
     type: image
     weight: 0
@@ -32,3 +26,6 @@ content:
     label: hidden
 hidden:
   member_for: true
+  profile_foster_parent: true
+  profile_main: true
+  profile_social_worker: true

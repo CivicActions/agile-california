@@ -1,17 +1,17 @@
-uuid: 58a664b7-f651-4482-8b26-7c7240250436
+uuid: 5d1174d2-3770-46aa-b59b-c4da830cf2df
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - bootstrap
 _core:
-  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
-id: bartik_powered
-theme: bartik
-region: footer_fifth
-weight: 10
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: bootstrap_powered
+theme: bootstrap
+region: '-1'
+weight: -5
 provider: null
 plugin: system_powered_by_block
 settings:

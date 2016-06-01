@@ -1,17 +1,17 @@
-uuid: 1dce4d14-fdfe-464b-beb8-59209ced17cc
+uuid: 762ffe3b-d4cf-49be-baae-fed93c75ee7b
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
   theme:
-    - bartik
+    - bootstrap
 _core:
-  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
-id: bartik_search
-theme: bartik
-region: sidebar_first
-weight: -1
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: bootstrap_search
+theme: bootstrap
+region: '-1'
+weight: -6
 provider: null
 plugin: search_form_block
 settings:

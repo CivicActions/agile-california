@@ -11,7 +11,7 @@ id: comment.message_reply.comment_body
 field_name: comment_body
 entity_type: comment
 bundle: message_reply
-label: Comment
+label: Reply
 description: ''
 required: true
 translatable: true

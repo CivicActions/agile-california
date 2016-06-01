@@ -1,17 +1,17 @@
-uuid: 56703443-8bb9-4e75-a1e7-be7d5a56b8f7
+uuid: 7f9f51b9-0736-40d2-b139-6526b1fd60ab
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - bartik
+    - bootstrap
 _core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
-id: bartik_help
-theme: bartik
-region: content
-weight: -30
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: bootstrap_help
+theme: bootstrap
+region: help
+weight: -7
 provider: null
 plugin: help_block
 settings:
