@@ -11,7 +11,7 @@
       "type": "verifyText",
       "locator": {
         "type": "xpath",
-        "value": "//div[@class='site-branding__name']//a"
+        "value": "//a[@class='navbar-brand']"
       },
       "text": "CHHS Foster Hub"
     },
