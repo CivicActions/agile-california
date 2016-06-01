@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.message_entity.field_urgent
     - system.menu.main
   module:
     - chhc_message
@@ -70,7 +71,7 @@ display:
         type: table
         options:
           grouping: {  }
-          row_class: ''
+          row_class: '{{ field_urgent }}'
           default_row_class: true
           override: true
           sticky: false
@@ -78,11 +79,27 @@ display:
           summary: ''
           description: ''
           columns:
+            last_comment_timestamp: last_comment_timestamp
             subject: subject
+            field_urgent: field_urgent
           info:
+            last_comment_timestamp:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             subject:
               sortable: false
               default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_urgent:
+              sortable: false
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
@@ -209,6 +226,71 @@ display:
           entity_type: message_entity
           entity_field: subject
           plugin_id: field
+        field_urgent:
+          id: field_urgent
+          table: message_entity__field_urgent
+          field: field_urgent
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: custom
+            format_custom_true: urgent
+            format_custom_false: normal
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters: {  }
       sorts:
         last_comment_timestamp:
@@ -238,7 +320,8 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.message_entity.field_urgent'
   page_1:
     display_plugin: page
     id: page_1
@@ -263,4 +346,5 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.message_entity.field_urgent'

@@ -1,0 +1,18 @@
+uuid: a6cf4d4c-a05b-49e2-b2fc-cfebec69b1b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - chhc_message
+id: message_entity.field_urgent
+field_name: field_urgent
+entity_type: message_entity
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

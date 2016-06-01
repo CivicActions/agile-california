@@ -1,0 +1,23 @@
+uuid: ad5866f8-9657-4143-bfd4-437aed3fa3b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhc_message.message_entity_type.default
+    - field.storage.message_entity.field_urgent
+id: message_entity.default.field_urgent
+field_name: field_urgent
+entity_type: message_entity
+bundle: default
+label: Urgent
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Urgent
+  off_label: Normal
+field_type: boolean

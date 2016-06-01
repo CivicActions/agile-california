@@ -16,21 +16,13 @@ bundle: user
 mode: default
 content:
   member_for:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
+    weight: 5
   profile_foster_parent:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
+    weight: 10
   profile_main:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
+    weight: 10
   profile_social_worker:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
+    weight: 10
   user_picture:
     type: image
     weight: 0
