@@ -73,7 +73,7 @@ Sprint 3
  
 **Day  8: May 27, 2016**
  - Daily Stand up
- - Demo **(Attachment B 2.c, USDS Play #1)**
+ - Demo **(Attachment B 2.c and 2.f, USDS Play #1 and #12)**
 	 - Invited Foster Mom Amy to get [feedback](https://docs.google.com/document/d/1R78M92rW6r0MWtqPMwES3GdxIQRMXx_hZMs_XJ4cUfo/edit?ts=57487340#heading=h.74uvvfivdo17)
  - Sprint 4 planning:
 	 - Outcomes:
