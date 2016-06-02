@@ -1,7 +1,0 @@
-map.content:
-  path: '/map'
-  defaults:
-    _controller: '\Drupal\map\Controller\MapController::content'
-    _title: 'Map'
-  requirements:
-    _permission: 'access content'
