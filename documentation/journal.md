@@ -96,3 +96,27 @@ Sprint 4
 - Sprint 4 retrospective [Trello board](https://trello.com/b/TDJOeV2E/agile-ca-sprint-4-retrospective)
 - Sprint 5 planning
 	- Goals for this sprint: get messaging and user profiles to Done. Demo the phone experience.
+
+Sprint 5
+--------
+**Day  11: June 2, 2016**
+- Daily Stand up
+- contact users to join demo tomorrow
+- build out wireframes for future functionality
+- development work for next demo
+
+**Day  12: June 3, 2016**
+- Daily Stand up
+- Sprint 5 demo
+- Sprint 6 planning
+	- Goals for this sprint: 
+
+Sprint 6
+--------
+**Day  13: June 6, 2016**
+
+**Day  14: June 7, 2016**
+
+**Day  15: June 8, 2016**
+
+**Day  16: June 9, 2016**
