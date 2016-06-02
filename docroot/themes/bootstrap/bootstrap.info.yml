@@ -21,7 +21,11 @@ regions:
 
 libraries:
   - 'bootstrap/theme'
+  - 'bootstrap/mapboxjs'
+  - 'bootstrap/mapboxgl'
+  - 'bootstrap/leafletjs'
   - 'bootstrap/map-js'
+
 
 libraries-extend:
   core/drupal.ajax:
