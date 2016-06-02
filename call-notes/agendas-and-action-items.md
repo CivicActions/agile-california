@@ -1,3 +1,19 @@
+#6/1 Action items
+- Steve to confirm with Amy re: demo
+- Henry to confirm with Rani re: demo 
+- Heather and Jen to co-work today around messaging UI 
+- Jen to stay on the project next week
+
+#6/1 Call Agenda 
+- Do we have users confirmed for tomorrow demo? 
+- Have we been able to make contact with any case workers? 
+- Should Jen and Rob connect today around Map UI? Is this highest priority for Jen?
+- Questions re: account and login. Right now live site does not allow account creation. Should we all be using admin login?  
+- Chicken and egg question of mobile wireframes: Should Jen create new mobile wireframes that direct our theming of the set of functionality that we discussed yesterday, or should she sync with Heather (eg) and wireframe mobile views based on what's being themed?
+- Making sure that everything in google docs is in github (workflow should be that nothing really lives in google docs)
+- Should we rewrite Sprint 5 backlog as user stories? Is there a reason we didn’t do this yesterday?
+- Jen’s involvement next week
+
 ##5/31 Action items
 * Rob to schedule mtg with April, Heather to discuss map integration
 * Rob and Henry to meet to discuss publicity 
