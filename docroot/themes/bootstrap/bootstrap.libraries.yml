@@ -133,12 +133,6 @@ drupal.vertical-tabs:
     - core/drupal.form
     - core/matchmedia
 
-map-js:
-  js:
-    js/map.js:  {}
-  dependencies:
-   - core/jquery
-
 mapboxjs:
   remote: https://github.com/mapbox
   version: 2.4.0
@@ -147,11 +141,38 @@ mapboxjs:
     url: https://github.com/mapbox/mapbox.js/blob/mb-pages/LICENSE.md
     gpl-compatible: true
   js:
-    https:https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js: { type: external, minified: true }
+    https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js: { type: external, minified: true }
   # css:
   #   theme:
   #     url: https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css: { type: external, minified: true }
 
+leafletjs:
+  remote: https://github.com/Leaflet/Leaflet
+  version: 0.7.7
+  license:
+    name: MIT
+    url: https://github.com/Leaflet/Leaflet/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js: { type: external, minified: true }
+
+mapboxgl:
+  remote: https://github.com/mapbox/mapbox-gl-js
+  version: 0.18.0
+  license:
+    name: MIT
+    url: https://github.com/mapbox/mapbox-gl-js/blob/master/LICENSE.txt
+    gpl-compatible: true
+  js:
+    https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js: { type: external, minified: true }
+
+map-js:
+  js:
+    js/map.js:  {}
+  dependencies:
+   - core/jquery
+   - mapboxjs
+   - leafletjs
 
 
 
