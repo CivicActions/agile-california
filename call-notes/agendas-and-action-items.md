@@ -1,3 +1,21 @@
+#6/3 Action items
+- Report on determination wrt Sacramento requirement 
+- Coordinate demo 
+- Handoff of any of April's work 
+- Update from Jen and Heather's co-work 
+- Plan for Style Guide 
+- Jen's schedule next week
+
+#6/2 Action items
+- Do we have users confirmed for tomorrow demo? 
+- Have we been able to make contact with any case workers? 
+- Should Jen and Rob connect today around Map UI? Is this highest priority for Jen?
+- Questions re: account and login. Right now live site does not allow account creation. Should we all be using admin login?  
+- Chicken and egg question of mobile wireframes: Should Jen create new mobile wireframes that direct our theming of the set of functionality that we discussed yesterday, or should she sync with Heather (eg) and wireframe mobile views based on what's being themed?
+- Plan for Jen next week
+- Making sure that everything in google docs is in github (workflow should be that nothing really lives in google docs)
+- Should we rewrite Sprint 5 backlog as user stories? Is there a reason we didn’t do this yesterday?
+
 #6/1 Action items
 - Steve to confirm with Amy re: demo
 - Henry to confirm with Rani re: demo 
