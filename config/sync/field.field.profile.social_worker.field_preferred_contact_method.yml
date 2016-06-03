@@ -15,7 +15,9 @@ label: 'Preferred contact method'
 description: ''
 required: true
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: no-preference
 default_value_callback: ''
 settings: {  }
 field_type: list_string
