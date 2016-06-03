@@ -1,20 +1,20 @@
-uuid: ff71fd60-c1de-49ef-9e45-9075df0c0439
+uuid: 50f29ee0-a86d-447e-9210-7fa61726e547
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.profile.field_fostering_since
+    - field.storage.profile.field_since
     - profile.type.foster_parent
   module:
     - datetime
-id: profile.foster_parent.field_fostering_since
-field_name: field_fostering_since
+id: profile.foster_parent.field_since
+field_name: field_since
 entity_type: profile
 bundle: foster_parent
 label: 'When did you begin fostering?'
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

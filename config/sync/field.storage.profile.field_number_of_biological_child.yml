@@ -1,17 +1,17 @@
-uuid: 6f172ba9-bda1-49f3-9fac-0453c23dce25
+uuid: f17c959e-001e-4b83-a427-155ce9f8ea8e
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - profile
-id: profile.field_fostering_since
-field_name: field_fostering_since
+id: profile.field_number_of_biological_child
+field_name: field_number_of_biological_child
 entity_type: profile
-type: datetime
+type: integer
 settings:
-  datetime_type: date
-module: datetime
+  unsigned: false
+  size: normal
+module: core
 locked: false
 cardinality: 1
 translatable: true

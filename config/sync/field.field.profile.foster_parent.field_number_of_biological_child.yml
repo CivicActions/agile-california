@@ -1,0 +1,25 @@
+uuid: 2b7184f9-c85b-4fa4-bc80-e77b29dc13cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_number_of_biological_child
+    - profile.type.foster_parent
+id: profile.foster_parent.field_number_of_biological_child
+field_name: field_number_of_biological_child
+entity_type: profile
+bundle: foster_parent
+label: 'Number of biological children in household'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

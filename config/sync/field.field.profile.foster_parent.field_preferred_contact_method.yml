@@ -1,0 +1,23 @@
+uuid: 1a7ab744-76ac-4553-8f88-79daa877330b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_preferred_contact_method
+    - profile.type.foster_parent
+  module:
+    - options
+id: profile.foster_parent.field_preferred_contact_method
+field_name: field_preferred_contact_method
+entity_type: profile
+bundle: foster_parent
+label: 'Preferred contact method'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: no-preference
+default_value_callback: ''
+settings: {  }
+field_type: list_string

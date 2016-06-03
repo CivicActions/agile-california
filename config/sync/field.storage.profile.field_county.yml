@@ -1,0 +1,195 @@
+uuid: 5653eb92-9e77-4658-b8f4-2727c57dbc85
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_county
+field_name: field_county
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Alameda County'
+      label: 'Alameda County'
+    -
+      value: 'Alpine County'
+      label: 'Alpine County'
+    -
+      value: 'Amador County'
+      label: 'Amador County'
+    -
+      value: 'Butte County'
+      label: 'Butte County'
+    -
+      value: 'Calaveras County'
+      label: 'Calaveras County'
+    -
+      value: 'City and County of San Francisco'
+      label: 'City and County of San Francisco'
+    -
+      value: 'Colusa County'
+      label: 'Colusa County'
+    -
+      value: 'Contra Costa County'
+      label: 'Contra Costa County'
+    -
+      value: 'Del Norte County'
+      label: 'Del Norte County'
+    -
+      value: 'El Dorado County'
+      label: 'El Dorado County'
+    -
+      value: 'Fresno County'
+      label: 'Fresno County'
+    -
+      value: 'Glenn County'
+      label: 'Glenn County'
+    -
+      value: 'Humboldt County'
+      label: 'Humboldt County'
+    -
+      value: 'Imperial County'
+      label: 'Imperial County'
+    -
+      value: 'Inyo County'
+      label: 'Inyo County'
+    -
+      value: 'Kern County'
+      label: 'Kern County'
+    -
+      value: 'Kings County'
+      label: 'Kings County'
+    -
+      value: 'Lake County'
+      label: 'Lake County'
+    -
+      value: 'Lassen County'
+      label: 'Lassen County'
+    -
+      value: 'Los Angeles County'
+      label: 'Los Angeles County'
+    -
+      value: 'Madera County'
+      label: 'Madera County'
+    -
+      value: 'Marin County'
+      label: 'Marin County'
+    -
+      value: 'Mariposa County'
+      label: 'Mariposa County'
+    -
+      value: 'Mendocino County'
+      label: 'Mendocino County'
+    -
+      value: 'Merced County'
+      label: 'Merced County'
+    -
+      value: 'Modoc County'
+      label: 'Modoc County'
+    -
+      value: 'Mono County'
+      label: 'Mono County'
+    -
+      value: 'Monterey County'
+      label: 'Monterey County'
+    -
+      value: 'Napa County'
+      label: 'Napa County'
+    -
+      value: 'Nevada County'
+      label: 'Nevada County'
+    -
+      value: 'Orange County'
+      label: 'Orange County'
+    -
+      value: 'Placer County'
+      label: 'Placer County'
+    -
+      value: 'Plumas County'
+      label: 'Plumas County'
+    -
+      value: 'Riverside County'
+      label: 'Riverside County'
+    -
+      value: 'Sacramento County'
+      label: 'Sacramento County'
+    -
+      value: 'San Benito County'
+      label: 'San Benito County'
+    -
+      value: 'San Bernardino County'
+      label: 'San Bernardino County'
+    -
+      value: 'San Diego County'
+      label: 'San Diego County'
+    -
+      value: 'San Joaquin County'
+      label: 'San Joaquin County'
+    -
+      value: 'San Luis Obispo County'
+      label: 'San Luis Obispo County'
+    -
+      value: 'San Mateo County'
+      label: 'San Mateo County'
+    -
+      value: 'Santa Barbara County'
+      label: 'Santa Barbara County'
+    -
+      value: 'Santa Clara County'
+      label: 'Santa Clara County'
+    -
+      value: 'Santa Cruz County'
+      label: 'Santa Cruz County'
+    -
+      value: 'Shasta County'
+      label: 'Shasta County'
+    -
+      value: 'Sierra County'
+      label: 'Sierra County'
+    -
+      value: 'Siskiyou County'
+      label: 'Siskiyou County'
+    -
+      value: 'Solano County'
+      label: 'Solano County'
+    -
+      value: 'Sonoma County'
+      label: 'Sonoma County'
+    -
+      value: 'Stanislaus County'
+      label: 'Stanislaus County'
+    -
+      value: 'Sutter County'
+      label: 'Sutter County'
+    -
+      value: 'Tehama County'
+      label: 'Tehama County'
+    -
+      value: 'Trinity County'
+      label: 'Trinity County'
+    -
+      value: 'Tulare County'
+      label: 'Tulare County'
+    -
+      value: 'Tuolumne County'
+      label: 'Tuolumne County'
+    -
+      value: 'Ventura County'
+      label: 'Ventura County'
+    -
+      value: 'Yolo County'
+      label: 'Yolo County'
+    -
+      value: 'Yuba County'
+      label: 'Yuba County'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
