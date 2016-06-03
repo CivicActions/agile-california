@@ -6,6 +6,7 @@ dependencies:
     - chhc_message.message_entity_type.default
     - field.field.message_entity.default.field_comment
     - field.field.message_entity.default.field_message
+    - field.field.message_entity.default.field_urgent
   module:
     - comment
     - text
@@ -26,6 +27,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+  field_urgent:
+    weight: 13
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
   langcode:
     type: language_select
     weight: 10
