@@ -56,3 +56,70 @@ function chhc_message_theme_suggestions_message_entity(array $variables) {
   $suggestions[] = 'message_entity__' . $entity->id() . '__' . $sanitized_view_mode;
   return $suggestions;
 }
+
+/*
+ * Impliments hook_presave()
+ * 
+ * Flag a message as unread when saved for both Foster Parent and Case Worker.
+ */
+function chhc_message_message_entity_insert(Drupal\Core\Entity\EntityInterface $entity){
+  // Set message to unread for Foster Parents and Caseworkers
+  chhc_message_flag_new($entity);  
+  return;
+}
+
+/*
+ * Impliments hook_view();
+ * 
+ * Remove unread Flag for user when message entity is viewed.
+ */
+
+function chhc_message_message_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  $account = \Drupal::currentUser();
+  $flag_service = \Drupal::service('flag');
+  $flag = $flag_service->getFlagById('unread');
+  $flagging = $flag_service->getFlagging($flag, $entity, $account);
+  if($flagging){
+    $flag_service->unflag($flag, $entity, $account);
+  }
+  return;
+}
+
+/*
+ * Helper function to map foster parent and case worker and flag message as
+ * unread for both.
+ */
+function chhc_message_flag_new ($entity){
+  $flag_service = \Drupal::service('flag');
+  $flag = $flag_service->getFlagById('unread');
+  $author = $entity->user_id;
+  $author_id = $author->target_id;
+  $entity_type = 'child_entity';  
+  $child = \Drupal::entityQuery($entity_type, 'OR')
+    ->condition('status', 1)
+    ->condition('field_foster_parent', $author_id)
+    ->condition('field_case_worker', $author_id)
+  ;
+  $nids = $child->execute();
+  foreach($nids as $nid){
+    $child_entity = entity_load($entity_type, $nid, $reset = FALSE);
+    // Flag Message as unread for the Case Worker
+    $case_worker = user_load($child_entity->field_case_worker->target_id);
+    if(!$flag_service->getFlagging($flag, $entity, $foster_parent)){
+      $flag_service->flag($flag, $entity, $case_worker);
+      \Drupal::logger('chhc_message')->notice('Message flagged as unread for Case Worker'
+        . $child_entity->field_case_worker->target_id
+        . '.');
+    }
+    // Flag Message as unread for Foster Parent
+    $foster_parent = user_load($child_entity->field_foster_parent->target_id);
+    if(!$flag_service->getFlagging($flag, $entity, $foster_parent)){
+      $flag_service->flag($flag, $entity, $foster_parent);
+      \Drupal::logger('chhc_message')->notice('Message flagged as unread for Foster Parent '
+        . $child_entity->field_foster_parent->target_id
+        . '.');
+    }
+  }
+
+  return;
+}

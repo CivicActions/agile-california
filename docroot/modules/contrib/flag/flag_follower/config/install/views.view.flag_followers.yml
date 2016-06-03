@@ -1,21 +1,19 @@
-uuid: bf04ce5a-06d7-47af-8e9e-d866615cd883
+uuid: 9ded31f9-ccf9-47df-8c81-6f5b50c9f190
 langcode: en
 status: true
 dependencies:
-  config:
-    - system.menu.main
   module:
-    - chhc_inbox
-    - chhc_message
-    - comment
+    - flag
     - user
-id: chhc_inbox
-label: Inbox
+_core:
+  default_config_hash: 5MBTq40KbLscG2VHKBCXaxuJhBqbTTxyF3BjoK9bxDw
+id: flag_followers
+label: 'Flag Followers'
 module: views
 description: ''
 tag: ''
-base_table: message_entity
-base_field: id
+base_table: users_field_data
+base_field: uid
 core: 8.x
 display:
   default:
@@ -27,9 +25,9 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'access user profiles'
       cache:
-        type: none
+        type: tag
         options: {  }
       query:
         type: views_query
@@ -50,7 +48,7 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 10
           offset: 0
@@ -65,13 +63,16 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: ‹‹
-            next: ››
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          quantity: 9
       style:
         type: table
         options:
           grouping: {  }
-          row_class: '{{ message_status_views_field }}-message'
+          row_class: ''
           default_row_class: true
           override: true
           sticky: false
@@ -79,25 +80,17 @@ display:
           summary: ''
           description: ''
           columns:
-            last_comment_timestamp: last_comment_timestamp
-            subject: subject
-            message_status_views_field: message_status_views_field
+            name: name
+            link_flag: link_flag
           info:
-            last_comment_timestamp:
-              sortable: false
+            name:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            subject:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            message_status_views_field:
+            link_flag:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -109,110 +102,42 @@ display:
       row:
         type: fields
       fields:
-        last_comment_timestamp:
-          id: last_comment_timestamp
-          table: comment_entity_statistics
-          field: last_comment_timestamp
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          entity_type: user
+          entity_field: name
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
           exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          date_format: short
-          custom_date_format: ''
-          timezone: ''
-          plugin_id: comment_last_timestamp
-        subject:
-          id: subject
-          table: message_entity
-          field: subject
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
+          type: user_name
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -223,17 +148,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: message_entity
-          entity_field: subject
-          plugin_id: field
-        message_status_views_field:
-          id: message_status_views_field
-          table: views
-          field: message_status_views_field
-          relationship: none
+        link_flag:
+          id: link_flag
+          table: flagging
+          field: link_flag
+          relationship: flag_relationship
           group_type: group
           admin_label: ''
-          label: 'Message status views field'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -266,35 +188,59 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
-          plugin_id: message_status_views_field
-      filters: {  }
-      sorts:
-        last_comment_timestamp:
-          id: last_comment_timestamp
-          table: comment_entity_statistics
-          field: last_comment_timestamp
+          hide_alter_empty: true
+          entity_type: flagging
+          plugin_id: flag_link
+      filters:
+        status:
+          value: true
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+      sorts: {  }
+      title: Followers
+      header: {  }
+      footer: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          plugin_id: date
-      title: Inbox
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
+          empty: true
+          tokenize: false
+          content:
+            value: 'You are not following any users. :-('
+            format: basic_html
+          plugin_id: text
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: users_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Flags
+          required: true
+          flag: following
+          user_scope: current
+          entity_type: user
+          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -312,16 +258,21 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: inbox
+      path: flag-followers/users
       menu:
-        type: normal
-        title: Inbox
+        type: 'default tab'
+        title: Following
         description: ''
         expanded: false
         parent: ''
         weight: 0
         context: '0'
         menu_name: main
+      tab_options:
+        type: normal
+        title: Followers
+        description: ''
+        weight: 0
     cache_metadata:
       max-age: 0
       contexts:

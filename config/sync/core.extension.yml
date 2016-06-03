@@ -4,6 +4,7 @@ module:
   block_content: 0
   breakpoint: 0
   chhc_child: 0
+  chhc_inbox: 0
   chhc_message: 0
   chhs_map: 0
   ckeditor: 0
@@ -14,6 +15,7 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -21,6 +23,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flag: 0
   help: 0
   history: 0
   image: 0

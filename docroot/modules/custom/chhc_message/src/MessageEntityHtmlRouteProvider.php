@@ -109,7 +109,7 @@ class MessageEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
    *   The generated route, if available.
    */
   protected function getAddPageRoute(EntityTypeInterface $entity_type) {
-    $route = new Route("/admin/structure/{$entity_type->id()}/add");
+    $route = new Route("/{$entity_type->id()}/add");
     $route
       ->setDefaults([
         '_controller' => 'Drupal\chhc_message\Controller\MessageEntityAddController::add',
