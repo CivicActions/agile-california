@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains chhc_inbox.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function chhc_inbox_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the chhc_inbox module.
+    case 'help.page.chhc_inbox':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
