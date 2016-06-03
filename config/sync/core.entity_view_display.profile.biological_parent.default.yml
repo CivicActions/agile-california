@@ -1,0 +1,173 @@
+uuid: 6c297d6e-5fa8-455e-8d29-d807731db997
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.biological_parent.field_about_me
+    - field.field.profile.biological_parent.field_best_times
+    - field.field.profile.biological_parent.field_county
+    - field.field.profile.biological_parent.field_first_name
+    - field.field.profile.biological_parent.field_last_name
+    - field.field.profile.biological_parent.field_phone
+    - field.field.profile.biological_parent.field_picture
+    - field.field.profile.biological_parent.field_preferred_contact_method
+    - field.field.profile.biological_parent.field_zip
+    - image.style.thumbnail
+    - profile.type.biological_parent
+  module:
+    - field_group
+    - image
+    - options
+third_party_settings:
+  field_group:
+    group_basic:
+      children:
+        - group_name
+        - field_county
+      parent_name: group_row1
+      weight: 1
+      label: Basic
+      format_type: html_element
+      format_settings:
+        label: Basic
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-10 profile--basic'
+    group_contact:
+      children:
+        - field_phone
+        - field_preferred_contact_method
+        - field_best_times
+      parent_name: ''
+      weight: 2
+      label: Contact
+      format_type: html_element
+      format_settings:
+        label: Contact
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: profile--contact
+    group_name:
+      children:
+        - field_first_name
+        - field_last_name
+      parent_name: group_basic
+      weight: 1
+      label: Name
+      format_type: html_element
+      format_settings:
+        label: Name
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: profile--name
+    group_picture:
+      children:
+        - field_picture
+      parent_name: group_row1
+      weight: 0
+      label: Picture
+      format_type: html_element
+      format_settings:
+        label: Picture
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-2 profile--picture'
+    group_row1:
+      children:
+        - group_picture
+        - group_basic
+      parent_name: ''
+      weight: 0
+      label: Row1
+      format_type: html_element
+      format_settings:
+        label: Row1
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: row
+id: profile.biological_parent.default
+targetEntityType: profile
+bundle: biological_parent
+mode: default
+content:
+  field_about_me:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_best_times:
+    weight: 7
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_county:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_first_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_last_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_phone:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_picture:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+    type: image
+  field_preferred_contact_method:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden:
+  field_zip: true

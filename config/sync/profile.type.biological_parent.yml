@@ -1,0 +1,16 @@
+uuid: b64a06a0-c079-4f0f-a39a-d3436129a78e
+langcode: en
+status: true
+dependencies: {  }
+id: biological_parent
+label: 'Biological parent profile'
+registration: false
+multiple: false
+roles:
+  biological_parent: biological_parent
+  authenticated: '0'
+  foster_parent: '0'
+  case_worker: '0'
+  case_manager: '0'
+  administrator: '0'
+weight: 0

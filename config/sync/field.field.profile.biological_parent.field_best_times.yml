@@ -1,0 +1,19 @@
+uuid: 826b80d9-6984-44e7-9eaf-6d80549b3b30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_best_times
+    - profile.type.biological_parent
+id: profile.biological_parent.field_best_times
+field_name: field_best_times
+entity_type: profile
+bundle: biological_parent
+label: 'Best time to reach me'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

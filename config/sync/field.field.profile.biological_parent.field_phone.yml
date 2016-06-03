@@ -1,0 +1,19 @@
+uuid: 6db33845-6cb0-4133-bb43-4ea9b89fb02f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_phone
+    - profile.type.biological_parent
+id: profile.biological_parent.field_phone
+field_name: field_phone
+entity_type: profile
+bundle: biological_parent
+label: 'Phone number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

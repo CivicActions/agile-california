@@ -1,0 +1,21 @@
+uuid: 19a03f5e-b58b-4a9a-b69a-76dc75c0b436
+langcode: en
+status: true
+dependencies: {  }
+id: biological_parent
+label: 'Biological Parent'
+weight: -8
+is_admin: null
+permissions:
+  - 'view published child entities'
+  - 'add message entities'
+  - 'view published message entities'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'access comments'
+  - 'use text format basic_html'
+  - 'access content'
+  - 'add own biological_parent profile'
+  - 'edit own biological_parent profile'
+  - 'view own biological_parent profile'
+  - 'view any social_worker profile'

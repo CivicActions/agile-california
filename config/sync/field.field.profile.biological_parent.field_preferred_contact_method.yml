@@ -1,0 +1,23 @@
+uuid: 6d5cadd5-f0e3-4b42-953a-6c3194ea4901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_preferred_contact_method
+    - profile.type.biological_parent
+  module:
+    - options
+id: profile.biological_parent.field_preferred_contact_method
+field_name: field_preferred_contact_method
+entity_type: profile
+bundle: biological_parent
+label: 'Preferred contact method'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: no-preference
+default_value_callback: ''
+settings: {  }
+field_type: list_string

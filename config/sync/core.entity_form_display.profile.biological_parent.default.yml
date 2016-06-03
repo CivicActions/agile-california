@@ -1,0 +1,131 @@
+uuid: 0bb13629-d3b2-40ac-85f5-1ebe5b90784d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.biological_parent.field_about_me
+    - field.field.profile.biological_parent.field_best_times
+    - field.field.profile.biological_parent.field_county
+    - field.field.profile.biological_parent.field_first_name
+    - field.field.profile.biological_parent.field_last_name
+    - field.field.profile.biological_parent.field_phone
+    - field.field.profile.biological_parent.field_picture
+    - field.field.profile.biological_parent.field_preferred_contact_method
+    - field.field.profile.biological_parent.field_zip
+    - image.style.thumbnail
+    - profile.type.biological_parent
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_profile:
+      children:
+        - group_basic
+        - group_contact
+      parent_name: ''
+      weight: 7
+      label: Profile
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_basic:
+      children:
+        - field_first_name
+        - field_last_name
+        - field_picture
+        - field_county
+        - field_zip
+        - field_about_me
+      parent_name: group_profile
+      weight: 9
+      label: 'Basic information'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_contact:
+      children:
+        - field_phone
+        - field_preferred_contact_method
+        - field_best_times
+      parent_name: group_profile
+      weight: 10
+      label: 'Contact information'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: profile.biological_parent.default
+targetEntityType: profile
+bundle: biological_parent
+mode: default
+content:
+  field_about_me:
+    type: string_textarea
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_best_times:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: 'e.g. Early afternoon'
+    third_party_settings: {  }
+    type: string_textfield
+  field_county:
+    type: options_select
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_picture:
+    type: image_image
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_preferred_contact_method:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  field_zip:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden: {  }

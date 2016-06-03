@@ -1,0 +1,14 @@
+uuid: fbd81547-0dc9-4f92-ab8b-813366c4a1d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.biological_parent
+  module:
+    - user
+id: user_remove_role_action.biological_parent
+label: 'Remove the Biological Parent role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: biological_parent

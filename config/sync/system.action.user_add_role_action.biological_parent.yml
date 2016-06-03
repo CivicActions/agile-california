@@ -1,0 +1,14 @@
+uuid: c2bf2df8-56b4-421d-917b-a39a765567c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.biological_parent
+  module:
+    - user
+id: user_add_role_action.biological_parent
+label: 'Add the Biological Parent role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: biological_parent

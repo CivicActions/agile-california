@@ -1,0 +1,21 @@
+uuid: d572f73e-32c4-4c8e-b886-8dbcf94462ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_county
+    - profile.type.biological_parent
+  module:
+    - options
+id: profile.biological_parent.field_county
+field_name: field_county
+entity_type: profile
+bundle: biological_parent
+label: County
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: case_manager
 label: 'Case Manager'
-weight: 5
+weight: -5
 is_admin: null
 permissions:
   - 'view any foster_parent profile'
@@ -26,3 +26,4 @@ permissions:
   - 'access comments'
   - 'use text format basic_html'
   - 'access content'
+  - 'view any biological_parent profile'

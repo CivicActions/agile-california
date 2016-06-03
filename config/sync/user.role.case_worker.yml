@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: case_worker
 label: 'Case Worker'
-weight: 3
+weight: -6
 is_admin: null
 permissions:
   - 'view any foster_parent profile'
@@ -24,3 +24,4 @@ permissions:
   - 'access comments'
   - 'use text format basic_html'
   - 'access content'
+  - 'view any biological_parent profile'
