@@ -109,7 +109,7 @@ class MessageEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
    *   The generated route, if available.
    */
   protected function getAddPageRoute(EntityTypeInterface $entity_type) {
-    $route = new Route("/admin/structure/{$entity_type->id()}/add");
+    $route = new Route("/inbox/{$entity_type->id()}/add");
     $route
       ->setDefaults([
         '_controller' => 'Drupal\chhc_message\Controller\MessageEntityAddController::add',
@@ -132,7 +132,7 @@ class MessageEntityHtmlRouteProvider extends AdminHtmlRouteProvider {
    */
   protected function getSettingsFormRoute(EntityTypeInterface $entity_type) {
     if (!$entity_type->getBundleEntityType()) {
-      $route = new Route("/admin/structure/{$entity_type->id()}/settings");
+      $route = new Route("/inbox/{$entity_type->id()}/settings");
       $route
         ->setDefaults([
           '_form' => 'Drupal\chhc_message\Form\MessageEntitySettingsForm',

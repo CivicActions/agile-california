@@ -47,11 +47,11 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/chhc/chhc-message/message_entity/{message_entity}",
- *     "add-form" = "/admin/structure/chhc/chhc-message/message_entity/add/{message_entity_type}",
- *     "edit-form" = "/admin/structure/chhc/chhc-message/message_entity/{message_entity}/edit",
- *     "delete-form" = "/admin/structure/chhc/chhc-message/message_entity/{message_entity}/delete",
- *     "collection" = "/admin/structure/chhc/chhc-message/message_entity",
+ *     "canonical" = "/inbox/{message_entity}",
+ *     "add-form" = "/inbox/add/{message_entity_type}",
+ *     "edit-form" = "/inbox/{message_entity}/edit",
+ *     "delete-form" = "/inbox/{message_entity}/delete",
+ *     "collection" = "/inbox",
  *   },
  *   bundle_entity_type = "message_entity_type",
  *   field_ui_base_route = "entity.message_entity_type.edit_form"
