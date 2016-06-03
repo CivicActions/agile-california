@@ -1,0 +1,19 @@
+uuid: 169772e0-17ad-447d-bb50-5a6d5b2f4ead
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_phone
+    - profile.type.foster_parent
+id: profile.foster_parent.field_phone
+field_name: field_phone
+entity_type: profile
+bundle: foster_parent
+label: 'Phone number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

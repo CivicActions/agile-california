@@ -1,0 +1,19 @@
+uuid: eeae2ce0-8b96-45f0-abce-49d66f4858ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_zip
+    - profile.type.foster_parent
+id: profile.foster_parent.field_zip
+field_name: field_zip
+entity_type: profile
+bundle: foster_parent
+label: 'Zip code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

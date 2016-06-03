@@ -1,0 +1,19 @@
+uuid: bbf3faed-85de-4a72-8f82-72ede3a4e9cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_about_me
+    - profile.type.social_worker
+id: profile.social_worker.field_about_me
+field_name: field_about_me
+entity_type: profile
+bundle: social_worker
+label: 'About me'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

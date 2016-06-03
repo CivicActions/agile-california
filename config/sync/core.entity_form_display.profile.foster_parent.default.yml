@@ -3,39 +3,184 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.profile.foster_parent.field_about_me
+    - field.field.profile.foster_parent.field_best_times
+    - field.field.profile.foster_parent.field_county
+    - field.field.profile.foster_parent.field_first_name
     - field.field.profile.foster_parent.field_foster_agencies
     - field.field.profile.foster_parent.field_foster_agency
-    - field.field.profile.foster_parent.field_fostering_since
+    - field.field.profile.foster_parent.field_last_name
+    - field.field.profile.foster_parent.field_number_of_biological_child
+    - field.field.profile.foster_parent.field_phone
+    - field.field.profile.foster_parent.field_picture
     - field.field.profile.foster_parent.field_preferred_ages
+    - field.field.profile.foster_parent.field_preferred_contact_method
+    - field.field.profile.foster_parent.field_since
+    - field.field.profile.foster_parent.field_zip
+    - image.style.thumbnail
     - profile.type.foster_parent
   module:
     - datetime
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_profile:
+      children:
+        - group_basic
+        - group_fostering
+        - group_contact
+      parent_name: ''
+      weight: 12
+      label: Profile
+      format_type: tabs
+      format_settings:
+        effect: none
+        classes: ''
+        id: ''
+        direction: vertical
+    group_fostering:
+      children:
+        - field_since
+        - field_foster_agency
+        - field_foster_agencies
+        - field_preferred_ages
+        - field_number_of_biological_child
+      parent_name: group_profile
+      weight: 17
+      label: Fostering
+      format_type: tab
+      format_settings:
+        effect: none
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_contact:
+      children:
+        - field_phone
+        - field_preferred_contact_method
+        - field_best_times
+      parent_name: group_profile
+      weight: 18
+      label: 'Contact information'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_basic:
+      children:
+        - field_first_name
+        - field_last_name
+        - field_picture
+        - field_county
+        - field_zip
+        - field_about_me
+      parent_name: group_profile
+      weight: 16
+      label: 'Basic information'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
 id: profile.foster_parent.default
 targetEntityType: profile
 bundle: foster_parent
 mode: default
 content:
-  field_foster_agencies:
+  field_about_me:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_best_times:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: 'e.g. Early afternoon'
+    third_party_settings: {  }
+    type: string_textfield
+  field_county:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_first_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_foster_agencies:
+    weight: 21
     settings:
       rows: 3
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
   field_foster_agency:
-    weight: 2
+    weight: 20
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
-  field_fostering_since:
-    weight: 0
-    settings: {  }
+  field_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: datetime_default
-  field_preferred_ages:
+    type: string_textfield
+  field_number_of_biological_child:
+    weight: 23
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_phone:
     weight: 4
+    settings:
+      size: 60
+      placeholder: 'e.g. 805-123-1234 ext 567'
+    third_party_settings: {  }
+    type: string_textfield
+  field_picture:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_preferred_ages:
+    weight: 22
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+  field_preferred_contact_method:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_since:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_zip:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
 hidden: {  }

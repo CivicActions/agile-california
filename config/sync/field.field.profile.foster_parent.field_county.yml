@@ -1,0 +1,21 @@
+uuid: a740b874-1b5b-41f5-9f28-8ca359a75fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_county
+    - profile.type.foster_parent
+  module:
+    - options
+id: profile.foster_parent.field_county
+field_name: field_county
+entity_type: profile
+bundle: foster_parent
+label: County
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

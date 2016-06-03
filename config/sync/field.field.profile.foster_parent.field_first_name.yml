@@ -1,0 +1,19 @@
+uuid: 7110d267-1cc8-4f28-8b9b-257fffde2134
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_first_name
+    - profile.type.foster_parent
+id: profile.foster_parent.field_first_name
+field_name: field_first_name
+entity_type: profile
+bundle: foster_parent
+label: 'First name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: f17c959e-001e-4b83-a427-155ce9f8ea8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_number_of_biological_child
+field_name: field_number_of_biological_child
+entity_type: profile
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

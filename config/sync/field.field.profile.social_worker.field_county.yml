@@ -1,0 +1,21 @@
+uuid: 71e28fb7-a124-404d-bef3-251cab5515ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_county
+    - profile.type.social_worker
+  module:
+    - options
+id: profile.social_worker.field_county
+field_name: field_county
+entity_type: profile
+bundle: social_worker
+label: County
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

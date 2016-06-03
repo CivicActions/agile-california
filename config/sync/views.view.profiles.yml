@@ -50,23 +50,18 @@ display:
         options:
           offset: 0
       style:
-        type: grid
+        type: default
         options:
           grouping: {  }
-          columns: 4
-          automatic_width: true
-          alignment: horizontal
-          col_class_default: true
-          col_class_custom: ''
-          row_class_default: true
-          row_class_custom: ''
+          row_class: ''
+          default_row_class: false
       row:
         type: fields
         options:
+          default_field_elements: false
           inline: {  }
           separator: ''
           hide_empty: false
-          default_field_elements: true
       fields:
         rendered_entity:
           id: rendered_entity
@@ -299,7 +294,10 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.profile.main.default'
+        - 'config:core.entity_view_display.profile.social_worker.default'
+        - 'config:core.entity_view_display.profile.foster_parent.default'
   profile_type_listing:
     display_plugin: embed
     id: profile_type_listing
@@ -313,7 +311,10 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.profile.foster_parent.default'
+        - 'config:core.entity_view_display.profile.main.default'
+        - 'config:core.entity_view_display.profile.social_worker.default'
   user_view:
     display_plugin: embed
     id: user_view
@@ -381,4 +382,7 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.profile.foster_parent.default'
+        - 'config:core.entity_view_display.profile.main.default'
+        - 'config:core.entity_view_display.profile.social_worker.default'

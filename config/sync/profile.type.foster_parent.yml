@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 id: foster_parent
-label: 'Foster parent'
-registration: true
+label: 'Foster parent profile'
+registration: false
 multiple: false
 roles:
   foster_parent: foster_parent

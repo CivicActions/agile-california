@@ -45,6 +45,10 @@ function bootstrap_element_info_alter(&$data, &$context1 = NULL, &$context2 = NU
  */
 function bootstrap_form_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
   Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
+  // Hide "Save and make default" button.
+  if (in_array($context2, array('profile_foster_parent_edit_form', 'profile_social_worker_edit_form', 'profile_biological_parent_edit_form'))) {
+    $data['actions']['set_default']['#access'] = FALSE;
+  }
 }
 
 /**

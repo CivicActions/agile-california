@@ -1,0 +1,19 @@
+uuid: 911df2b8-59c7-42e5-8f37-36759690c968
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_last_name
+    - profile.type.biological_parent
+id: profile.biological_parent.field_last_name
+field_name: field_last_name
+entity_type: profile
+bundle: biological_parent
+label: 'Last name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

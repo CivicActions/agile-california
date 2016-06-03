@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: social_worker
-label: 'Social worker'
+label: 'Social worker profile'
 registration: false
 multiple: false
 roles:
