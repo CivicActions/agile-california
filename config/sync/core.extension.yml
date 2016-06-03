@@ -5,6 +5,7 @@ module:
   breakpoint: 0
   chhc_child: 0
   chhc_message: 0
+  chhs_map: 0
   ckeditor: 0
   color: 0
   comment: 0
