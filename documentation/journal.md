@@ -107,9 +107,19 @@ Sprint 5
 
 **Day  12: June 3, 2016**
 - Daily Stand up
-- Sprint 5 demo
-- Sprint 6 planning
-	- Goals for this sprint: 
+- [Sprint 5 demo](https://github.com/CivicActions/agile-california/blob/master/call-notes/sprint-5-demo.md) **(Attachment B 2.c, USDS Play #1)**
+ - Messaging
+ - Site theme
+ - User Profile 
+ 
+- Demo to foster mom Amy and got feedback
+- Demo to Case Worker. We learned yesterday that "parents" in the RFI was referring to bio parents and we had been thinking of foster parents. Today we are changing our plan in this demo to ask the Case Worker about what the bio parents would want in this application.
+
+- [Sprint 6 planning](https://github.com/CivicActions/agile-california/blob/master/call-notes/sprint-6-planning.md)
+	- Goals:
+		- complete the application for submission
+		- prioritize better user experience
+
 
 Sprint 6
 --------
