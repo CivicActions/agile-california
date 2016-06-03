@@ -1,6 +1,0 @@
-rules.condition.context_values.rules_entity_is_new:
-  type: mapping
-  label: Entity is new context values
-  mapping:
-    entity:
-      type: string
