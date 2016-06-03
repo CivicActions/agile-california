@@ -1,6 +1,0 @@
-rules.action.context_values.rules_test_log:
-  type: mapping
-  label: Test log context values
-  mapping:
-    message:
-      type: text
