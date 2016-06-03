@@ -1,0 +1,22 @@
+uuid: b14d0115-7270-4b67-95fa-b138c7b35699
+langcode: en
+status: true
+dependencies: {  }
+id: flag_unread
+label: 'Flag Unread'
+description: ''
+tags:
+  - ''
+config_version: '3'
+component:
+  expression:
+    id: rules_rule
+    uuid: c28b54f0-4eb7-4f2a-9880-fb309cb57d9b
+    conditions:
+      id: rules_and
+      uuid: a40c4824-2d7d-41f5-b79c-4c60d883f015
+      conditions: {  }
+    actions:
+      id: rules_action_set
+      uuid: 8582c6a9-235d-4dd2-9247-eebbf0de71f1
+      actions: {  }

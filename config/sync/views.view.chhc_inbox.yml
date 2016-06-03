@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - chhc_inbox
     - chhc_message
     - comment
     - user
@@ -70,7 +71,7 @@ display:
         type: table
         options:
           grouping: {  }
-          row_class: ''
+          row_class: '{{ message_status_views_field }}-message'
           default_row_class: true
           override: true
           sticky: false
@@ -78,9 +79,25 @@ display:
           summary: ''
           description: ''
           columns:
+            last_comment_timestamp: last_comment_timestamp
             subject: subject
+            message_status_views_field: message_status_views_field
           info:
+            last_comment_timestamp:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             subject:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            message_status_views_field:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -209,6 +226,55 @@ display:
           entity_type: message_entity
           entity_field: subject
           plugin_id: field
+        message_status_views_field:
+          id: message_status_views_field
+          table: views
+          field: message_status_views_field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Message status views field'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: message_status_views_field
       filters: {  }
       sorts:
         last_comment_timestamp:
