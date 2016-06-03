@@ -1,0 +1,38 @@
+uuid: a085b129-889c-4860-8fa6-8ba0cbf0a80c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_picture
+    - profile.type.social_worker
+  module:
+    - image
+id: profile.social_worker.field_picture
+field_name: field_picture
+entity_type: profile
+bundle: social_worker
+label: Picture
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '60 KB'
+  max_resolution: ''
+  min_resolution: 85x85
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

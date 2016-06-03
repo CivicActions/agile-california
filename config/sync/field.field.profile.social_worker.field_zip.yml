@@ -1,0 +1,19 @@
+uuid: 3413b35c-8df8-4564-a387-d3d45ec1c919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_zip
+    - profile.type.social_worker
+id: profile.social_worker.field_zip
+field_name: field_zip
+entity_type: profile
+bundle: social_worker
+label: 'Zip code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
