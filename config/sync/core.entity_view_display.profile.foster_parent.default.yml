@@ -44,40 +44,26 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: col-md-10
+        classes: 'col-md-10 profile--basic'
     group_fostering:
       children:
         - field_preferred_ages
         - field_foster_agencies
+        - field_number_of_biological_child
       parent_name: ''
       weight: 2
       label: Fostering
       format_type: html_element
       format_settings:
+        label: Fostering
         element: div
         show_label: false
         label_element: h3
+        attributes: ''
         effect: none
         speed: fast
-        attributes: ''
-        classes: ''
         id: ''
-    group_household:
-      children:
-        - field_number_of_biological_child
-      parent_name: ''
-      weight: 3
-      label: 'Household status'
-      format_type: html_element
-      format_settings:
-        element: div
-        show_label: false
-        label_element: h3
-        effect: none
-        speed: fast
-        attributes: ''
-        classes: ''
-        id: ''
+        classes: profile--fostering
     group_since:
       children:
         - field_since
@@ -105,14 +91,15 @@ third_party_settings:
       label: Contact
       format_type: html_element
       format_settings:
+        label: Contact
         element: div
-        show_label: false
-        label_element: h3
+        show_label: true
+        label_element: h4
+        attributes: ''
         effect: none
         speed: fast
-        attributes: ''
-        classes: ''
         id: ''
+        classes: profile--contact
     group_name:
       children:
         - field_first_name
@@ -122,14 +109,15 @@ third_party_settings:
       label: Name
       format_type: html_element
       format_settings:
+        label: Name
         element: div
         show_label: false
         label_element: h3
+        attributes: ''
         effect: none
         speed: fast
-        attributes: ''
-        classes: ''
         id: ''
+        classes: profile--name
     group_picture:
       children:
         - field_picture
@@ -146,7 +134,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: col-md-2
+        classes: 'col-md-2 profile--picture'
     group_row1:
       children:
         - group_picture
@@ -210,7 +198,7 @@ content:
     third_party_settings: {  }
     type: string
   field_number_of_biological_child:
-    weight: 8
+    weight: 4
     label: inline
     settings:
       thousand_separator: ''

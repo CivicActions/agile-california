@@ -57,7 +57,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: col-md-2
+        classes: 'col-md-2 profile--picture'
     group_basic:
       children:
         - group_name
@@ -76,7 +76,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: col-md-10
+        classes: 'col-md-10 profile--basic'
     group_name:
       children:
         - field_first_name
@@ -86,14 +86,15 @@ third_party_settings:
       label: Name
       format_type: html_element
       format_settings:
+        label: Name
         element: div
         show_label: false
         label_element: h3
+        attributes: ''
         effect: none
         speed: fast
-        attributes: ''
-        classes: ''
         id: ''
+        classes: profile--name
     group_since:
       children:
         - field_since
@@ -122,14 +123,15 @@ third_party_settings:
       label: Contact
       format_type: html_element
       format_settings:
+        label: Contact
         element: div
-        show_label: false
-        label_element: h3
+        show_label: true
+        label_element: h4
+        attributes: ''
         effect: none
         speed: fast
-        attributes: ''
-        classes: ''
         id: ''
+        classes: profile--contact
 id: profile.social_worker.default
 targetEntityType: profile
 bundle: social_worker
