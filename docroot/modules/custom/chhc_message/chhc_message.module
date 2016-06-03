@@ -62,7 +62,7 @@ function chhc_message_theme_suggestions_message_entity(array $variables) {
  * 
  * Flag a message as unread when saved for both Foster Parent and Case Worker.
  */
-function chhc_message_message_entity_presave(Drupal\Core\Entity\EntityInterface $entity){
+function chhc_message_message_entity_insert(Drupal\Core\Entity\EntityInterface $entity){
   // Set message to unread for Foster Parents and Caseworkers
   chhc_message_flag_new($entity);  
   return;
