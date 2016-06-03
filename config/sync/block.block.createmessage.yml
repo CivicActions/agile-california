@@ -1,0 +1,31 @@
+uuid: 5f0c0cf4-4d79-4aa1-8c7c-d231d4f9fca6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4da1bf6e-3556-4da9-b428-7dd5dba6423a'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap
+id: createmessage
+theme: bootstrap
+region: content
+weight: null
+provider: null
+plugin: 'block_content:4da1bf6e-3556-4da9-b428-7dd5dba6423a'
+settings:
+  id: 'block_content:4da1bf6e-3556-4da9-b428-7dd5dba6423a'
+  label: 'Create Message'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /inbox
+    negate: false
+    context_mapping: {  }
