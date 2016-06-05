@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - chhc_message
+    - chhs_message
 id: message_entity.field_urgent
 field_name: field_urgent
 entity_type: message_entity

@@ -1,0 +1,12 @@
+chhs_child.child_entity_type.*:
+  type: config_entity
+  label: 'Child type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - chhc_child.child_entity_type.profile
+    - chhs_child.child_entity_type.profile
     - field.field.child_entity.profile.field_case_worker
     - field.field.child_entity.profile.field_foster_parent
   module:

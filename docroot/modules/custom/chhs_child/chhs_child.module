@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains chhs_child.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function chhs_child_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the chhs_child module.
+    case 'help.page.chhs_child':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function chhs_child_theme() {
+  $theme = [];
+  $theme['child_entity'] = [
+    'render element' => 'elements',
+    'file' => 'child_entity.page.inc',
+    'template' => 'child_entity',
+  ];
+  $theme['child_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'child_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function chhs_child_theme_suggestions_child_entity(array $variables) {
+  $suggestions = array();
+  $entity = $variables['elements']['#child_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'child_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'child_entity__' . $entity->bundle();
+  $suggestions[] = 'child_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'child_entity__' . $entity->id();
+  $suggestions[] = 'child_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

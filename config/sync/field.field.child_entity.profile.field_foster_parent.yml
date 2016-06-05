@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - chhc_child.child_entity_type.profile
+    - chhs_child.child_entity_type.profile
     - field.storage.child_entity.field_foster_parent
 id: child_entity.profile.field_foster_parent
 field_name: field_foster_parent
