@@ -7,6 +7,7 @@
 
 namespace Drupal\flag;
 
+use Drupal\flag\Entity\Flag;
 use Drupal\views\EntityViewsData;
 
 /**
@@ -52,6 +53,29 @@ class FlaggingViewsData extends EntityViewsData {
         'help' => t('Sort by whether entities have or have not been flagged.'),
       ],
     ];
+
+    /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager */
+    $entity_type_manager = \Drupal::entityTypeManager();
+    foreach (Flag::loadMultiple(NULL) as $flag_id => $flag) {
+      /** @var \Drupal\flag\Entity\Flag $flag */
+      $entity_type = $entity_type_manager->getDefinition($flag->getFlaggableEntityTypeId());
+      if ($base = $entity_type->getDataTable() ?: $entity_type->getBaseTable()) {
+        $data['flagging']['flag_' . $flag_id]['relationship'] = [
+          'title' => $entity_type->getLabel(),
+          'help' => $this->t('The @entity_type this flagging belongs to.', ['@entity_type' => $entity_type->getLabel()]),
+          'base' => $base,
+          'base field' => $entity_type->getKey('id'),
+          'relationship field' => 'entity_id',
+          'id' => 'standard',
+          'label' => $entity_type->getLabel(),
+          'extra' => [[
+            'field' => 'flag_id',
+            'value' => $flag_id,
+            'table' => 'flagging'
+          ]],
+        ];
+      }
+    }
 
     return $data;
   }
