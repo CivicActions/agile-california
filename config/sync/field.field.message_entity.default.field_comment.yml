@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - chhc_message.message_entity_type.default
+    - chhs_message.message_entity_type.default
     - field.storage.message_entity.field_comment
   module:
     - comment

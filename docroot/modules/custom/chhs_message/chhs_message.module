@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Contains chhs_message.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function chhs_message_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the chhs_message module.
+    case 'help.page.chhs_message':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Messaging for CHHC Foster Hub') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function chhs_message_theme() {
+  $theme = [];
+  $theme['message_entity'] = [
+    'render element' => 'elements',
+    'file' => 'message_entity.page.inc',
+    'template' => 'message_entity',
+  ];
+  $theme['message_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'message_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function chhs_message_theme_suggestions_message_entity(array $variables) {
+  $suggestions = array();
+  $entity = $variables['elements']['#message_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'message_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'message_entity__' . $entity->bundle();
+  $suggestions[] = 'message_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'message_entity__' . $entity->id();
+  $suggestions[] = 'message_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_message_entity_view();
+ * 
+ * Add read Flag for user when message entity is viewed.
+ */
+function chhs_message_message_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  $account = \Drupal::currentUser();
+  $flag_service = \Drupal::service('flag');
+  $flag = $flag_service->getFlagById('read');
+  $flagging = $flag_service->getFlagging($flag, $entity, $account);
+  if(!$flagging){
+    $flag_service->flag($flag, $entity, $account);
+  }
+}
+
+/**
+ * Implements hook_comment_insert();
+ * 
+ * Remove read Flag for all other users when new comment/reply is added to a
+ * message entity.
+ */
+function chhs_message_comment_insert($comment) {
+  $account = \Drupal::currentUser();
+  $entity = $comment->entity_id->entity;
+  if ($entity->getEntityTypeId() != 'message_entity') {
+    return;
+  }
+  $flag_service = \Drupal::service('flag');
+  $flag = $flag_service->getFlagById('read');
+  $flagging_users = $flag_service->getFlaggingUsers($entity, $flag);
+  foreach ($flagging_users as $flagging_user) {
+    if ($flagging_user->id() != $account->id()) {
+      $flag_service->unflag($flag, $entity, $flagging_user);
+    }
+  }
+}

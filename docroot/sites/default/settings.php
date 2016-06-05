@@ -725,4 +725,4 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
 if (file_exists('/var/www/.docker/etc/settings.docker.php')) {
   require '/var/www/.docker/etc/settings.docker.php';
 }
-$settings['install_profile'] = 'standard';
+$settings['install_profile'] = 'config_installer';

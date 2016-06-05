@@ -1,0 +1,14 @@
+{
+  "name": "drupal/chhs_message",
+  "type": "drupal-module",
+  "description": "Messaging for CHHC Foster Hub",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/chhs_message",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/chhs_message",
+    "source": "http://cgit.drupalcode.org/chhs_message"
+  },
+  "require": { }
+}

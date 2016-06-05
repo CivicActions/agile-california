@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - chhc_child
+    - chhs_child
     - user
 id: child_entity.field_case_worker
 field_name: field_case_worker
