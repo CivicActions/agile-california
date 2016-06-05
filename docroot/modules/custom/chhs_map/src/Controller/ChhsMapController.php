@@ -12,7 +12,7 @@ class ChhsMapController extends ControllerBase {
   public function content() {
     return array(
       '#type' => 'markup',
-      '#markup' => '<div id="facmap" style="width: 600px; height: 400px"></div>',
+      '#markup' => '<div id="facmap"></div>',
       '#attached' => array('library' => array('chhs_map/map-js')),
     );
   }

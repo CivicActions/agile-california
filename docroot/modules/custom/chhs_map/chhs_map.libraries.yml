@@ -7,25 +7,16 @@ mapboxjs:
     gpl-compatible: true
   js:
     https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js: { type: external, minified: true }
-  # css:
-  #   theme:
-  #     url: https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css: { type: external, minified: true }
-  dependencies:
-    - chhs_map/mapboxgl
-
-mapboxgl:
-  remote: https://github.com/mapbox/mapbox-gl-js
-  version: 0.18.0
-  license:
-    name: MIT
-    url: https://github.com/mapbox/mapbox-gl-js/blob/master/LICENSE.txt
-    gpl-compatible: true
-  js:
-    https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js: { type: external, minified: true }
+  css:
+    theme:
+      https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css: { type: external, minified: true }
 
 map-js:
   js:
     js/map.js:  {}
+  css:
+    theme:
+      css/map.css:  {}
   dependencies:
     - core/jquery
     - chhs_map/mapboxjs
