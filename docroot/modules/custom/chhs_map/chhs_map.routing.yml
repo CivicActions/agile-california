@@ -1,4 +1,4 @@
-map.content:
+chhs_map.map:
   path: '/map'
   defaults:
     _controller: '\Drupal\chhs_map\Controller\ChhsMapController::content'

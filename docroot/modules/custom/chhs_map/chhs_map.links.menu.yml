@@ -1,0 +1,7 @@
+# Map menu item definition
+chhs_map.map:
+  title: 'Facilities Map'
+  route_name: chhs_map.map
+  description: 'List Foster Care Facilities'
+  menu_name: main
+  weight: 100
