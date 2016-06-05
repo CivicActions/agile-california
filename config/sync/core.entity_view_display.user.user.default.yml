@@ -11,6 +11,8 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  profile_biological_parent:
+    weight: 10
   profile_foster_parent:
     weight: 10
   profile_main:

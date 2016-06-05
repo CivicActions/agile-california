@@ -18,6 +18,8 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+  flag_reply_unread:
+    weight: 10
   links:
     weight: 100
 hidden: {  }

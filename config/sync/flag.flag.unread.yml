@@ -1,0 +1,27 @@
+uuid: dec74eb4-e559-4670-8b7f-bc16108f5233
+langcode: en
+status: true
+dependencies: {  }
+id: unread
+label: Unread
+bundles:
+  - default
+entity_type: message_entity
+enabled: true
+global: false
+weight: 0
+flag_short: Unread
+flag_long: ''
+flag_message: ''
+unflag_short: Read
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:message_entity'
+link_type: reload
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: 1
+  show_on_form: 0
+  show_contextual_link: 0
+linkTypeConfig: {  }

@@ -38,6 +38,8 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+  flag_unread:
+    weight: 10
   subject:
     label: above
     type: string
