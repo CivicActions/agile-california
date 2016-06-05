@@ -1,0 +1,56 @@
+{#
+/**
+ * @file message_entity.html.twig
+ * Default theme implementation to present Message data.
+ *
+ * This template is used when viewing Message pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_message_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('message_entity') }}>
+  <div class="row">
+    <div class="col-md-4 form-item form-wrapper panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">From</div>
+      </div>
+      <div class="panel-body">
+        {{ content.user_id }}
+      </div>
+    </div>
+    <div class="col-md-4 form-item form-wrapper panel panel-default">
+      <div class="panel-heading">
+         <div class="panel-title">Urgency</div>
+      </div>
+      <div class="panel-body">
+        {{ content.field_urgent }}
+      </div>
+    </div>
+    <div class="col-md-4 form-item form-wrapper panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">Sent</div>
+      </div>
+      <div class="panel-body">
+        {{ content.field_sent }}
+      </div>
+    </div>
+  </div>
+  <div class="form-item form-wrapper panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">{{ content.subject }}</div>
+    </div>
+    <div class="panel-body">
+      {{ content.field_message }}
+    </div>
+  </div>
+</div>
+<div class="message--comments">
+  {{ content.field_comment }}
+</div>
