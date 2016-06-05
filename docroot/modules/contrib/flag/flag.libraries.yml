@@ -1,0 +1,9 @@
+flag.admin:
+  version: VERSION
+  js:
+    js/flag-admin.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.form
