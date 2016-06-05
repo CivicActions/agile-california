@@ -7,25 +7,32 @@ mapboxjs:
     gpl-compatible: true
   js:
     https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js: { type: external, minified: true }
-  # css:
-  #   theme:
-  #     url: https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css: { type: external, minified: true }
-  dependencies:
-    - chhs_map/mapboxgl
+  css:
+    theme:
+      https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css: { type: external, minified: true }
 
-mapboxgl:
-  remote: https://github.com/mapbox/mapbox-gl-js
-  version: 0.18.0
+datatables:
+  remote: https://datatables.net/ 
+  version: 1.10.12
   license:
     name: MIT
-    url: https://github.com/mapbox/mapbox-gl-js/blob/master/LICENSE.txt
+    url: https://github.com/DataTables/DataTables/blob/master/license.txt 
     gpl-compatible: true
   js:
-    https://api.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js: { type: external, minified: true }
+    https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js: { type: external, minified: true }
+    https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js: { type: external, minified: true }
+  css:
+    theme:
+      https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css: { type: external, minified: true }
+      https://cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.min.css: { type: external, minified: true }
 
 map-js:
   js:
     js/map.js:  {}
+  css:
+    theme:
+      css/map.css:  {}
   dependencies:
     - core/jquery
     - chhs_map/mapboxjs
+    - chhs_map/datatables
