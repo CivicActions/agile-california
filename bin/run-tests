@@ -1,11 +1,14 @@
 #!/bin/sh
 cd "$(git rev-parse --show-toplevel)/tests"
 docker-compose build
-docker-compose up -d seleniumchrome seleniumfirefox
+docker-compose up -d --force-recreate seleniumchrome seleniumfirefox
 sleep 5
-# Run tests in Chrome and Firefox.
+# Run tests in Chrome and Firefox, recreating users after each test.
+create-demo-users
 docker-compose run --no-deps --rm seinterpreter se-interpreter --driver-host=seleniumchrome:4444 --browser-browserName="chrome" /usr/src/tests/base-tests.json | tee chrome.log
+create-demo-users
 docker-compose run --no-deps --rm seinterpreter se-interpreter --driver-host=seleniumfirefox:4444 --browser-browserName="firefox" /usr/src/tests/base-tests.json | tee firefox.log
+create-demo-users
 docker-compose stop
 # Check for errors and return useful exit code.
 if fgrep -q 'Failed' chrome.log firefox.log; then
