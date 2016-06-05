@@ -11,6 +11,21 @@ mapboxjs:
     theme:
       https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css: { type: external, minified: true }
 
+datatables:
+  remote: https://datatables.net/ 
+  version: 1.10.12
+  license:
+    name: MIT
+    url: https://github.com/DataTables/DataTables/blob/master/license.txt 
+    gpl-compatible: true
+  js:
+    https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js: { type: external, minified: true }
+    https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js: { type: external, minified: true }
+  css:
+    theme:
+      https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css: { type: external, minified: true }
+      https://cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.min.css: { type: external, minified: true }
+
 map-js:
   js:
     js/map.js:  {}
@@ -20,3 +35,4 @@ map-js:
   dependencies:
     - core/jquery
     - chhs_map/mapboxjs
+    - chhs_map/datatables
