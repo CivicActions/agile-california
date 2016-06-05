@@ -1,0 +1,20 @@
+uuid: d26570cd-b953-43e4-bb6e-2f7e97a86eb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - chhs_message
+    - datetime
+id: message_entity.field_sent
+field_name: field_sent
+entity_type: message_entity
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

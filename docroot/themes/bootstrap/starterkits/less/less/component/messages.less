@@ -1,0 +1,51 @@
+/**
+ * @file
+ * Visual styles for messages and message replies.
+ */
+
+.message_entity {
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .panel {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  margin-bottom: 40px;
+}
+
+.message--comments {
+  .links {
+    float: right;
+    margin-bottom: 0;
+  }
+  article {
+    margin-top: 20px;
+  }
+  .indented {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
+
+.message--comment-form{
+  margin-top: 20px;
+  .filter-wrapper,
+  .form-item label,
+  .form-item .form-required {
+    display: none;
+  }
+}
+.view-chhs-inbox {
+  .Urgent, .Urgent a, .Urgent a:link, .Urgent a:visited, .Urgent a:hover {
+    color: #a94442;
+  } 
+  .table-striped > tbody > tr.Unread {
+    background-color: #d9edf7;
+  }
+  .table-striped > tbody > tr > td:first-child,
+  .table-striped > tbody > tr > td:last-child {
+    width: 20%;
+  }
+}

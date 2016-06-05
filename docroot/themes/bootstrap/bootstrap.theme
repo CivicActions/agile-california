@@ -43,11 +43,19 @@ function bootstrap_element_info_alter(&$data, &$context1 = NULL, &$context2 = NU
  *
  * @see \Drupal\bootstrap\Theme::alter()
  */
-function bootstrap_form_alter(&$data, &$context1 = NULL, &$context2 = NULL) {
-  Bootstrap::alter(__FUNCTION__, $data, $context1, $context2);
-  // Hide "Save and make default" button.
-  if (in_array($context2, array('profile_foster_parent_edit_form', 'profile_social_worker_edit_form', 'profile_biological_parent_edit_form'))) {
-    $data['actions']['set_default']['#access'] = FALSE;
+function bootstrap_form_alter(&$form, &$form_state = NULL, &$form_id = NULL) {
+  Bootstrap::alter(__FUNCTION__, $form, $form_state, $form_id);
+  // Hide "Save and make default" button on profile add/edit forms.
+  if (substr($form_id, 0, 8) == 'profile_' && (substr($form_id, -10) == '_edit_form' || substr($form_id, -9) == '_add_form')) {
+    $form['actions']['set_default']['#access'] = FALSE;
+  }
+  // Hide comment open/close control on messages form.
+  if ($form_id == 'message_entity_default_form') {
+    $form['field_comment']['#access'] = FALSE;
+  }
+  // Rename "Save" button to "Reply";
+  if ($form_id == 'comment_message_reply_form') {
+    $form['actions']['submit']['#value'] = t('Reply');
   }
 }
 

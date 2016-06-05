@@ -1,0 +1,24 @@
+uuid: 6ea045a8-adae-43c5-b6c2-3c572caec62d
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhs_message.message_entity_type.default
+    - field.storage.message_entity.field_sent
+  module:
+    - datetime
+id: message_entity.default.field_sent
+field_name: field_sent
+entity_type: message_entity
+bundle: default
+label: Sent
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

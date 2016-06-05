@@ -15,6 +15,7 @@ mode: compact
 content: {  }
 hidden:
   member_for: true
+  profile_biological_parent: true
   profile_foster_parent: true
   profile_main: true
   profile_social_worker: true

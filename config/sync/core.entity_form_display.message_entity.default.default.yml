@@ -6,6 +6,7 @@ dependencies:
     - chhs_message.message_entity_type.default
     - field.field.message_entity.default.field_comment
     - field.field.message_entity.default.field_message
+    - field.field.message_entity.default.field_sent
     - field.field.message_entity.default.field_urgent
   module:
     - comment
@@ -46,4 +47,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_sent: true
   user_id: true
