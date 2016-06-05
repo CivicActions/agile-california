@@ -17,20 +17,20 @@ bundle: default
 mode: default
 content:
   field_comment:
-    weight: 2
+    weight: 3
     label: above
     settings:
       pager_id: 0
     third_party_settings: {  }
     type: comment_default
   field_message:
-    weight: 1
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
   field_urgent:
-    weight: 3
+    weight: 4
     label: above
     settings:
       format: default
@@ -41,14 +41,15 @@ content:
   subject:
     label: above
     type: string
-    weight: -4
+    weight: 0
     settings:
       link_to_entity: false
     third_party_settings: {  }
   user_id:
     label: hidden
     type: author
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  flag_read: true

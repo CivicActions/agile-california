@@ -8,11 +8,12 @@ dependencies:
   module:
     - chhc_message
     - comment
+    - flag
     - user
 id: chhc_inbox
 label: Inbox
 module: views
-description: ''
+description: 'Listing of messages including indication of unread status and urgency'
 tag: ''
 base_table: message_entity
 base_field: id
@@ -291,6 +292,60 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        flagged:
+          id: flagged
+          table: flagging
+          field: flagged
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: custom
+          type_custom_true: ''
+          type_custom_false: Unread
+          not: 0
+          entity_type: flagging
+          plugin_id: flag_flagged
       filters: {  }
       sorts:
         last_comment_timestamp:
@@ -310,7 +365,19 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: message_entity
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Flags
+          required: false
+          flag: read
+          user_scope: current
+          entity_type: message_entity
+          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
