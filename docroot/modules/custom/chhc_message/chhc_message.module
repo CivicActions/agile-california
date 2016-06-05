@@ -56,3 +56,40 @@ function chhc_message_theme_suggestions_message_entity(array $variables) {
   $suggestions[] = 'message_entity__' . $entity->id() . '__' . $sanitized_view_mode;
   return $suggestions;
 }
+
+/**
+ * Implements hook_message_entity_view();
+ * 
+ * Add read Flag for user when message entity is viewed.
+ */
+function chhc_message_message_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  $account = \Drupal::currentUser();
+  $flag_service = \Drupal::service('flag');
+  $flag = $flag_service->getFlagById('read');
+  $flagging = $flag_service->getFlagging($flag, $entity, $account);
+  if(!$flagging){
+    $flag_service->flag($flag, $entity, $account);
+  }
+}
+
+/**
+ * Implements hook_comment_insert();
+ * 
+ * Remove read Flag for all other users when new comment/reply is added to a
+ * message entity.
+ */
+function chhc_message_comment_insert($comment) {
+  $account = \Drupal::currentUser();
+  $entity = $comment->entity_id->entity;
+  if ($entity->getEntityTypeId() != 'message_entity') {
+    return;
+  }
+  $flag_service = \Drupal::service('flag');
+  $flag = $flag_service->getFlagById('read');
+  $flagging_users = $flag_service->getFlaggingUsers($entity, $flag);
+  foreach ($flagging_users as $flagging_user) {
+    if ($flagging_user->id() != $account->id()) {
+      $flag_service->unflag($flag, $entity, $flagging_user);
+    }
+  }
+}

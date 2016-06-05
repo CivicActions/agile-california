@@ -1,21 +1,17 @@
-uuid: bf04ce5a-06d7-47af-8e9e-d866615cd883
+uuid: 2ab3c10e-641e-4c12-a307-f318f6d2e9c4
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.message_entity.field_urgent
-    - system.menu.main
   module:
-    - chhc_message
-    - comment
     - flag
+    - node
     - user
-id: chhc_inbox
-label: Inbox
+id: flagging_admin
+label: 'Flagging Admin'
 module: views
-description: 'Listing of messages including indication of unread status and urgency'
+description: ''
 tag: ''
-base_table: message_entity
+base_table: flagging
 base_field: id
 core: 8.x
 display:
@@ -28,7 +24,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'administer flags'
       cache:
         type: tag
         options: {  }
@@ -51,7 +47,7 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 10
           offset: 0
@@ -66,58 +62,24 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: ‹‹
-            next: ››
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          quantity: 9
       style:
         type: table
-        options:
-          grouping: {  }
-          row_class: '{{ field_urgent }}'
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            last_comment_timestamp: last_comment_timestamp
-            subject: subject
-            field_urgent: field_urgent
-          info:
-            last_comment_timestamp:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            subject:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_urgent:
-              sortable: false
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
       row:
         type: fields
       fields:
-        last_comment_timestamp:
-          id: last_comment_timestamp
-          table: comment_entity_statistics
-          field: last_comment_timestamp
+        id:
+          id: id
+          table: flagging
+          field: id
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Flagging ID'
           exclude: false
           alter:
             alter_text: false
@@ -150,7 +112,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -158,18 +120,32 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          date_format: short
-          custom_date_format: ''
-          timezone: ''
-          plugin_id: comment_last_timestamp
-        subject:
-          id: subject
-          table: message_entity
-          field: subject
+          click_sort_column: value
+          type: number_integer
+          settings:
+            thousand_separator: ''
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: flagging
+          entity_field: id
+          plugin_id: field
+        flag_id:
+          id: flag_id
+          table: flagging
+          field: flag_id
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Flag ID'
           exclude: false
           alter:
             alter_text: false
@@ -202,7 +178,269 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: flagging
+          entity_field: flag_id
+          plugin_id: field
+        created:
+          id: created
+          table: flagging
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Created
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: flagging
+          entity_field: created
+          plugin_id: field
+        uid:
+          id: uid
+          table: flagging
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'User ID'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: flagging
+          entity_field: uid
+          plugin_id: field
+        entity_type:
+          id: entity_type
+          table: flagging
+          field: entity_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Entity Type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: flagging
+          entity_field: entity_type
+          plugin_id: field
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: flag_bookmark
+          group_type: group
+          admin_label: ''
+          label: Title
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -224,160 +462,26 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: message_entity
-          entity_field: subject
+          entity_type: node
+          entity_field: title
           plugin_id: field
-        field_urgent:
-          id: field_urgent
-          table: message_entity__field_urgent
-          field: field_urgent
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: custom
-            format_custom_true: urgent
-            format_custom_false: normal
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        flagged:
-          id: flagged
-          table: flagging
-          field: flagged
-          relationship: flag_relationship
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          type: custom
-          type_custom_true: ''
-          type_custom_false: Unread
-          not: 0
-          entity_type: flagging
-          plugin_id: flag_flagged
       filters: {  }
-      sorts:
-        last_comment_timestamp:
-          id: last_comment_timestamp
-          table: comment_entity_statistics
-          field: last_comment_timestamp
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-          plugin_id: date
-      title: Inbox
+      sorts: {  }
+      title: Flaggings
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
-        flag_relationship:
-          id: flag_relationship
-          table: message_entity
-          field: flag_relationship
+        flag_bookmark:
+          id: flag_bookmark
+          table: flagging
+          field: flag_bookmark
           relationship: none
           group_type: group
-          admin_label: Flags
+          admin_label: Content
           required: false
-          flag: read
-          user_scope: current
-          entity_type: message_entity
-          plugin_id: flag_relationship
+          entity_type: flagging
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -387,8 +491,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.message_entity.field_urgent'
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -396,16 +499,21 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: inbox
+      path: admin/structure/flags/flagging
       menu:
-        type: normal
-        title: Inbox
+        type: tab
+        title: Flagging
         description: ''
-        expanded: false
-        parent: ''
-        weight: 0
+        expanded: true
+        parent: flag.admin.structure.flag
+        weight: 10
         context: '0'
-        menu_name: main
+        menu_name: admin
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
     cache_metadata:
       max-age: 0
       contexts:
@@ -413,5 +521,4 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.message_entity.field_urgent'
+      tags: {  }
