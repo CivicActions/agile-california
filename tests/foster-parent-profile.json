@@ -1,0 +1,205 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Foster parent profile"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Fostering"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-foster-agencies-0-value"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-foster-agencies-0-value"
+      },
+      "text": "Agency 1"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-foster-agency-value"
+      }
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-preferred-ages-2"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-number-of-biological-child-0-value"
+      },
+      "text": "1"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Basic information"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-first-name-0-value"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-first-name-0-value"
+      },
+      "text": "First"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-last-name-0-value"
+      },
+      "text": "Last"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "xpath",
+        "value": "//select[@id='edit-field-county']//option[11]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-zip-0-value"
+      },
+      "text": "92867"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-about-me-0-value"
+      },
+      "text": "Bio"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Contact information"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-phone-0-value"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-phone-0-value"
+      },
+      "text": "123-1234-1234"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "xpath",
+        "value": "//select[@id='edit-field-preferred-contact-method']//option[2]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-best-times-0-value"
+      },
+      "text": "Now"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "edit-set-default"
+      }
+    },
+    {
+      "type": "waitForTextPresent",
+      "text": "Foster parent profile profile has been created."
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "First"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Last"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "El Dorado County"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "0-2 years"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Agency 1"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "1"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Bio"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "123-1234-1234"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Call"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Now"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

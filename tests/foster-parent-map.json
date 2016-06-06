@@ -1,0 +1,75 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Facilities Map"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@class='leaflet-marker-pane']/img[3]"
+      }
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "css selector",
+        "value": ".leaflet-popup-pane .marker-title"
+      },
+      "text": "HANNAH'S CHILDRENS HOMES"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "css selector",
+        "value": "#faclist tbody tr:first-child td:nth-child(1)"
+      },
+      "text": "ADVANTAGE FOSTER FAMILY AGENCY"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "css selector",
+        "value": "#faclist tbody tr:first-child td:nth-child(2)"
+      },
+      "text": "FOSTER FAMILY AGENCY"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "css selector",
+        "value": "#faclist tbody tr:first-child td:nth-child(3)"
+      },
+      "text": "LICENSED"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='faclist_filter']/label/input"
+      },
+      "text": "nuevo"
+    },
+    {
+      "type": "verifyText",
+      "locator": {
+        "type": "css selector",
+        "value": "#faclist tbody tr:first-child td:nth-child(1)"
+      },
+      "text": "NUEVO AMANECER LATINO FFA"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

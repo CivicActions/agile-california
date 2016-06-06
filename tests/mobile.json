@@ -1,0 +1,36 @@
+{
+  "type": "suite",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "scripts": [
+    {
+      "where": "local",
+      "path": "base-url.json"
+    },
+    {
+      "where": "local",
+      "path": "switch-to-mobile.json"
+    },
+    {
+      "where": "local",
+      "path": "mobile-open-navbar.json"
+    },
+    {
+      "where": "local",
+      "path": "foster-parent-login.json"
+    },
+    {
+      "where": "local",
+      "path": "foster-parent-profile.json"
+    },
+    {
+      "where": "local",
+      "path": "mobile-open-navbar.json"
+    },
+    {
+      "where": "local",
+      "path": "foster-parent-map.json"
+    }
+  ],
+  "shareState": true
+}
