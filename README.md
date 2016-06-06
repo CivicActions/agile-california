@@ -62,10 +62,10 @@ Researcher/Usability Tester, and Delivery Manger.  Engineers also doubled as Dev
 c. Interviewed 3 actual users, designed wireframes and empathy maps with them, demoed to them, and performed usability testing with one of them. 
 d. Used:
 
-1) User Interviews
-2) Personae
-3) Empathy Maps
-4) Wireframes
+1. User Interviews
+2. Personae
+3. Empathy Maps
+4. Wireframes
 
 e. We leveraged Bootstrap as an open-source style and made a few header and footer design choices. 
 
@@ -77,13 +77,14 @@ h. Using responsive open-source technology, we tested with both mobile phones an
 
 i. We used technologies:
 
-1) GeoJSON
-2) MapBox
-3) BootStrap
-4) Jenkins
-5) Docker
-6) Bowline
-7) Drupal 8
+1. GeoJSON
+2. MapBox
+3. BootStrap
+4. Jenkins
+5. Docker
+6. Bowline
+7. Drupal 8
+8. Jquery
 
 
 j. Deployed the prototype on an Infrastructure as a Service (Iaas) or Platform as Service (Paas)
@@ -104,46 +105,4 @@ p. Provided sufficient documentation to install and run their prototype on anoth
 q. Our entire software stack is open source.
 
 
-a. Assigned one leader and gave that person authority and responsibility and held that person
-accountable for the quality of the prototype submitted
-
-b. Assembled a multidisciplinary and collaborative team that includes, at a minimum, five of the
-labor categories as identified in Attachment C - ADPQ Vendor Pool Labor Category
-Descriptions
-
-c. Understood what people needed (see Note #1), by including people in the prototype
-development and design process
-
-d. Used at least three “human-centered design” techniques or tools
-
-e. Created or used a design style guide and/or a pattern library
-
-f. Performed usability tests with people
-
-g. Used an iterative approach, where feedback informed subsequent work or versions of the
-prototype
-
-h. Created a prototype that works on multiple devices, and presents a responsive design
-
-i. Used at least five modern (see Note #2) and open-source technologies, regardless of
-architectural layer (frontend, backend, etc.)
-
-j. Deployed the prototype on an Infrastructure as a Service (Iaas) or Platform as Service (Paas)
-provider, and indicated which provider they used.
-
-k. Developed automated unit tests for their code
-
-l. Setup or used a continuous integration system to automate the running of tests and
-continuously deployed their code to their IaaS or PaaS provider.
-
-m. Setup or used configuration management
-
-n. Setup or used continuous monitoring
-
-o. Deployed their software in a container (i.e., utilized operating-system-level virtualization)We
-
-p. Provided sufficient documentation to install and run their prototype on another machine
-
-q. Prototype and underlying platforms used to create and run the prototype are openly licensed
-and free of charge
 
