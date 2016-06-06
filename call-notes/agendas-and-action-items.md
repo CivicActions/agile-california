@@ -1,5 +1,9 @@
-#6/3 Agenda items
-
+#6/6 Agenda items
+- Review of QA feedback. What is best way to log bugs? How should we prioritize edits and/or new features? 
+- Maps and zip code (listed separately, as it seems it may the most major modification to current live site)
+- Style guide / Bootstrap
+- How to make most of Jen's last 2 days
+- Proposing compliance and documentation co-work Tuesday afternoon 
 
 #6/3 Agenda items
 - Report on determination wrt Sacramento requirement 
