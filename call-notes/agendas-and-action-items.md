@@ -1,4 +1,15 @@
-#6/3 Action items
+#6/6 Agenda items
+- Review of QA feedback. What is best way to log bugs? (new issues? comments to existing issues?) 
+- How should we prioritize edits and/or new features? Get consensus on waffle.io priorities. 
+- Maps and zip code (listed separately, as it seems it may the most major modification to current live site)
+- Screencast idea 
+- Style guide / Bootstrap
+- How to make most of Jen's last 2 days, and how to approach workload for team as a whole these coming days 
+- Proposing compliance and documentation co-work Tuesday afternoon 
+- Consensus on overall strategy
+- Balance to make use of each teammember
+
+#6/3 Agenda items
 - Report on determination wrt Sacramento requirement 
 - Coordinate demo 
 - Handoff of any of April's work 
@@ -6,7 +17,7 @@
 - Plan for Style Guide 
 - Jen's schedule next week
 
-#6/2 Action items
+#6/2 Agenda items
 - Do we have users confirmed for tomorrow demo? 
 - Have we been able to make contact with any case workers? 
 - Should Jen and Rob connect today around Map UI? Is this highest priority for Jen?
