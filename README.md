@@ -2,21 +2,24 @@ Try our prototype:
 
 [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/)
 
+Watch a screencast of the user experience here:
+[TO BE DONE]
+
 # CHHS Foster Hub - The CivicActions Submission to CHHS RFI #75001 Agile Development Pre-Qualified (ADPQ)
 
 ## How We Built the Prototype
 
 We created a multi-disciplinary team and immediately decided to iterate through
 [six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
-SCRUM methodology. A Product Owner was assigned as the overall voice of the users. We immediately and
+SCRUM methodology. A Product Owner was assigned as the overall voice of the users. We 
 successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california),
 a group that put us in contact with real foster parents
-and case workers, who generously assisted us each step as we moved from
-user interviews to wireframes to a demoable prototype to a user-testable prototype.
+and case workers, who generously assisted us each step of our iterative developent.
 
 Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis
 as our understanding of user needs evolved through interaction with our actual users with guidance from our Agile Coach.
-We mainatained a disciplined process, having formal demos, retrospectives, and fully prioritized backlog of 
+We mainatained a disciplined process, having formal demos, retrospectives, and fully prioritized backlog of user stories.
+We carefully compressed a normal Sprint of two weeks down into two days so that we could iterate powerfully in limited time.
 
 ## The User-Centered Approach
 
@@ -27,19 +30,18 @@ of one case worker and three foster parents. From these interviews
 we built an empathy map [TODO: reference] and personae [TODO: referenmce]. We then began building
 [wirefames](https://github.com/CivicActions/agile-california/blob/master/Sketch-inbox01.png) that we could show to users to get feedback. In parallel to the creation of the wireframes
 we deployed a website upon which we drove to a functional prototype so that our users could test our app on their actual
-mobile devices.
+mobile devices. 
 
-The users taught us things not anticipated by the RFI. For example, visitation status and finding safe and convenient
-places for visitation seems to be even more important than finding official Residential Facilities (from the state's data).
+We demoed wireframes in Sprint 3.
+
+The users taught us things not anticipated by the RFI. For example, visitation status changes and finding safe and convenient
+places for dropoff seems to be even more important than finding official Residential Facilities (from the state's data).
 Using this fact, we created a "spike" [solution](https://github.com/CivicActions/agile-california/tree/master/geojson-spike)
-to test our abilit to render a map.
+to test our ability to render a map.
 Nonetheless we implemented the map and made plans to provide a visitation negotiation system.
 
-We were in fact surprised by the State's clarification that the primary user was the biological parent,
-not the foster parent!
-Following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change
-by beginning to ask your users to tell us what they believed biological parents
-would want. Our prototype now has roles for biological parents, foster parents, and case workers.
+As our understanding grew we kept our
+[story map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md) up to date.
 
 We designed our profile based on specific feedback about what is important to both biological parents and foster parents.
 For example, we learned that a very important profile feature is "preferred time of contact", so we added that to our profiles
@@ -48,6 +50,16 @@ of parents and case workers. Our users told us it was better to leave this an in
 We learned that marking messages in the inbox of urgent was very important, so we supported that and render urgent messages in red.
 We also learned that classifying messages as being related to visitation or medical incidents is extremely important, so we write user stories
 to capture that and placed them into our constantly-evolving [backlog](https://github.com/CivicActions/agile-california/issues), but were not able to complete them.
+
+We got a big surprise when the State clarified that the primary user was the biological parent,
+not the foster parent!
+Following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change
+by beginning to ask your users to tell us what they believed biological parents
+would want. Our prototype now has roles for biological parents, foster parents, and case workers.
+
+By Sprint 5 had a functional prototype demoed to both a foster parent and a case worker.
+A foster parent provided user testing of our deployed prototype and
+[extensive feedback](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/usability-testing/2016-6-03-notes-from-foster-parent-usabiliy-tester.md) during Sprint 6.
 
 ## The Technology
 
@@ -108,11 +120,11 @@ l. We use Jenkins to run the automated tests after each deploy.
 
 m. Setup or used configuration management [TODO: what do we put here.]
 
-n. We did not set up continous monitoring. [TODO: can we create something here?]
+n. We did not set up continous monitoring. [TODO: Owen to create]
 
 o. We use Docker.
 
-p. Provided sufficient documentation to install and run their prototype on another machine
+p. We have a [guide to deployment](https://github.com/CivicActions/agile-california/blob/master/docker-readme.md). [TODO: Owen, can you confirm this sufficient?]
 
 q. Our entire software stack is open source.
 
