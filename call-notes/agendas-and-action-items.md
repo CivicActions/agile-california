@@ -6,6 +6,7 @@
 - Style guide / Bootstrap
 - How to make most of Jen's last 2 days, and how to approach workload for team as a whole these coming days 
 - Proposing compliance and documentation co-work Tuesday afternoon 
+- How to handle screenshots 
 - Consensus on overall strategy
 - Balance to make use of each teammember
 

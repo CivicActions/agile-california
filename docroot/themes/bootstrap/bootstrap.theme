@@ -45,9 +45,11 @@ function bootstrap_element_info_alter(&$data, &$context1 = NULL, &$context2 = NU
  */
 function bootstrap_form_alter(&$form, &$form_state = NULL, &$form_id = NULL) {
   Bootstrap::alter(__FUNCTION__, $form, $form_state, $form_id);
-  // Hide "Save and make default" button on profile add/edit forms.
+  // Make "Save and make default" the only button on profile add/edit forms and give it a simpler name.
   if (substr($form_id, 0, 8) == 'profile_' && (substr($form_id, -10) == '_edit_form' || substr($form_id, -9) == '_add_form')) {
-    $form['actions']['set_default']['#access'] = FALSE;
+    $form['actions']['submit']['#access'] = FALSE;
+    $form['actions']['set_default']['#access'] = TRUE;
+    $form['actions']['set_default']['#value'] = t("Save profile"); 
   }
   // Hide comment open/close control on messages form.
   if ($form_id == 'message_entity_default_form') {

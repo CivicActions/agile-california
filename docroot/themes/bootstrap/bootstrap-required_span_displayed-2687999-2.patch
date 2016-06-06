@@ -1,0 +1,26 @@
+From 74ee50b0fa245f6370614d6357268f806c4a627c Mon Sep 17 00:00:00 2001
+From: florenttorregrosa <florenttorregrosa@2388214.no-reply.drupal.org>
+Date: Wed, 16 Mar 2016 00:03:08 +0100
+Subject: [PATCH] Issue #2687999 by Grimreaper: Required span displayed even if
+ the field not required
+
+---
+ templates/input/form-element-label.html.twig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/templates/input/form-element-label.html.twig b/templates/input/form-element-label.html.twig
+index debce21..9d030d2 100644
+--- a/templates/input/form-element-label.html.twig
++++ b/templates/input/form-element-label.html.twig
+@@ -31,7 +31,7 @@
+       <p class="help-block">{{ description }}</p>
+     {%- endif -%}
+   </label>
+-  {%- if required and title_display == 'before' or title_display == 'after'-%}
++  {%- if required and (title_display == 'before' or title_display == 'after')-%}
+     <span class="form-required">*</span>
+   {%- endif -%}
+ {%- endif -%}
+-- 
+2.1.4
+
