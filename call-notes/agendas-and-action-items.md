@@ -1,8 +1,10 @@
 #6/6 Agenda items
-- Review of QA feedback. What is best way to log bugs? How should we prioritize edits and/or new features? 
+- Review of QA feedback. What is best way to log bugs? (new issues? comments to existing issues?) 
+- How should we prioritize edits and/or new features? Get consensus on waffle.io priorities. 
 - Maps and zip code (listed separately, as it seems it may the most major modification to current live site)
+- Screencast idea 
 - Style guide / Bootstrap
-- How to make most of Jen's last 2 days
+- How to make most of Jen's last 2 days, and how to approach workload for team as a whole these coming days 
 - Proposing compliance and documentation co-work Tuesday afternoon 
 
 #6/3 Agenda items
