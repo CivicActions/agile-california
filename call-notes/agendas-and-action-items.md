@@ -8,6 +8,7 @@
 - Proposing compliance and documentation co-work Tuesday afternoon 
 - Consensus on overall strategy
 - Balance to make use of each teammember
+- Installation on phone concept
 
 #6/3 Agenda items
 - Report on determination wrt Sacramento requirement 
