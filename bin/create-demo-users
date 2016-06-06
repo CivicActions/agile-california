@@ -6,6 +6,8 @@ assert_composer
 
 export DRUSH="docker exec -it ${web} sudo -iu www-data TERM="xterm" /var/www/vendor/drush/drush/drush --root=/var/www/docroot --uri=${DRUSH_URI}"
 
+echo "Creating/recreating demo users"
+
 ${DRUSH} user-cancel -y biological-parent > /dev/null
 BIOLOGICAL_PARENT=$(${DRUSH} user-create biological-parent --password=demo --mail=biological-parent@example.org --fields=uid --pipe)
 ${DRUSH} user-add-role biological_parent ${BIOLOGICAL_PARENT}
