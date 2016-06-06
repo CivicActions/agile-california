@@ -1,4 +1,7 @@
-#6/3 Action items
+#6/3 Agenda items
+
+
+#6/3 Agenda items
 - Report on determination wrt Sacramento requirement 
 - Coordinate demo 
 - Handoff of any of April's work 
@@ -6,7 +9,7 @@
 - Plan for Style Guide 
 - Jen's schedule next week
 
-#6/2 Action items
+#6/2 Agenda items
 - Do we have users confirmed for tomorrow demo? 
 - Have we been able to make contact with any case workers? 
 - Should Jen and Rob connect today around Map UI? Is this highest priority for Jen?
