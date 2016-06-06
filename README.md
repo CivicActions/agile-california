@@ -9,17 +9,19 @@ Watch a screencast of the user experience here:
 
 ## How We Built the Prototype
 
-We created a multi-disciplinary team and immediately decided to iterate through
+We created a multi-disciplinary team and immediately decided to iterate through six
 [six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
-SCRUM methodology. A Product Owner was assigned as the overall voice of the users. We 
+SCRUM methodology carefully compressed from the normal two-week cycle down to a ligtning-fast two days.
+A Product Owner was assigned as the overall voice of the users. We 
 successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california),
 a group that put us in contact with real foster parents
 and case workers, who generously assisted us each step of our iterative developent.
 
 Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis
 as our understanding of user needs evolved through interaction with our actual users with guidance from our Agile Coach.
-We mainatained a disciplined process, having formal demos, retrospectives, and fully prioritized backlog of user stories.
-We carefully compressed a normal Sprint of two weeks down into two days so that we could iterate powerfully in limited time.
+We mainatained a disciplined process, having formal demos, retrospectives, and a complete story board manipulated with
+[Waffle](https://waffle.io/)
+overlaying our [GitHub](https://github.com/CivicActions/agile-california) Issues and Stories.
 
 ## The User-Centered Approach
 
@@ -27,12 +29,14 @@ Knowing very little about the subject of foster children but having found real u
 open-ended [scripts](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews/Scripts).
 We began our four [user interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
 of one case worker and three foster parents. From these interviews
-we built an empathy map [TODO: reference] and personae [TODO: referenmce]. We then began building
-[wirefames](https://github.com/CivicActions/agile-california/blob/master/Sketch-inbox01.png) that we could show to users to get feedback. In parallel to the creation of the wireframes
+we built an [empathy map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md) and [personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md).
+We then began building
+[wirefames](https://github.com/CivicActions/agile-california/blob/master/Sketch-inbox01.png) that we could show to users to get feedback.
+In parallel to the creation of the wireframes
 we deployed a website upon which we drove to a functional prototype so that our users could test our app on their actual
 mobile devices. 
 
-We demoed wireframes in Sprint 3.
+We demoed wireframes to users in Sprint 3.
 
 The users taught us things not anticipated by the RFI. For example, visitation status changes and finding safe and convenient
 places for dropoff seems to be even more important than finding official Residential Facilities (from the state's data).
@@ -51,11 +55,18 @@ We learned that marking messages in the inbox of urgent was very important, so w
 We also learned that classifying messages as being related to visitation or medical incidents is extremely important, so we write user stories
 to capture that and placed them into our constantly-evolving [backlog](https://github.com/CivicActions/agile-california/issues), but were not able to complete them.
 
-We got a big surprise when the State clarified that the primary user was the biological parent,
+We got a *big surprise* when the State clarified that the primary user was the biological parent,
 not the foster parent!
+
 Following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change
 by beginning to ask your users to tell us what they believed biological parents
 would want. Our prototype now has roles for biological parents, foster parents, and case workers.
+
+On June 1st our CEO [reached out](https://civicactions.com/blog/an-open-invitation-to-collaborate/) 
+to other firms seeking to be part of the RFI by inviting them to work with us,
+reuse our work-in-progress software, and even to share in our most valuable resource, our access to actual foster parents.
+This reiterate our "fiercely open" way of doing business.
+
 
 By Sprint 5 had a functional prototype demoed to both a foster parent and a case worker.
 A foster parent provided user testing of our deployed prototype and
