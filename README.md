@@ -67,7 +67,7 @@ d. Used:
 3) Empathy Maps
 4) Wireframes
 
-e. We leveraged Bootstrap as an open-source style selected for this purpose with minimal extenstions.
+e. We leveraged Bootstrap as an open-source style and made a few header and footer design choices. 
 
 f. An actual foster parent performed usability testing. We used ourselves as additional user testers.
 
@@ -75,27 +75,33 @@ g. Each of the the first 5 sprints involved user feedback that immediately influ
 
 h. Using responsive open-source technology, we tested with both mobile phones and desktop environments.
 
-i. Used at least five modern (see Note #2) and open-source technologies, regardless of
-architectural layer (frontend, backend, etc.)
+i. We used technologies:
+
+1) GeoJSON
+2) MapBox
+3) BootStrap
+4) Jenkins
+5) Docker
+6) Bowline
+7) Drupal 8
+
 
 j. Deployed the prototype on an Infrastructure as a Service (Iaas) or Platform as Service (Paas)
-provider, and indicated which provider they used.
+provider, and indicated which provider they used. [TODO: Own, can you comment on this?]
 
-k. Developed automated unit tests for their code
+k. [TODO: Owen, can you comment on our automated unit tests?]
 
-l. Setup or used a continuous integration system to automate the running of tests and
-continuously deployed their code to their IaaS or PaaS provider.
+l. We use Jenkins to run the automated tests after each deploy.
 
-m. Setup or used configuration management
+m. Setup or used configuration management [TODO: what do we put here.]
 
-n. Setup or used continuous monitoring
+n. We did not set up continous monitoring. [TODO: can we create something here?]
 
-o. Deployed their software in a container (i.e., utilized operating-system-level virtualization)
+o. We use Docker.
 
 p. Provided sufficient documentation to install and run their prototype on another machine
 
-q. Prototype and underlying platforms used to create and run the prototype are openly licensed
-and free of charge
+q. Our entire software stack is open source.
 
 
 a. Assigned one leader and gave that person authority and responsibility and held that person
@@ -134,7 +140,7 @@ m. Setup or used configuration management
 
 n. Setup or used continuous monitoring
 
-o. Deployed their software in a container (i.e., utilized operating-system-level virtualization)
+o. Deployed their software in a container (i.e., utilized operating-system-level virtualization)We
 
 p. Provided sufficient documentation to install and run their prototype on another machine
 
