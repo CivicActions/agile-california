@@ -4,40 +4,6 @@
   "formatVersion": 2,
   "steps": [
     {
-      "type": "get",
-      "url": "http://172.17.0.4/"
-    },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "link text",
-        "value": "Log in"
-      }
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "edit-name"
-      },
-      "text": "foster-parent"
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "edit-pass"
-      },
-      "text": "demo"
-    },
-    {
-      "type": "clickElement",
-      "locator": {
-        "type": "id",
-        "value": "edit-submit"
-      }
-    },
-    {
       "type": "clickElement",
       "locator": {
         "type": "link text",
@@ -45,49 +11,17 @@
       }
     },
     {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "edit-field-first-name-0-value"
-      },
-      "text": "First"
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "edit-field-last-name-0-value"
-      },
-      "text": "Last"
-    },
-    {
-      "type": "setElementSelected",
-      "locator": {
-        "type": "xpath",
-        "value": "//select[@id='edit-field-county']//option[11]"
-      }
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "edit-field-zip-0-value"
-      },
-      "text": "91234"
-    },
-    {
-      "type": "setElementText",
-      "locator": {
-        "type": "id",
-        "value": "edit-field-about-me-0-value"
-      },
-      "text": "Bio"
-    },
-    {
       "type": "clickElement",
       "locator": {
         "type": "link text",
         "value": "Fostering"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-foster-agencies-0-value"
       }
     },
     {
@@ -124,7 +58,67 @@
       "type": "clickElement",
       "locator": {
         "type": "link text",
+        "value": "Basic information"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-first-name-0-value"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-first-name-0-value"
+      },
+      "text": "First"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-last-name-0-value"
+      },
+      "text": "Last"
+    },
+    {
+      "type": "setElementSelected",
+      "locator": {
+        "type": "xpath",
+        "value": "//select[@id='edit-field-county']//option[11]"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-zip-0-value"
+      },
+      "text": "92867"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-about-me-0-value"
+      },
+      "text": "Bio"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
         "value": "Contact information"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "edit-field-phone-0-value"
       }
     },
     {
@@ -154,7 +148,7 @@
       "type": "clickElement",
       "locator": {
         "type": "id",
-        "value": "edit-submit"
+        "value": "edit-set-default"
       }
     },
     {
