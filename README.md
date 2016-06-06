@@ -76,8 +76,9 @@ d. Used:
 
 1. [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
 2. [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
-3. [Empathy Maps](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
-4. Wireframes
+3. [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
+4. [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
+4. [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
 
 e. We leveraged Bootstrap as an open-source style and made a few header and footer design choices. 
 
