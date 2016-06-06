@@ -30,6 +30,10 @@ The users taught us things not anticipated by the RFI. For example, visitation s
 places for visitation seems to be even more important than finding official Residential Facilities (from the state's data).
 Nonetheless we implemented the map and made plans to provide a visitation negotiation system.
 
+We were in fact surprised by the State's clarification that the primary user was the biological parent, not the foster parent,
+but, following the Agile Manifesto, we immediately adjusted by beginning to ask your users to tell us what they believed biological parents
+would want. Our prototype has roles for biological parents, foster parents, and case workers.
+
 We designed our profile based on specific feedback about what is important to both biological parents and foster parents.
 For example, we learned that a very important profile feature is "preferred time of contact"
 
@@ -49,6 +53,50 @@ technology such as Leaflet distributed with MapBox, an open-source mapping syste
 jquery.
 
 ## The Explicit RFI Requirements
+
+a. Robert L. Read was assigned as Product Owner with overall responsibility.
+
+b. Team consisted 7 persons in roles: Product Owner, Agile Coach, Technical Architect, Back End Web Designer, Front End Web Designer, and Interaction Designer/User
+Researcher/Usability Tester, and Delivery Manger.  Engineers also doubled as DevOps engineers.
+
+c. Interviewed 3 actual users, designed wireframes and empathy maps with them, demoed to them, and performed usability testing with one of them. 
+d. Used:
+
+1) User Interviews
+2) Personae
+3) Empathy Maps
+4) Wireframes
+
+e. We leveraged Bootstrap as an open-source style selected for this purpose with minimal extenstions.
+
+f. An actual foster parent performed usability testing. We used ourselves as additional user testers.
+
+g. Each of the the first 5 sprints involved user feedback that immediately influenced our design.
+
+h. Using responsive open-source technology, we tested with both mobile phones and desktop environments.
+
+i. Used at least five modern (see Note #2) and open-source technologies, regardless of
+architectural layer (frontend, backend, etc.)
+
+j. Deployed the prototype on an Infrastructure as a Service (Iaas) or Platform as Service (Paas)
+provider, and indicated which provider they used.
+
+k. Developed automated unit tests for their code
+
+l. Setup or used a continuous integration system to automate the running of tests and
+continuously deployed their code to their IaaS or PaaS provider.
+
+m. Setup or used configuration management
+
+n. Setup or used continuous monitoring
+
+o. Deployed their software in a container (i.e., utilized operating-system-level virtualization)
+
+p. Provided sufficient documentation to install and run their prototype on another machine
+
+q. Prototype and underlying platforms used to create and run the prototype are openly licensed
+and free of charge
+
 
 a. Assigned one leader and gave that person authority and responsibility and held that person
 accountable for the quality of the prototype submitted
