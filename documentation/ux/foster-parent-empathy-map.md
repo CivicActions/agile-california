@@ -1,3 +1,3 @@
 **Foster Parent Empathy Map**
 
-agile-california/empathy-map-Amy.png
+<img src="https://github.com/CivicActions/agile-california/blob/master/empathy-map-Amy.png">
