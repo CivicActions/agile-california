@@ -54,6 +54,7 @@ as well as case workers with whom they must communicate.
 4. We have not yet addressed the problem of people who don't use smart phones.
 5. User interviews, personae, story maps, empathy maps.
 * [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
+* [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
 * [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
 * [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
 * [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
