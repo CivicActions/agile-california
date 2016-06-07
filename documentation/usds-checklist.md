@@ -292,14 +292,14 @@ We need talented people working in government who have experience creating moder
 8. The appropriate privacy, civil liberties, and/or legal advisor for the department or agency is a partner
 
 #### Actions
-1. Yes -- though our "high-traffic" credentials might not be at a Google or Facebook level, we do have experience scaling complex, interactive digital services over hudreds of thousands of users.
+1. Yes -- though our "high-traffic" credentials might not be at a Google or Facebook level, we do have experience scaling complex, interactive digital services for hudreds of thousands of users.
 2. Yes
-3. Yes, we used an XUnit framework (PHPUnit), and have experience with several other technologies.
-4. Yes, we had a run-test-after commit system using Jenkins, including a full "from scratch" scripted environment build.
-5. Yes, we implemented a hardened FISMA ready Ubuntu host for this project, and have experience with OpenSCAP automated compliance scanning tools, among others.
+3. Yes
+4. Yes
+5. Yes, we have experience with OpenSCAP automated compliance scanning tools, among others.
 6. N/A
-7. N/A (though we had someone play this role)
-8. We assigned the CEO to play the role of Privacy and Legal officer, and an experienced cybersecurity/compliance expert to play the role of Security officer.
+7. N/A
+8. N/A
 
 
 <a name="Play8"></a>
