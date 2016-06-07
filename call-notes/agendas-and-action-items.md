@@ -7,7 +7,7 @@
 - Wrapping things up
 - Taking screenshots of Waffle board
 - Plan to lock repository
-- 
+
 
 
 #6/6 Agenda items
