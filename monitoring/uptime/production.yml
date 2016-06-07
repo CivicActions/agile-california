@@ -1,0 +1,48 @@
+url: 'http://localhost:8082'
+
+mongodb:
+  connectionString: mongodb://updb:27017/uptime       # alternative to setting server, database, user and password separately
+
+monitor:
+  name:                   origin
+  apiUrl:                 'http://localhost:8082/api' # must be accessible without a proxy
+  pollingInterval:        10000      # ten seconds
+  timeout:                5000       # five seconds
+  userAgent:              NodeUptime/3.0 (https://github.com/fzaninotto/uptime)
+
+analyzer:
+  updateInterval:         60000      # one minute
+  qosAggregationInterval: 600000     # ten minutes
+  pingHistory:            8035200000 # three months
+
+autoStartMonitor: true
+
+plugins:
+  - ./plugins/console
+  - ./plugins/patternMatcher
+  - ./plugins/httpOptions
+  - ./plugins/email
+  - ./plugins/basicAuth
+
+email:
+  method:      SMTP
+  transport:
+    host: smtp
+  event:
+    up:        true
+    down:      true
+    paused:    true
+    restarted: true
+  message:           
+    from: "Monitoring <agile-ca-monitor@civicactions.com>"
+    to: "Agile CA <agileca-int@lists.civicactions.net>"
+
+basicAuth:
+  username:    monitoring
+  password:    demo
+verbose: true # only used in dev
+
+webPageTest:
+  server: 'http://www.webpagetest.org'
+  key:
+  testOptions: 
