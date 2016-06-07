@@ -116,12 +116,12 @@ Using a government service shouldnâ€™t be stressful, confusing, or daunting. Itâ
 7. Use language and design consistently throughout the service, including online and offline touch points
 
 #### Actions
-1. An expert created a simple, application specific [style guide](https://github.com/CivicActions/nebula/blob/master/GSA_AGILE_BPA_style_guide.png). We also used [Bootstrap](http://getbootstrap.com/) as a user interface baseline and grid framework.
-2. This is a very simple application, but we are harmonizing the color palette.
-3. This simple, one page application takes a list of drugs and displays the adverse events associated with each one. When a user adds a drug to the list the drug is displayed in the legend and its data appears in the graph, giving immediate visual feedback.
-4. We prioritized accessibility stories and use colors that make the chart easier to read for users with visual impairments. For [reference](http://accessibility.psu.edu/images/charts/#charttext) and [here](http://guides.library.duke.edu/topten). We also completed a [detailed accessibility test](https://github.com/CivicActions/nebula/tree/master/accessibility).
-5. We are offering a "save url" option so that users may return to the chart. It will save the list of drugs but no personal information.
-6. The language will be kept to a minimum so the focus can remain on the charts. This app is geared towards health care professionals and we will ensure the copy makes sense to them. In subsequent revisions of the wireframes we've minimized or removed unnecessary text.
+1. We used [Bootstrap](http://getbootstrap.com/) as a user interface baseline and grid framework.
+2. This is a very simple application and Bootstrap is used consistently.
+3. The application enables users (both parents and caseworkers) to view and send messages, view nearby residential facilities on a map, and edit a personal profile. Upon sending a new message or replying to an existing one, the message posts in the thread and a confirmation message displays, giving immediate visual feedback. When a user updates their profile, a confirmation message displays to indicate that changes have been saved. Breadcrumbs are also visible to assist with navigation of the site.
+4. In the Inbox, we display "unread" and "urgent" statuses in text (rather than relying on color) to make this information accessible.
+5. Users may edit some profile fields, save, and then return later to complete their profiles. The other user activities (viewing or sending a message and viewing facilities on a map) are simple, one-step processes.
+6. Language is kept to a minimum so the focus can remain on the content of user profiles, messages, and maps. We've minimized or removed unnecessary text.
 7. We are currently only an online service.
 
 #### key questions
@@ -133,10 +133,10 @@ Using a government service shouldnâ€™t be stressful, confusing, or daunting. Itâ
 
 #### answers to key questions
 
-1. The user wants to understand the adverse event implications of complicated drug regimens for highly-prescribed patients (who sometimes have 5, 10, or 15 drugs.)
-2. We have not worked much on "plain language", especially because our intended users are professional doctors. We would look out for language improvements during ongoing iterations and feedback cycles.
+1. Primarily, users wants to be able to send and receive messages, and to be able to indicate whether a message is urgent and needs immediate attention. Secondarily, the users want to find residential facilities within or near to their zip code, and to maintain an up-to-date profile that contains information relevant to other users of the system. For example, parents want to share information about themselves that will be helpful to caseworkers, such as how many children they have in their home, and caseworkers want to share information that will be helpful to parents, such as shift hours.
+2. The language is plain.
 3. English only at present.
-4. Since this is a prototype, we have provided no help facility. Whoever forks it may wish to do so.
+4. We use tool tips, suggested text, and/or field-level help text for most fields on the site.
 5. We haven't attempted to harmonize with other government services, since this is a standalone application. We aimed for a modern, Bootstrap-style responsive design.
 
 <a name="Play4"></a>
