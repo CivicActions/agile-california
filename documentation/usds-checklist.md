@@ -232,9 +232,9 @@ To improve our chances of success when contracting out development work, we need
 
 #### answers to key questions
 
-1. See RFQ and related documents.
-2. See RFQ and related documents.
-3. See RFQ and related documents.
+1. See RFI and related documents.
+2. See RFI and related documents.
+3. See RFI and related documents.
 
 <a name="Play6"></a>
 ## Play 6
