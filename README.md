@@ -124,21 +124,21 @@ i. We used technologies:
 7. [Jquery](https://jquery.com/)
 
 
-j. We deployed the prototype to FedRAMP compliant Amazon Web Services (IaaS), additionally CloudFlare was used for CDN, SSL and DNS automation.
+j. We deployed the prototype to Amazon Web Services (AWS), a FedRAMP compliant IaaS provider, additionally CloudFlare was used for CDN, SSL and DNS automation.
 
-k. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework and automated them using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner. Tests run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, and test profile and mapping functionality.
+k. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework. Tests run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, and test profile and mapping functionality.
 
-l. We use Jenkins to run the automated tests after each deploy.
+l. We used Jenkins to run the automated tests on each candidate deploy and notify us immediately on Slack if tests passed of failed. Tests were automated using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner and run in Firefox and Chrome browsers.
 
-m. Setup or used configuration management [TODO: what do we put here.]
+m. We used an Infrastructure as Code (IaC) methodology to manage all infrastructure and configuration. Upon triggering a deploy with a Slack command Jenkins runs a [deploy script](https://github.com/CivicActions/agile-california/blob/master/bin/deploy) that creates a new "candidate" AWS EC2 server instance with Docker Machine, brings up Docker containers to host the site, installs the site software, runs the test suite and (if the tests pass) switches DNS to make the candidate live. The immediate prior live container is retained online in case it is needed for fail back. This entire process happens with no manual interaction and encapsulates all the configuration (deploy script, Docker Compose configuration and site configuration) in the project Git repository.
 
 n. We did not set up continous monitoring. [TODO: Owen to create]
 
-o. We use Docker.
+o. We use [Docker](https://www.docker.com/) together with [Docker Machine](https://docs.docker.com/machine/overview/) for Docker host management and [Docker Compose](https://docs.docker.com/compose/overview/) for container orchestration and configuration management.
 
 p. We have a [guide to deployment](https://github.com/CivicActions/agile-california/blob/master/docker-readme.md). [TODO: Owen, can you confirm this sufficient?]
 
-q. Our entire software stack is open source.
+q. Our entire software stack is open source and provided free of charge.
 
 
 
