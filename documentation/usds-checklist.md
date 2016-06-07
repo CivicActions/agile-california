@@ -16,13 +16,22 @@ We must begin digital projects by exploring and pinpointing the needs of the peo
 7. As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs
 
 #### Actions
-1. We have met with three professionals, including on the first day, to interview them about their needs around adverse event information. See links https://www.youtube.com/user/civicactions.
-2. We used interviews to gather user stories and to inform prioritization, as well as to provide feedback on designs, prototypes and throughout development. We also implemented analytics and feedback systems on the site to gather ongoing feedback.
-3. We consistently groomed the user stories in order to keep MVP priorities in mind.
-4. Trello cards [here](https://trello.com/b/IlUoml5c/nebula)
-5. Results of our discussions wiht users, and determinations based on these discussions, are consistently shared with the team and agency leadership in [this folder](https://github.com/CivicActions/nebula/tree/master/user-interviews) in our repo, and in our Slack channel.
-6. Our user stories can be found on Trello [here](https://trello.com/b/IlUoml5c/nebula)
-7. We scheduled a total of [six user interviews](https://github.com/CivicActions/nebula/tree/master/user-interviews) throughout the project, starting on day one.
+1. On the second day of the project we performed [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
+of 4 foster parents and/or case workers, two of which we continued to use as testers and remained involved in all of our Sprint Demos.
+2. We used interviews to gather user stories and to inform prioritization, as well as to provide feedback on designs, prototypes
+and throughout development. We did no quantititative work in this short prototype,
+but got feedback which influenced each of our six, two-day sprints.
+3. Several of our users tested against our deployed site and gave
+[valuable feedback](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/usability-testing) which turned into stories.
+4. We kept extensive [documentation](https://github.com/CivicActions/agile-california/tree/master/documentation/ux) of
+our user interactions and our conclusions. 
+5. Results of our discussions with users, and determinations based on these discussions, are consistently shared
+with the team in our repo, and in our Slack channel. Because our repo is completely open,
+our findings may be useful to the California Health and Human Services Agency even if our firm is not selectld.
+6. Our user stories and our backlog were kept is GitHub [Issues](https://github.com/CivicActions/agile-california/issues) managed via Waffle.
+We managed this backlog every day as we made progress on stories and got more user feedback.
+7. In addition to interviews, as soon as we had wirefames we invited actual users to our sprintly demos, where they
+gave valuable feedback.  They also directly performed usability testing of our AWS deployed prototype.
 
 
 
