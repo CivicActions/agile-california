@@ -1,3 +1,15 @@
+#6/7 Agenda items
+- Demo preparation
+- Plan for compliance
+- Screencast
+- Review of Readme
+- Continuous Monitoring
+- Wrapping things up
+- Taking screenshots of Waffle board
+- Plan to lock repository
+- 
+
+
 #6/6 Agenda items
 - Review of QA feedback. What is best way to log bugs? (new issues? comments to existing issues?) 
 - How should we prioritize edits and/or new features? Get consensus on waffle.io priorities. 
