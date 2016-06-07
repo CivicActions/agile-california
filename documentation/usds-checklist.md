@@ -253,8 +253,8 @@ There must be a single product owner who has the authority and responsibility to
 
 
 #### Actions
-1. Product owner was identified on June 17 as Rob Read. Documented [here](https://github.com/CivicActions/nebula/blob/master/evidence/AppointmentOfProductOwner.md)
-2. Stakeholders in this instance are agency management, and authority as outlined was granted to product owner on day 1 of Sprint.
+1. Product owner was identified as Robert L. Read. 
+2. Stakeholders in this instance were all teammembers, and all agreed to authority as outlined was granted to product owner on day 1 of Sprint.
 3. See Read's [biography](https://civicactions.com/team/rob-read).
 4. We early established a labor budget matrix of peoples skills against their availability.
 5. Again, see [biography](https://civicactions.com/team/rob-read).
@@ -268,7 +268,7 @@ There must be a single product owner who has the authority and responsibility to
 
 #### answers to key questions
 
-1. A single product owner, Rob Read, was assigned.
+1. A single product owner, Robert L. Read, was assigned.
 2. Although CivicActions maintains a polite and professional environment, the Product Owner was empowered to make prioritizaion decisions and assign tasks.
 3. The product owner required no additional authority, but based all decision on user feedback.
 
