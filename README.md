@@ -124,10 +124,9 @@ i. We used technologies:
 7. [Jquery](https://jquery.com/)
 
 
-j. Deployed the prototype on an Infrastructure as a Service (Iaas) or Platform as Service (Paas)
-Provider, and indicated which provider they used. [TODO: Own, can you comment on this?]
+j. We deployed the prototype to FedRAMP compliant Amazon Web Services (IaaS), additionally CloudFlare was used for CDN, SSL and DNS automation.
 
-k. [TODO: Owen, can you comment on our automated unit tests?]
+k. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework and automated them using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner. Tests run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, and test profile and mapping functionality.
 
 l. We use Jenkins to run the automated tests after each deploy.
 
