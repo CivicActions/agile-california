@@ -53,12 +53,12 @@ as well as case workers with whom they must communicate.
 3. The case worker wants to be able to handle a large case load, the parent wants to communicate more clearly to lear the status of their children.
 4. We have not yet addressed the problem of people who don't use smart phones.
 5. User interviews, personae, story maps, empathy maps.
-** [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
-** [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
-** [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
-** [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
-** [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
-** [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
++ [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
++ [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
++ [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
++ [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
++ [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
++ [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
 6. That parents want streamlined communication, and that changes to visitation status and arrange dropoff locations are big deal.
 7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all
 of our ux finding.
