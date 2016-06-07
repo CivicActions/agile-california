@@ -23,6 +23,8 @@ We mainatained a disciplined process, having formal demos, retrospectives, and a
 [Waffle](https://waffle.io/)
 overlaying our [GitHub](https://github.com/CivicActions/agile-california) Issues and Stories.
 
+As we have done before, we closely followed the [USDS checklist](https://github.com/CivicActions/agile-california/blob/master/documentation/usds-checklist.md).
+
 ## The User-Centered Approach
 
 Knowing very little about the subject of foster children but having found real users, we wrote
