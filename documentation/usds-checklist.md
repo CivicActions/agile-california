@@ -317,8 +317,8 @@ The technology decisions we make need to enable development teams to work effici
 4. [Consider open source software solutions](http://www.whitehouse.gov/sites/default/files/omb/assets/egov_docs/memotociostechnologyneutrality.pdf) at every layer of the stack
 
 #### Actions
-1. API driven frontend. Modern lightweight PHP MVC framework (Silex/Symphony). Bootstrap, jQuery.
-2. We used Bootstrap in order to be Responsive, and tested with phones and iPad tablets using crossbrowsertesting.com and hands on device testing.
+1. We used Drupal 8, with MapBox as our mapping tool, and Boostrap as our styling tool.
+2. We used Bootstrap in order to be Responsive, and tested with desktops, iPhones, and Android operating systems.
 3. We have reproducible sandbox installation instructions with minimal dependencies (self hosting), and continuous integration of unit test framework.
 4. The Docker host operating system (Ubuntu), Docker, container operating systems (minimal Debian), Nginx, PHP, MySQL and frontend frameworks are all open source licenced.
 
@@ -332,9 +332,11 @@ The technology decisions we make need to enable development teams to work effici
 
 #### answers to key questions
 
-1. Docker and Docker Compose for development, due to need for rapid developer onboarding, as well as for allowing full consistency with production environment. PHP on the backend chosen do to familiarity fo the team. API-centric for flexibility and reusability. JQuery and Bootstrap on the front end. We choose all of these components as light-weight and suited to a simple application that required not session or identity management.
-2. We chose Mariadb version 10.0 as a popular and stable drop-in replacement of MySQL with strong support in the community.
-3. We had no new development team members join mid-project in this short time, but our security officer tested our sandbox setup using the instructions and was ready to go in around 30 mins.
+1. Drupal 8 was a backbone that provided out-of-the-box user management and configurable profiles. MapBox and GeoJSON allowed easy utilization
+of the API offfered by the state for finding residentail facilityes. Docker and Docker Compose for development, due to need for rapid developer onboarding, as well as for allowing full consistency with production environment.
+API-centric for flexibility and reusability. JQuery and Bootstrap on the front end. We choose all of these components as light-weight and suited to a simple application that required not session or identity management.
+2. We installed Drupal 8 on top of MariaDB 10 as a standard default database solution.
+3. In this simple app, a Drupal developer will need no more than a day to start contributing.  One team member contributed the MapBox code in single day, which was then integrated into Drupal in a second day.
 
 <a name="Play9"></a>
 ## Play 9
