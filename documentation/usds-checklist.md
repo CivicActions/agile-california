@@ -47,13 +47,20 @@ gave valuable feedback.  They also directly performed usability testing of our A
 
 #### answers to key questions
 
-1. Health care professionals, but in particular busy doctors treating highly prescribed patients.
-2. The need to compare the adverse events associated with multiple drugs.
-3. To help patients reduce adverse events or suspected side effects associated with their drug regimes.
-4. Those not facile with online tools. Those who are looking for information on non-prescription drugs (as the MVP will be targeted to prescription drugs in the AHRQ database).
-5. User interviews, and Design Studio.
-6. That healthcare professionals would benefit from being able to visually compare adverse events across drugs.
-7. Interviews and notes are posted [here]  (https://www.youtube.com/user/civicactions) and [here](https://github.com/CivicActions/nebula/tree/master/user-interviews), respectively.
+1. At the beginning of the project we thought it was Foster Parents, but the State answered our questions explaining it is Biological Parents,
+as well as case workers with whom they must communicate.
+2. Communication between parents and caseworkers is costly and cumbersome, and finding dropoff and visitation sites difficult.
+3. The case worker wants to be able to handle a large case load, the parent wants to communicate more clearly to lear the status of their children.
+4. We have not yet addressed the problem of people who don't use smart phones.
+5. User interviews, personae, story maps, empathy maps.
+* [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
+* [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
+* [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
+* [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
+* [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
+6. That parents want streamlined communication, and that changes to visitation status and arrange dropoff locations are big deal.
+7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all
+of our ux finding.
 8. During each sprint.
 
 <a name="Play2"></a>
