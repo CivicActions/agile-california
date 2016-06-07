@@ -158,15 +158,15 @@ We should use an incremental, fast-paced style of software development to reduce
 9. Use code reviews to ensure quality
 
 #### Actions
-1. See url https://nebula.civicactions.com/ (subsequently moved to https://www.sideeffect.io/), rendered public on day 5 of our Sprint.
-2. User interviews run via screenshare on days 1, 3, 4 of the Sprint, and live interaction with the url solicited on day 5, with feedback immediately collected from affiliate Tomorrow Partners and from members of the CivicActions team beyond the project team. See [process journal](https://github.com/CivicActions/nebula/edit/master/ProcessJournal.md).
+1. See url [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/), which was made live early n our project. 
+2. We did usability tests in each sprint.
 3. Daily scrums, targeted sub-group meetings, chat (Slack), and Sprint rituals (retrospectives, Sprint planning meetings, backlog grooming meetings) have all constituted the central pillars of our team communication.
-4. Our project team is exactly the size required by the roles specified in the RFQ in order to qualify for Pools 1, 2, 3, and has been entirely non-hierarchical, with directives derived in consultation with all concerned members of the project team.
+4. We had an egalitarian team of 4-7 with no management layers. The Product Owner was a coding member of the team.
 5. Features are pushed to the live site multiple times each day, as evidenced by the log in Github and Slack.
-6. Features prioritized on our Trello list "Prioritized Stories"; bugs prioritized in our issue queue in github.
-8. Using Github for this - all project members and user-testers/stakeholders have access and the repository is also public.
-8. Using Trello for this - all project members and user-testers/stakeholders have access. For this project, the board is also public. We used GitHub for some bugs.
-9. We did team code and architecture design reviews of key components, and also used public pull requests in github to ensure expert-on-neophyte individual code reviews.
+6. We religiously kept our feature backlog up-to-date every day using Waffle on top of GitHub Issues.
+7. Using Github for this - all project members and user-testers/stakeholders have access and the repository is also public.
+8. We used GitHub issues for all bugs and story writing, which was done by all team members.
+9. Our Chief Architect did code review with the two other coders of each pull request.
 
 #### key questions
 - How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
@@ -181,15 +181,16 @@ We should use an incremental, fast-paced style of software development to reduce
 
 #### answers to key questions
 
-1. MVP shipped (made public) on day 5 of the Sprint. It was shown (in buggy prototype state) to users on Days 3 and 4.
-2. Seven minutes.
-3. Sprints have been 4 days each in this initial Sprint.
+1. MVP was shown to test users after Sprint 4.
+2. Including tests, we deploy in less than 10 minutes.
+3. Used very rapid Sprints of 2 Sprints per week, or 2.5 days per Sprint.
 4. Git
 5. Github issue queue
-6. Trello, prioritized in the Sprint planning meeting.
-7. Every 2 days.
-8. User interviews, fed into backlog prioritization.
-9. Early gap was inaccess to tool (access only through screenshare), later gaps were in poor UX, inaccess to relativized data.
+6. Waflle, on top of GitHub Issues.
+7. Everyday, with Waffle.
+8. Every demo (twice per week) we have formal interaction with users, who also did additional testing, amounting to approximately 3 feedback sessions per week.
+9. We identified fundamental needs unmet by existing technology, especially around communication, and specializations of communication
+around fostering, such as medical incidents and visitation.
 
 <a name="Play5"></a>
 ## Play 5
