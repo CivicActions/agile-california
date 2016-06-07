@@ -32,8 +32,8 @@ open-ended [scripts](https://github.com/CivicActions/agile-california/tree/maste
 We began our four [user interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
 of one case worker and three foster parents. From these interviews
 we built an [empathy map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md) and [personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md).
-We then began building
-[wirefames](https://github.com/CivicActions/agile-california/blob/master/Sketch-inbox01.png) that we could show to users to get feedback.
+We then organized an informal design studio and began mocking up
+[sketches and wirefames](https://github.com/CivicActions/agile-california/blob/master/Sketch-inbox01.png) that we could show to users to get feedback.
 In parallel to the creation of the wireframes
 we deployed a website upon which we drove to a functional prototype so that our users could test our app on their actual
 mobile devices. 
