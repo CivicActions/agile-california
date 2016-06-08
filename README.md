@@ -2,8 +2,7 @@ Try our prototype:
 
 [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/)
 
-Watch a screencast of the user experience here:
-[TO BE DONE]
+Watch a [screencast](https://youtu.be/A76b5W14Nvo) of the user experience.
 
 # CHHS Foster Hub - The CivicActions Submission to CHHS RFI #75001 Agile Development Pre-Qualified (ADPQ)
 
