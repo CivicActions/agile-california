@@ -1,0 +1,10 @@
+{
+  "type": "https",
+  "name": "Agile CA",
+  "url": "http://agile-ca.civicactions.com/user",
+  "isPaused": false,
+  "tags": [],
+  "alertTreshold": 1,
+  "maxTime": 1500,
+  "interval": 60
+}
