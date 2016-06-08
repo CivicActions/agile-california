@@ -296,7 +296,7 @@ We need talented people working in government who have experience creating moder
 2. Yes
 3. Yes
 4. Yes
-5. Yes, we have experience with OpenSCAP automated compliance scanning tools, among others.
+5. Yes
 6. N/A
 7. N/A
 8. N/A
@@ -357,9 +357,9 @@ Our services should be deployed on flexible infrastructure, where resources can 
 
 #### Actions
 1. Fully automated deployment script provisions Amazon Web Services (AWS) infrastructure, and Cloudflare DNS/CDN. Docker based container architecture runs on AWS infrastructure could be horizontally scaled with minimal effort.
-2. Deployments contain a full frontend or backend stack, so can be provisioned dynamically using AWS Cloudwatch rules.
-3. Using AWS and Cloudflare APIs - there is no need for GUI configuration of these services, beyond getting an API key and connection details.
-4. AWS region is configurable and instances are self contained (no master database needed).
+2. Yes
+3. Using AWS and Cloudflare APIs allow automatic provisioning.
+4. AWS region is configurable and instances are self contained (no master database needed), although we do not need this.
 5. AWS charges by the minute.
 6. Cloudfront is used as a content delivery network.
 7. AWS uses commodity hardware.
@@ -413,11 +413,11 @@ Today, developers write automated scripts that can verify thousands of scenarios
 5. Conduct load and performance tests at regular intervals, including before public launch
 
 #### Actions
-1. We have automated front-end tests that run on every Github push, using Selenium Builder JSON format tests. These run a series of interactions and checks on the site in both Google Chrome and Mozilla Firefox browsers, and report any failures to developers.
-2. We automated have back-end API integration tests using PHPUnit.
+1. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework. Tests run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, and test profile and mapping functionality.
+2. We used Jenkins to run the automated tests on each candidate deploy and notify us immediately on Slack if tests passed of failed. Tests were automated using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner and run in Firefox and Chrome browsers.
 3. The build process runs on every git push, and includes automated tests.
 4. We use automated deployment that can be initiated with a single slack command to automatically deploy both the backend and the frontend (as separate AWS instances).
-5. We have continually tested. We have performed performance tests, which led to refactoring. We have not yet performed load tests.
+5. No---in this rapid prototype, we have not invested in performance testing.
 
 
 
@@ -436,16 +436,16 @@ Today, developers write automated scripts that can verify thousands of scenarios
 
 #### answers to key questions
 
-1. Proably about 70% on the back end, 60% on the front end.
+1. Perhaps 40%.
 2. A very very minor fix can be coded, built, tested, and deployed in 10 minutes (3 minutes to test and 7 minutes for build and deployment time.)  Coding time is often longer, of course.
 3. Our total process from conception to deployment can take as little as 3 hours.  Once fully coded, the build time is the same as for bugs.
-4. The build/test process runs on every push - it ran 421 times during the course of this project. We also performed a complete deploy about 5 times a day during heavy development, although some days were slower.
-5. PHPUnit test are the basis of the automated tests. We are using Jenkins as our central tool, which uses docker, docker-compose, and docker-machine to manage the containers.
+4. The build/test process runs on every push. We probably made 3 code pushes each day.
+5. We are using Jenkins as our central tool, which uses docker, docker-compose, and docker-machine to manage the containers.
 6. We are using Jenkins as our central tool, which uses docker, docker-compose, and docker-machine to manage the containers, as well as report and chart test results.
-7. We target medical professionals, so there may be as many as 2 million total uses (for doctors and their staff).  There use is not likely to be bursty, but will follow working hours as a pattern.  Since we do not require session management for this application, it is more reasonable to talk about requests per second than number of concurrent users. Ideally we can imagine 10 uses per day, or 20 million uses in a 12 hour period, or 1.7 million per hour, or 472 per second.
+7. We think there are as many as 50,000 foster kids in California. This would be a relatively modest user base.
 8. We haven't tested this.
-9. We gracefully tolerate certain failures of the OpenFDA API, although we do not inform the user as well as we should in these cases.
-10. If we ever reached high volume, we might have to start caching queries to the OpenFDA API itself.
+9. We haven't tested this.
+10. We suspect in this limited use that immediate scaling will not be required.
 
 <a name="Play11"></a>
 ## Play 11
@@ -466,12 +466,12 @@ The following checklist provides a starting point, but teams should work closely
 6. Use deployment scripts to ensure configuration of production environment remains consistent and controllable
 
 #### Actions
-1. CivicActions has determined in consultation with internal privacy experts the system does not collect any personal information.
-2. CivicActions has determined in consultation with internal privacy experts the system does not collect any personal information.
-3. CivicActions has determined in consultation with internal privacy experts the system does not collect any personal information.
-4. CivicActions has determined in consultation with internal privacy experts the system does not collect any personal information and no PII is retained.
+1. NA
+2. NA
+3. NA
+4. NA
 5. AWS infrastructure is FedRAMP certified.
-6. CivicActions uses Ansible, Docker and other Infrastructure as Code tools to automate and control the configuration and deployment of development and production environments.
+6. CivicActions uses Docker and other Infrastructure as Code tools to automate and control the configuration and deployment of development and production environments.
 
 
 #### key questions
@@ -484,12 +484,12 @@ The following checklist provides a starting point, but teams should work closely
 
 #### answers to key questions
 
-1. The service is anonymous and does not collect personal information from the user.
-2. The service does not collect more information than necessary to return the results of potential drug interactions.
-3. N/A
-4. N/A
-5. CivicActions uses OpenSCAP and GovReady for automated, continous scanning of the system against the USGCB baselines and for known vultnerabilities.
-6. Yes. The system will have a contact page with a variety of information including a privacy email address indicated for questions regarding HIPPA, privacy, and security matters.
+1. N/A
+2. N/A
+3. We should provide a way to remove data upon leaving the product but we have not.
+4. No
+5. This would depend on California policies.
+6. N/A
 
 <a name="Play12"></a>
 ## Play 12
@@ -510,11 +510,11 @@ At every stage of a project, we should measure how well our service is working f
 8. Use an experimentation tool that supports multivariate testing in production
 
 #### Actions
-1. AWS Cloudwatch provides real-time resource monitoring of instances and resource utilization.
-2. We monitored system availability, performance (response time, latency and error rates) as well as APIj correctness using the Runscope multi-location checking service. See (devops/monitoring)[https://github.com/CivicActions/nebula/tree/master/devops/monitoring] for details. AWS CloudWatch provides monitors for network throughput.
-3. Runscope includes (median, 95th percentile, and 98th percentile performance)[https://github.com/CivicActions/nebula/blob/master/devops/monitoring/metrics.jpg]. Google Analytics also provides real user measurement (RUM) of end-user browser page load times.
-4. Runscope was configured to provide automated e-mail and text alerts when failing checks occured.
-5. (Google Analytics)[https://github.com/CivicActions/nebula/blob/master/evidence/google-analytics.jpg] was set up and tracks concurrent users in real time, as well as in aggregate.
+1. AWS and Google Analytics provides tools for this monitoring.
+2. We have not implemented significant performance testing.
+3. We have not done this.
+4. We have not done this.
+5. Google Analytics was set up and tracks concurrent users in real time, as well as in aggregate.
 6. There was not enough time or traffic to gather sufficient data to provide a useful report.
 7. There was not enough time or traffic to gather sufficient data to provide a useful report.
 8. Google Analytics provides this functionality, but there was not enough time or traffic to gather sufficient data to peform multivariate testing.
@@ -537,9 +537,9 @@ At every stage of a project, we should measure how well our service is working f
 
 #### answers to key questions
 
-1. User interactions (drugs entered, toggled), user shares, system response time and error rate.
+1. User interactions, messages sent per unit time.
 2. There was not enough time or traffic to gather sufficient data to assess this.
-3. AWS CloudWatch, Runscope, Jenkins.
+3. AWS CloudWatch, Jenkins.
 4. For 99% of requests, page load requests should respond within 1 second, AHRQ API response should be within 2 seconds, and FDA API response within 4 seconds.
 5. There was not enough time or traffic to gather sufficient data to assess this.
 6. There was not enough time or traffic to gather sufficient data to assess this.
@@ -572,14 +572,14 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 
 #### Actions
 1. We have an open repository which allows issues to be created, and recently implemented an in-product survey.
-2. We offer a documented API that makes it easy to combine the AHRQ and OpenFDA data.  It is public, and others can implement it.
-3. We generate no new data, but pass the OpenFDA and AHRQ data through.
+2. We have no datasets, but we explictly [invited](https://civicactions.com/blog/an-open-invitation-to-collaborate/) our competitors to share our code.
+3. NA
 4. NA
 5. NA --- the government can do this, but we do not.  We have place our code in the public domain.  If we paid for any sub-contracting, we would of course do this.
 6. NA --- we have chosen to publish as the government does, in the public domain.  A GPL or other share-alike system would allow us to do this. We hope the government demands such licensing where legally entitled to in the future.
-7. We have done this, https://api.sideeffect.io
-8. Obviously we have done this as required by the RFQ and our principles. https://github.com/CivicActions/nebula
-9. We did do this, and in fact we reported on by [Federal Computer Weekly](http://fcw.com/articles/2015/07/06/civicactions-agile.aspx?m=1).
+7. Our users asked for a way for the court to announce changes in status. In theory we could implement this as an API, but we have no power to get the California court system to use it.
+8. Obviously we have done this as required by the RFI and our principles. https://github.com/CivicActions/agile-california
+9. We have done fiercely with our blog posts.
 
 #### key questions
 - How are you collecting user feedback for bugs and issues?
@@ -590,8 +590,8 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 
 #### answers to key questions
 
-1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open github repository.  However, since that is mostly friendly to techies, we also placed a survey directly in the product.
-2. It is code-level documented, and provides a reasonalbe RESTful explanation if you just go to it.  It repackages the OpenFDA data and can combine it with prescription volume data from AHRQ to add value by contextualizing the data.
+1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open github repository.
+2. N/A
 3. It is open source.
 4. All.
 5. None in addition to what we are repackaging.
