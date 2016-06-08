@@ -9,7 +9,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: logo.png
+  path: themes/bootstrap/logo.jpg
   url: ''
   use_default: false
 schema: 8000
