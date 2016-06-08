@@ -1,3 +1,9 @@
+#6/7 Action items
+- Henry to review readme tomorrow 
+- Steve to set up 4pm ET demo call Weds with Amy and Rani 
+- Rob and Jen to review screencast together 
+- Owen to include plan for continuous monitoring today/tomorrow 
+
 #6/7 Agenda items
 - Demo preparation
 - Plan for compliance
@@ -7,8 +13,6 @@
 - Wrapping things up
 - Taking screenshots of Waffle board
 - Plan to lock repository
-
-
 
 #6/6 Agenda items
 - Review of QA feedback. What is best way to log bugs? (new issues? comments to existing issues?) 
