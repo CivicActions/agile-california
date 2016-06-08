@@ -90,14 +90,25 @@ The facilities information is presented on an integrated mobile-friendly map usi
 technology such as Leaflet distributed with MapBox, an open-source mapping system. The API provided by the state is accessed via
 jquery.
 
-## The Explicit RFI Requirements
+# Following the USDS Playbook
+
+We follow the USDS Playbook closely.  As documentation of this, we us the explicit checklist published by the
+USDS with specific evidence and answers for each relevant checklist item:
+
+[USDS checklist](https://github.com/CivicActions/agile-california/blob/master/documentation/usds-checklist.md)
+
+# The Explicit RFI Requirements
+
+The RFI calls out items (a-q) below as requiring explicit reference. We have not duplicated the headings, but only our evidence for
+having completed each of the required items.
 
 a. A Product Owner was given overall responsibility (Robert L. Read).
 
 b. Team consisted 7 persons in roles: Product Owner, Agile Coach, Technical Architect, Back End Web Designer, Front End Web Designer, and Interaction Designer/User
 Researcher/Usability Tester, and Delivery Manger.  Engineers also doubled as DevOps engineers.
 
-c. Interviewed 4 actual users, designed wireframes and empathy maps with them, demoed to them, and performed usability testing with one of them. 
+c. Interviewed 4 actual users, designed wireframes and empathy maps with them, demoed to them, and performed usability testing with one of them.
+
 d. Used:
 
 1. [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
