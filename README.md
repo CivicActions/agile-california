@@ -137,7 +137,7 @@ n. We set up continuous monitoring of application status and response time using
 
 o. We use [Docker](https://www.docker.com/) together with [Docker Machine](https://docs.docker.com/machine/overview/) for Docker host management and [Docker Compose](https://docs.docker.com/compose/overview/) for container orchestration and configuration management.
 
-p. We have a [guide to deployment](https://github.com/CivicActions/agile-california/blob/master/docker-readme.md). [TODO: Owen, can you confirm this sufficient?]
+p. The [devops-manual](https://github.com/CivicActions/agile-california/blob/master/documentation/devops-manual.md) describes how to install and run the prototype on a local sandbox, deploy the application to AWS and configure a continuous delivery (integrated testing and deployment) automation job.
 
 q. Our entire software stack is open source and provided free of charge.
 
