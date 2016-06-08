@@ -133,7 +133,7 @@ l. We used Jenkins to run the automated tests on each candidate deploy and notif
 
 m. We used an Infrastructure as Code (IaC) methodology to manage all infrastructure and configuration. Upon triggering a deploy with a Slack command Jenkins runs a [deploy script](https://github.com/CivicActions/agile-california/blob/master/bin/deploy) that creates a new "candidate" AWS EC2 server instance with Docker Machine, brings up Docker containers to host the site, installs the site software, runs the test suite and (if the tests pass) switches DNS to make the candidate live. The immediate prior live container is retained online in case it is needed for fail back. This entire process happens with no manual interaction and encapsulates all the configuration (deploy script, Docker Compose configuration and site configuration) in the project Git repository.
 
-n. We did not set up continous monitoring. [TODO: Owen to create]
+n. We set up continuous monitoring of application status and response time using open source [uptime](https://github.com/fzaninotto/uptime) software. This produces summary/historical reports and charts, and will send e-mail alerts if an issue is detected.
 
 o. We use [Docker](https://www.docker.com/) together with [Docker Machine](https://docs.docker.com/machine/overview/) for Docker host management and [Docker Compose](https://docs.docker.com/compose/overview/) for container orchestration and configuration management.
 
