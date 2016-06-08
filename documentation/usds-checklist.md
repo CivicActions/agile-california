@@ -1,6 +1,6 @@
-# USDS Playbook Checklist and Evaluation Form
+# USDS Playbook Checklist and Evaluation Form for CHHS Foster Hub Prototype
 
-<a name="abcd"></a>
+<a name="Play1"></a>
 ## Play: 1
 ### Understand what people need
 
@@ -18,22 +18,17 @@ We must begin digital projects by exploring and pinpointing the needs of the peo
 #### Actions
 1. On the second day of the project we performed [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
 of 4 foster parents and/or case workers, two of which we continued to use as testers and remained involved in all of our Sprint Demos.
-2. We used interviews to gather user stories and to inform prioritization, as well as to provide feedback on designs, prototypes
-and throughout development. We did no quantititative work in this short prototype,
+2. We used interviews to gather user stories and to inform prioritization, as well as to provide feedback on designs, prototypes and throughout development. We did no quantitative work in this short prototype,
 but got feedback which influenced each of our six, two-day sprints.
-3. Several of our users tested against our deployed site and gave
-[valuable feedback](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/usability-testing) which turned into stories.
-4. We kept extensive [documentation](https://github.com/CivicActions/agile-california/tree/master/documentation/ux) of
-our user interactions and our conclusions. 
+3. Several of our users tested against our deployed site and gave [valuable feedback](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/usability-testing) which turned into stories and informed prioritization of subsequent work.
+4. We kept extensive [documentation](https://github.com/CivicActions/agile-california/tree/master/documentation/ux) of our user interactions and our conclusions. 
 5. Results of our discussions with users, and determinations based on these discussions, are consistently shared
-with the team in our repo, and in our Slack channel. Because our repo is completely open,
-our findings may be useful to the California Health and Human Services Agency even if our firm is not selectld.
-6. Our user stories and our backlog were kept is GitHub [Issues](https://github.com/CivicActions/agile-california/issues) managed via Waffle.
+with the team in our Git repository, and in our Slack channel. Because our repository is completely open,
+our findings may be useful to the California Health and Human Services Agency leadership even if our firm is not selected.
+6. Our user stories and our backlog were kept is GitHub [Issues](https://github.com/CivicActions/agile-california/issues?q=label%3A"user+story"+sort%3Acreated-asc) managed via [Waffle](https://waffle.io/CivicActions/agile-california?label=user%20story).
 We managed this backlog every day as we made progress on stories and got more user feedback.
 7. In addition to interviews, as soon as we had wirefames we invited actual users to our sprintly demos, where they
 gave valuable feedback.  They also directly performed usability testing of our AWS deployed prototype.
-
-
 
 #### key questions
 1. Who are your primary users?
@@ -47,28 +42,18 @@ gave valuable feedback.  They also directly performed usability testing of our A
 
 #### answers to key questions
 
-1. At the beginning of the project we thought it was Foster Parents, but the State answered our questions explaining it is Biological Parents,
-as well as case workers with whom they must communicate.
-2. Communication between parents and caseworkers is costly and cumbersome, and finding dropoff and visitation sites difficult.
-3. The case worker wants to be able to handle a large case load, the parent wants to communicate more clearly to lear the status of their children.
-4. We have not yet addressed the problem of people who don't use smart phones.
-5. User interviews, personae, story maps, empathy maps.
- + [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
- + [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
- + [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
- + [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
- + [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
- + [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
+1. At the beginning of the project we thought it was Foster Parents, but the State answered our questions explaining it is Biological Parents, as well as case workers with whom they must communicate.
+2. Communication between parents (both foster and biological) and caseworkers is costly and cumbersome, and finding dropoff and visitation sites difficult.
+3. The case worker wants to be able to handle a large case load, the parent wants to communicate more clearly around the status of their children.
+4. We have not yet addressed the problem of people who don't use smart phones - a potential future enhancement would be to integrate bidirectional SMS capability into the Inbox.
+5. The following user research methods were used: [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews), [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes), [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md), [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md), [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md), [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes).
 6. That parents want streamlined communication, and that changes to visitation status and arrange dropoff locations are big deal.
-7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all
-of our ux finding.
-8. During each sprint.
+7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all of our UX finding.
+8. During each of the 6 sprints.
 
 <a name="Play2"></a>
 ## Play 2
 ### Address the whole experience, from start to finish
-
-
 
 We need to understand the different ways people will interact with our services, including the actions they take online, through a mobile application, on a phone, or in person. Every encounter — whether it's online or offline — should move the user closer towards their goal.
 
