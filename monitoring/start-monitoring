@@ -3,4 +3,4 @@
 docker-compose up -d
 sleep 5
 # Add our initial check.
-curl -v -H "Content-Type: application/json" -X PUT -d "@check.json" 'http://monitoring:demo@localhost:8082/api/checks
+curl -v -H "Content-Type: application/json" -X PUT -d "@check.json" 'http://monitoring:demo@localhost:8082/api/checks'
