@@ -166,7 +166,7 @@ We should use an incremental, fast-paced style of software development to reduce
 6. We religiously kept our feature backlog up-to-date every day using Waffle on top of GitHub Issues.
 7. Using Github for this - all project members and user-testers/stakeholders have access and the repository is also public.
 8. We used GitHub issues for all bugs and story writing, which was done by all team members.
-9. Our Chief Architect did code review with the two other coders of each pull request.
+9. Our Technical Architect performed code review with the two other coders of each pull request.
 
 #### key questions
 - How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
@@ -186,8 +186,8 @@ We should use an incremental, fast-paced style of software development to reduce
 3. Used very rapid Sprints of 2 Sprints per week, or 2.5 days per Sprint.
 4. Git
 5. Github issue queue
-6. Waflle, on top of GitHub Issues.
-7. Everyday, with Waffle.
+6. Waffle.io, on top of GitHub Issues.
+7. Everyday, with Waffle.io.
 8. Every demo (twice per week) we have formal interaction with users, who also did additional testing, amounting to approximately 3 feedback sessions per week.
 9. We identified fundamental needs unmet by existing technology, especially around communication, and specializations of communication
 around fostering, such as medical incidents and visitation.
@@ -316,7 +316,7 @@ The technology decisions we make need to enable development teams to work effici
 4. [Consider open source software solutions](http://www.whitehouse.gov/sites/default/files/omb/assets/egov_docs/memotociostechnologyneutrality.pdf) at every layer of the stack
 
 #### Actions
-1. We used Drupal 8, with MapBox as our mapping tool, and Boostrap as our styling tool.
+1. We used Drupal 8, with MapBox as our mapping tool, and Bootstrap as our styling tool.
 2. We used Bootstrap in order to be Responsive, and tested with desktops, iPhones, and Android operating systems.
 3. We have reproducible sandbox installation instructions with minimal dependencies (self hosting), and continuous integration of unit test framework.
 4. The Docker host operating system (Ubuntu), Docker, container operating systems (minimal Debian), Nginx, PHP, MySQL and frontend frameworks are all open source licenced.
@@ -416,7 +416,7 @@ Today, developers write automated scripts that can verify thousands of scenarios
 2. We used Jenkins to run the automated tests on each candidate deploy and notify us immediately on Slack if tests passed of failed. Tests were automated using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner and run in Firefox and Chrome browsers.
 3. The build process runs on every git push, and includes automated tests.
 4. We use automated deployment that can be initiated with a single slack command to automatically deploy both the backend and the frontend (as separate AWS instances).
-5. No---in this rapid prototype, we have not invested in performance testing.
+5. No - in this rapid prototype, we have not invested in performance testing.
 
 
 
@@ -509,14 +509,14 @@ At every stage of a project, we should measure how well our service is working f
 8. Use an experimentation tool that supports multivariate testing in production
 
 #### Actions
-1. AWS and Google Analytics provides tools for this monitoring.
-2. We have not implemented significant performance testing.
-3. We have not done this.
-4. We have not done this.
+1. [AWS provides tools](https://aws.amazon.com/documentation/cloudwatch/) for this monitoring.
+2. Our [monitoring system](https://github.com/CivicActions/agile-california/tree/master/monitoring) tracks system response time and error rates from designated monitoring location(s). Google Analytics also tracks real user page response time, error rates etc.
+3. We have not done this, however monitoring and Google Analytics track data in sufficiently detailed form allowing for percentile reports to be generated offline.
+4. Our [monitoring system](https://github.com/CivicActions/agile-california/tree/master/monitoring) provides automated e-mail alerts and can be configured to submit to webhooks for real time alerting systems.
 5. Google Analytics was set up and tracks concurrent users in real time, as well as in aggregate.
 6. There was not enough time or traffic to gather sufficient data to provide a useful report.
 7. There was not enough time or traffic to gather sufficient data to provide a useful report.
-8. Google Analytics provides this functionality, but there was not enough time or traffic to gather sufficient data to peform multivariate testing.
+8. Google Analytics provides this functionality, but there was not enough time or traffic to gather sufficient data to perform multivariate testing.
 
 
 #### key questions
@@ -536,15 +536,15 @@ At every stage of a project, we should measure how well our service is working f
 
 #### answers to key questions
 
-1. User interactions, messages sent per unit time.
+1. User interactions with each major feature (profiles, messaging, mapping), messages sent per unit time.
 2. There was not enough time or traffic to gather sufficient data to assess this.
-3. AWS CloudWatch, Jenkins.
-4. For 99% of requests, page load requests should respond within 1 second, AHRQ API response should be within 2 seconds, and FDA API response within 4 seconds.
+3. [AWS CloudWatch](https://aws.amazon.com/documentation/cloudwatch/), [uptime monitoring system](https://github.com/CivicActions/agile-california/tree/master/monitoring).
+4. For 90% of page load requests should have a response within 1 second, 98% within 2 seconds, and 99% within 4 seconds.
 5. There was not enough time or traffic to gather sufficient data to assess this.
 6. There was not enough time or traffic to gather sufficient data to assess this.
 7. Given rapid prototype "beta" production, we would aim for 98% uptime for the initial launch, moving upwards as user base grows and platform stabilizes.
 8. There was not enough time or traffic to gather sufficient data to assess this.
-9. Email and text.
+9. Email.
 10. We coordinate this on Slack, assigning an owner for each incident, working closely on triage and remediation. All incidents are considered using a root cause analysis, and discussed with the entire development and operations team based on those findings to improve process and tools as needed.
 11. We are using Google Analytics on the site so that we can gain better insight into usage and behavior. We are also planning on basic usability testing using a remote testing tool after the release of the MVP.
 12. Our MVP is rapidly evolving and we are not ready for A/B testing at this time.
