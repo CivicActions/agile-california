@@ -1,4 +1,10 @@
-#6/7 Call Agenda
+#6/8 Action items
+- Heather to work on logo, and then backlog 
+- Owen to work on backlog before demos, and then documentation
+- Rob to lead demos, Owen to screenshare 
+- Steve to start with readme 
+
+#6/8 Call Agenda
 - Question re: mapping of GSA schedule roles 
 - Status update USDS playbook mapping 
 - README (and question of whether RFI criteria should be covered there) 
