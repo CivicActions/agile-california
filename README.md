@@ -10,7 +10,7 @@ Watch a [screencast](https://youtu.be/A76b5W14Nvo) of the user experience.
 
 We created a multi-disciplinary team and immediately decided to iterate through
 [six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
-scrum methodology, carefully compressed from the normal two-week cycle down to a ligtning-fast two days per sprint.
+scrum methodology, carefully compressed from the normal two-week cycle down to a ligtning-fast two-days-per sprint.
 A Product Owner was assigned as the overall voice of the users. We 
 successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california),
 a group that put us in contact with real foster parents
@@ -43,7 +43,7 @@ The users taught us things not anticipated by the RFI. For example, visitation s
 places for dropoff seems to be even more important than finding official Residential Facilities (from the state's data).
 Using this fact, we created a "spike" [solution](https://github.com/CivicActions/agile-california/tree/master/geojson-spike)
 to test our ability to render a map.
-Nonetheless we implemented the map and made plans to provide a visitation negotiation system.
+Nonetheless we implemented the map of official residential facilites and made future plans to provide a visitation negotiation system.
 
 As our understanding grew we kept our
 [story map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md) up to date.
@@ -52,15 +52,15 @@ We designed our profile based on specific feedback about what is important to bo
 For example, we learned that a very important profile feature is "preferred time of contact", so we added that to our profiles
 of parents and case workers. Our users told us it was better to leave this an informal text message than to use a time-based field.
 
-We learned that marking messages in the inbox of urgent was very important, so we supported that and render urgent messages in red.
-We also learned that classifying messages as being related to visitation or medical incidents is extremely important, so we write user stories
+We learned that marking messages in the inbox of urgent was very important, so we render urgent messages in red.
+We also learned that classifying messages as being related to visitation or medical incidents is extremely important, so we wrote user stories
 to capture that and placed them into our constantly-evolving [backlog](https://github.com/CivicActions/agile-california/issues), but were not able to complete them.
 
 We got a *big surprise* when the State clarified that the primary user was the biological parent,
 not the foster parent!
 
 Following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change
-by beginning to ask your users to tell us what they believed biological parents
+by beginning to ask our users to tell us what they believed biological parents
 would want. Our prototype now has roles for biological parents, foster parents, and case workers.
 
 On June 1st our CEO [reached out](https://civicactions.com/blog/an-open-invitation-to-collaborate/) 
