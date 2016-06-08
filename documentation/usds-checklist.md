@@ -166,7 +166,7 @@ We should use an incremental, fast-paced style of software development to reduce
 6. We religiously kept our feature backlog up-to-date every day using Waffle on top of GitHub Issues.
 7. Using Github for this - all project members and user-testers/stakeholders have access and the repository is also public.
 8. We used GitHub issues for all bugs and story writing, which was done by all team members.
-9. Our Chief Architect did code review with the two other coders of each pull request.
+9. Our Technical Architect performed code review with the two other coders of each pull request.
 
 #### key questions
 - How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
@@ -186,8 +186,8 @@ We should use an incremental, fast-paced style of software development to reduce
 3. Used very rapid Sprints of 2 Sprints per week, or 2.5 days per Sprint.
 4. Git
 5. Github issue queue
-6. Waflle, on top of GitHub Issues.
-7. Everyday, with Waffle.
+6. Waffle.io, on top of GitHub Issues.
+7. Everyday, with Waffle.io.
 8. Every demo (twice per week) we have formal interaction with users, who also did additional testing, amounting to approximately 3 feedback sessions per week.
 9. We identified fundamental needs unmet by existing technology, especially around communication, and specializations of communication
 around fostering, such as medical incidents and visitation.
