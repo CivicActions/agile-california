@@ -9,17 +9,17 @@ Watch a screencast of the user experience here:
 
 ## How We Built the Prototype
 
-We created a multi-disciplinary team and immediately decided to iterate through six
+We created a multi-disciplinary team and immediately decided to iterate through
 [six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
-SCRUM methodology carefully compressed from the normal two-week cycle down to a ligtning-fast two days.
+scrum methodology, carefully compressed from the normal two-week cycle down to a ligtning-fast two days per sprint.
 A Product Owner was assigned as the overall voice of the users. We 
 successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california),
 a group that put us in contact with real foster parents
 and case workers, who generously assisted us each step of our iterative developent.
 
-Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis
-as our understanding of user needs evolved through interaction with our actual users with guidance from our Agile Coach.
-We mainatained a disciplined process, having formal demos, retrospectives, and a complete story board manipulated with
+Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis,
+as our understanding of user needs evolved through interaction with our actual users, as guided by our Agile Coach.
+We mainatained a disciplined process, having formal demos and retrospectives with each sprint, and a complete story board manipulated with
 [Waffle](https://waffle.io/)
 overlaying our [GitHub](https://github.com/CivicActions/agile-california) Issues and Stories.
 
@@ -67,22 +67,22 @@ would want. Our prototype now has roles for biological parents, foster parents, 
 On June 1st our CEO [reached out](https://civicactions.com/blog/an-open-invitation-to-collaborate/) 
 to other firms seeking to be part of the RFI by inviting them to work with us,
 reuse our work-in-progress software, and even to share in our most valuable resource, our access to actual foster parents.
-This reiterate our "fiercely open" way of doing business.
+This reiterates our "fiercely open" way of doing business.
 
 
-By Sprint 5 had a functional prototype demoed to both a foster parent and a case worker.
+By Sprint 5 we had a functional prototype demoed to both a foster parent and a case worker.
 A foster parent provided user testing of our deployed prototype and
 [extensive feedback](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/usability-testing/2016-6-03-notes-from-foster-parent-usabiliy-tester.md) during Sprint 6.
 
 ## The Technology
 
-Building on experience, we began in the first Sprint to implement a automatic deployment and continuous
+Building on experience, we began in the very first Sprint to implement a automatic deployment and continuous
 integraton system with an automated testing system.  This used Docker and Bowline for the deployment to
 a virtualized server.  Jenkins was used for our automated tests.  We have a Slack command that anyone
 can use to initiate a build.
 
 The actual technology is a backbone of Drupal 8 styled with Bootstrap, although a user is unlikely to be aware of that, since we significantly
-simplified the user interface, and install it in such a way that it appears to be an iOS or Android app.
+simplified the user interface, and installed it in such a way that it appears to be an iOS or Android app.
 In actuality it is a mobile-friendly website.
 
 The facilities information is presented on an integrated mobile-friendly map using GeoJSON, MapBox, and a javascript rendering
