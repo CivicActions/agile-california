@@ -79,11 +79,10 @@ We need to understand the different ways people will interact with our services,
 4. Develop metrics that will measure how well the service is meeting user needs at each step of the service
 
 #### Actions
-1. On a mobile device (phone or tablet) in a doctor's office, hospital, pharmacy, medical/nursing school, nursing home. Generally used when a patient is adding or altering the medications in his or her regime.
-2. Different drugs are associated with different adverse events, at differing frequencies and there is not an easy tool to compare this relationship with multiple drugs.
-3. Our intent is that information linking and promoting this tool could be posted in Dr's offices and medical facilities, in order grow public and professional awareness of the tool.
-4. Metrics could include lower incidence of adverse events due to improved identification of the most likely drug in a patients regimen causing an adverse events; how often healthcare professionals access the site; how many different drug combinations are compared on the site;
-
+1. In order to understand at what points the system would be useful, we interviewed several parents and case workers to get a clearer picture of their needs and how they would prefer to interact with the system. What we learned is that foster parents, case workers, and biological parents will need to interact with the system in a variety of circumstances-- sometimes under duress (i.e. a foster parent is being contacted by a bio parent for visitation but foster parent doesn't know visitation status, and needs to contact case worker, or a foster parent is ill and needs to seek a respite facility to drop a child off while they recover). Therefore, the system needs to be flexible enough to be accessed on-the-go. We built a completely responsive site so that users can access from desktop and mobile device, and would propose building a separate mobile app so that users can get immediate notifications as to whether they have a new message, and other advanced features. 
+2. In addition to conducting direct user interviews, we constructed empathy maps that helped us further synthesize the feedback from parents and case workers to understand their main pain points and what they had the most to gain from a better system. Once we understood the most critical pain points for each user, we prioritized building features to resolve these issues and focused our efforts around what we were hearing. 
+3. Foster parents and biological parents would both be given literature to orient them towards the website and instructions to download mobile app. Case workers would be provided links and instructions in an organization-wide training. 
+4. We will install Google Analytics and plan to perform user surveys and direct observation to watch users navigating through the site and app.
 
 #### key questions
 - What are the different ways (both online and offline) that people currently accomplish the task the digital service is designed to help with?
@@ -93,10 +92,10 @@ We need to understand the different ways people will interact with our services,
 
 #### answers to key questions
 
-1. Looking up individual drugs online. Some doctors use WebMD, but don't admit it.
-2. There is no way to get one comprehensive visual of all adverse events associated with a drug regime.
-3. It can fit into the beginning of the prescription experience or when drugs are being added to an existing regime. Busy doctors, particularly in gerontology, have to manage complex drug regimenes quickly.
-4. Usage will increase as trust in the information grows over time. We would like to create a "Would you recommend this to your colleagues" but we did not have time to measure that in this project.
+1. Currently, most parents and case workers interact through phone calls or text messaging. More infrequently, they will use email. 
+2. The most critical pain point which we heard from multiple parents was that they often had to call case workers multiple times, and often wait long periods of time without a response, in order to get vital information such as the visitation status of the child. These delays cause strife between the biological parent, foster parent, case worker, and the system. We heard that there was no clear method to escalate concerns in the case of an urgent need. Case workers complained about having too large of a workload and not having enough time to address concerns, and often getting the same request over and over again. We spent the bulk of our time creating and refining a messaging system with the ability to escalate messages in priority, to provide a paper trail showing when parents have contacted case worker in case of long delays in response times, and also give case workers the ability to point to previous responses so they don't have to duplicate replies. 
+3. The power of this project lies in facilitating communication between an overburdened county employee and equally stressed biological and foster families, who we repeatedly heard were just trying "to do their primary job, which is take care of the children". This system would reduce the need for frequent calls made to case worker, without waiting to hear a response. A case worker could reply instantly, from wherever he or she may be, and even copy and paste answers to save time. 
+4. Metrics that will indicate how well the service is working would be: reduced number of calls between case workers/parents, a good percentage of the number of families/case workers overall as site visitors, the number of returning visitors (to measure how many users must be finding the website/app useful), a low bounce rate (how many users abandoned the system), user surveys indicating overall satisfaction with the system, and user observation revealing that users are able to successfully navigate through the app and perform critical functions.
 
 <a name="Play3"></a>
 ## Play 3

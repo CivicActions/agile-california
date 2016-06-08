@@ -124,8 +124,17 @@ Sprint 5
 Sprint 6
 --------
 **Day  13: June 6, 2016**
+- Daily standup
+- Determination to create two screencasts to orient users. One from user perspective, one to give developer insight 
+- Agreement to fix UX issues with zip entry and map 
+- Compliance co-work scheduled for Tues 
 
 **Day  14: June 7, 2016**
+- Daily standup
+- Setting up final Demo with users for Wednesday
+- Review of screencasts
+- Work on logo / header 
+- Team considered building a periodic reset to site, and elected against, given that a manual reset could be performed as needed and at any time. 
 
 **Day  15: June 8, 2016**
 

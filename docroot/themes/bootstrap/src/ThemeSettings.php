@@ -171,7 +171,7 @@ class ThemeSettings extends Config {
     // Generate the path to the logo image.
     if ($config->get('features.logo')) {
       $logo_url = FALSE;
-      foreach (['svg', 'png', 'jpg'] as $type) {
+      foreach (['png', 'jpg'] as $type) {
         if (file_exists($theme->getPath() . "/logo.$type")) {
           $logo_url = file_create_url($theme->getPath() . "/logo.$type");
           break;
