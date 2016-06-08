@@ -1,10 +1,17 @@
+#6/7 Call Agenda
+- Question re: mapping of GSA schedule roles 
+- Status update USDS playbook mapping 
+- README (and question of whether RFI criteria should be covered there) 
+- Continuous monitoring work 
+- Plan for today's demos 
+
 #6/7 Action items
 - Henry to review readme tomorrow 
 - Steve to set up 4pm ET demo call Weds with Amy and Rani 
 - Rob and Jen to review screencast together 
 - Owen to include plan for continuous monitoring today/tomorrow 
 
-#6/7 Agenda items
+#6/7 Call Agenda
 - Demo preparation
 - Plan for compliance
 - Screencast
@@ -19,7 +26,7 @@
 - Screencasts, Jen to do UX, Owen to do devel / code
 - Owen to implement fix to zip code UX issue
 
-#6/6 Agenda items
+#6/6 Call Agenda
 - Review of QA feedback. What is best way to log bugs? (new issues? comments to existing issues?) 
 - How should we prioritize edits and/or new features? Get consensus on waffle.io priorities. 
 - Maps and zip code (listed separately, as it seems it may the most major modification to current live site)
@@ -31,7 +38,7 @@
 - Consensus on overall strategy
 - Balance to make use of each teammember
 
-#6/3 Agenda items
+#6/3 Call Agenda
 - Report on determination wrt Sacramento requirement 
 - Coordinate demo 
 - Handoff of any of April's work 
@@ -39,7 +46,7 @@
 - Plan for Style Guide 
 - Jen's schedule next week
 
-#6/2 Agenda items
+#6/2 Call Agenda
 - Do we have users confirmed for tomorrow demo? 
 - Have we been able to make contact with any case workers? 
 - Should Jen and Rob connect today around Map UI? Is this highest priority for Jen?
