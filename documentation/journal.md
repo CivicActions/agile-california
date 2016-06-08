@@ -134,6 +134,7 @@ Sprint 6
 - Setting up final Demo with users for Wednesday
 - Review of screencasts
 - Work on logo / header 
+- Team considered building a periodic reset to site, and elected against, given that a manual reset could be performed as needed and at any time. 
 
 **Day  15: June 8, 2016**
 
