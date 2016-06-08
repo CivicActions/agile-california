@@ -14,6 +14,11 @@
 - Taking screenshots of Waffle board
 - Plan to lock repository
 
+#6/7 Action items
+- Enhancements / feature requests to all be added to backlog as new issues
+- Screencasts, Jen to do UX, Owen to do devel / code
+- Owen to implement fix to zip code UX issue
+
 #6/6 Agenda items
 - Review of QA feedback. What is best way to log bugs? (new issues? comments to existing issues?) 
 - How should we prioritize edits and/or new features? Get consensus on waffle.io priorities. 
