@@ -8,8 +8,6 @@ Watch a screencast of the user experience here:
 
 # CHHS Foster Hub - The CivicActions Submission to CHHS RFI #75001 Agile Development Pre-Qualified (ADPQ)
 
-# DescriptionUntitled event
-
 ## How We Built the Prototype
 
 We created a multi-disciplinary team and immediately decided to iterate through [six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
