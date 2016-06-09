@@ -120,7 +120,7 @@ o. We use [Docker](https://www.docker.com/) together with [Docker Machine](https
 
 p. The [devops-manual](https://github.com/CivicActions/agile-california/blob/master/documentation/devops-manual.md) describes how to install and run the prototype on a local sandbox, deploy the application to AWS and configure a continuous delivery (integrated testing and deployment) automation job.
 
-q. Our entire software stack is open source and provided free of charge.
+q. Our entire software stack is open source and provided free of charge. All licenses are documented in associated [LICENSE.md](https://github.com/CivicActions/agile-california/blob/master/LICENSE.md).
 
 
 

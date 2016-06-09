@@ -372,7 +372,7 @@ Today, developers write automated scripts that can verify thousands of scenarios
 1. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework. Tests run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, and test profile and mapping functionality.
 2. We used Jenkins to run the automated tests on each candidate deploy and notify us immediately on Slack if tests passed of failed. Tests were automated using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner and run in Firefox and Chrome browsers.
 3. The build process runs on every git push, and includes automated tests.
-4. We use automated deployment that can be initiated with a single slack command to automatically deploy both the backend and the frontend (as separate AWS instances).
+4. We use automated deployment that can be initiated with a single slack command to automatically create a new AWS EC2 server instance and deploy the entire stack onto it.
 5. No - in this rapid prototype, we have not invested in performance testing. Our monitoring system and Google Analytics can provide response time data.
 
 #### key questions
@@ -422,7 +422,7 @@ The following checklist provides a starting point, but teams should work closely
 3. NA
 4. NA
 5. AWS infrastructure is FedRAMP certified, including in the region we are using.
-6. CivicActions uses Docker and other Infrastructure as Code tools to automate and control the configuration and deployment of development and production environments.
+6. CivicActions uses Docker and other Infrastructure as Code tools to automate and control the creation, configuration and deployment of development and production environments.
 
 #### key questions
 - Does the service collect personal information from the user?  How is the user notified of this collection?
@@ -538,5 +538,5 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open Github repository.
 2. N/A
 3. It is open source.
-4. All.
+4. All components. Licenses are documented in associated [LICENSE.md](https://github.com/CivicActions/agile-california/blob/master/LICENSE.md).
 5. None in addition to what we are repackaging.
