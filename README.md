@@ -15,7 +15,8 @@ scrum methodology, carefully compressed from the normal two-week cycle down to a
 A Product Owner was assigned as the overall voice of the users. We successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california), a group that put us in contact with real foster parents and case workers, who generously assisted us each step of our iterative developent.
 
 Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis, as our understanding of user needs evolved through interaction with our actual users, and as guided by our Agile Coach.
-We maintained a disciplined process, holding [formal demos](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-interviews/log-of-sprint-demos.md) and [retrospectives](https://github.com/CivicActions/agile-california/tree/master/call-notes) with each sprint, and a complete story board manipulated with [Waffle](https://waffle.io/)
+We maintained a disciplined process, holding [formal demos](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-interviews/log-of-sprint-demos.md) and [retrospectives](https://github.com/CivicActions/agile-california/tree/master/call-notes)
+with each sprint, and a complete story board manipulated with [Waffle](https://github.com/CivicActions/agile-california/tree/master/call-notes/waffle-shots)
 overlaying our [GitHub](https://github.com/CivicActions/agile-california) Issues and Stories.
 
 As we have done before, we [closely followed the USDS checklist](https://github.com/CivicActions/agile-california/blob/master/documentation/usds-checklist.md).
