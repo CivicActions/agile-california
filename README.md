@@ -12,97 +12,68 @@ Watch a screencast of the user experience here:
 
 ## How We Built the Prototype
 
-We created a multi-disciplinary team and immediately decided to iterate through
-[six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
+We created a multi-disciplinary team and immediately decided to iterate through [six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
 scrum methodology, carefully compressed from the normal two-week cycle down to a ligtning-fast two-days-per sprint.
-A Product Owner was assigned as the overall voice of the users. We 
-successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california),
-a group that put us in contact with real foster parents
-and case workers, who generously assisted us each step of our iterative developent.
+A Product Owner was assigned as the overall voice of the users. We successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california), a group that put us in contact with real foster parents and case workers, who generously assisted us each step of our iterative developent.
 
-Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis,
-as our understanding of user needs evolved through interaction with our actual users, as guided by our Agile Coach.
-We mainatained a disciplined process, having formal demos and retrospectives with each sprint, and a complete story board manipulated with
-[Waffle](https://waffle.io/)
+Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis, as our understanding of user needs evolved through interaction with our actual users, as guided by our Agile Coach.
+We maintained a disciplined process, having formal demos and retrospectives with each sprint, and a complete story board manipulated with [Waffle](https://waffle.io/)
 overlaying our [GitHub](https://github.com/CivicActions/agile-california) Issues and Stories.
 
-As we have done before, we closely followed the [USDS checklist](https://github.com/CivicActions/agile-california/blob/master/documentation/usds-checklist.md).
+As we have done before, we [closely followed the USDS checklist](https://github.com/CivicActions/agile-california/blob/master/documentation/usds-checklist.md).
 
 ## The User-Centered Approach
 
-Knowing very little about the subject of foster children but having found real users, we wrote
-open-ended [scripts](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews/Scripts).
-We began our four [user interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
-of one case worker and three foster parents. From these interviews
-we built an [empathy map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md) and [personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md).
-We then organized an informal design studio and began mocking up
-[sketches and wirefames](https://github.com/CivicActions/agile-california/blob/master/documentation/images/Sketch-inbox01.png) that we could show to users to get feedback.
-In parallel to the creation of the wireframes
-we deployed a website upon which we drove to a functional prototype so that our users could test our app on their actual
-mobile devices. 
+Knowing very little about the subject of foster children but having found real users, we wrote open-ended [scripts](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews/Scripts).
+We began our four [user interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews) of one case worker and three foster parents. From these interviews we built an [empathy map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md) and [personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md).
+We then organized an informal design studio and began mocking up [sketches and wirefames](https://github.com/CivicActions/agile-california/blob/master/documentation/images/Sketch-inbox01.png) that we could show to users to get feedback.
+In parallel to the creation of the wireframes we deployed a website upon which we drove to a functional prototype so that our users could test our app on their actual
+mobile devices.
 
-We demoed wireframes to users in Sprint 3.
+We demonstrated wireframes to users in [Sprint 3](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md#sprint-3).
 
-The users taught us things not anticipated by the RFI. For example, visitation status changes and finding safe and convenient
-places for dropoff seems to be even more important than finding official Residential Facilities (from the state's data).
-Using this fact, we created a "spike" [solution](https://github.com/CivicActions/agile-california/tree/master/geojson-spike)
-to test our ability to render a map.
-Nonetheless we implemented the map of official residential facilites and made future plans to provide a visitation negotiation system.
+The users taught us things not anticipated by the RFI. For example, visitation status changes and finding safe and convenient places for dropoff seems to be even more important than finding official Residential Facilities (from the state's data).
+Using this fact, we created a "spike" [solution](https://github.com/CivicActions/agile-california/tree/master/geojson-spike) to test our ability to render a map.
+Nonetheless we implemented the map of official residential facilities and made future plans to provide a visitation negotiation system.
 
-As our understanding grew we kept our
-[story map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md) up to date.
+As our understanding grew we kept our [story map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md) up to date.
 
 We designed our profile based on specific feedback about what is important to both biological parents and foster parents.
-For example, we learned that a very important profile feature is "preferred time of contact", so we added that to our profiles
-of parents and case workers. Our users told us it was better to leave this an informal text message than to use a time-based field.
+For example, we learned that a very important profile feature is "preferred time of contact", so we added that to our profiles of parents and case workers. Our users told us it was better to leave this an informal text message than to use a time-based field.
 
 We learned that marking messages in the inbox of urgent was very important, so we render urgent messages in red.
-We also learned that classifying messages as being related to visitation or medical incidents is extremely important, so we wrote user stories
-to capture that and placed them into our constantly-evolving [backlog](https://github.com/CivicActions/agile-california/issues), but were not able to complete them.
+We also learned that classifying messages as being related to visitation or medical incidents is extremely important, so we wrote user stories to capture that and placed them into our constantly-evolving [backlog](https://github.com/CivicActions/agile-california/issues), but were not able to complete them.
 
-We got a *big surprise* when the State clarified that the primary user was the biological parent,
-not the foster parent!
+We got a *big surprise* when the State clarified that the primary user was the biological parent, not the foster parent!
 
-Following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change
-by beginning to ask our users to tell us what they believed biological parents
+Following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change by beginning to ask our users to tell us what they believed biological parents
 would want. Our prototype now has roles for biological parents, foster parents, and case workers.
 
-On June 1st our CEO [reached out](https://civicactions.com/blog/an-open-invitation-to-collaborate/) 
-to other firms seeking to be part of the RFI by inviting them to work with us,
+On June 1st our CEO [reached out](https://civicactions.com/blog/an-open-invitation-to-collaborate/) to other firms seeking to be part of the RFI by inviting them to work with us,
 reuse our work-in-progress software, and even to share in our most valuable resource, our access to actual foster parents.
 This reiterates our "fiercely open" way of doing business.
 
-
-By Sprint 5 we had a functional prototype demoed to both a foster parent and a case worker.
-A foster parent provided user testing of our deployed prototype and
-[extensive feedback](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/usability-testing/2016-6-03-notes-from-foster-parent-usabiliy-tester.md) during Sprint 6.
+By [Sprint 5](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md#sprint-5) we had a functional prototype demoed to both a foster parent and a case worker.
+A foster parent provided user testing of our deployed prototype and [extensive feedback](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/usability-testing/2016-6-03-notes-from-foster-parent-usabiliy-tester.md) during Sprint 6.
 
 ## The Technology
 
-Building on experience, we began in the very first Sprint to implement a automatic deployment and continuous
-integraton system with an automated testing system.  This used Docker and Bowline for the deployment to
-a virtualized server.  Jenkins was used for our automated tests.  We have a Slack command that anyone
-can use to initiate a build.
+Building on experience, we began in the very first Sprint to implement a automatic delivery system with fully automated testing and fully automated deployment of the candidate build. This used "infrastructure as code" instantiating a new server instance for each deploy, then using Docker and Bowline to orchestrate containers. We have a Slack command that anyone
+can use to initiate a Jenkins build.
 
-The actual technology is a backbone of Drupal 8 styled with Bootstrap, although a user is unlikely to be aware of that, since we significantly
-simplified the user interface, and installed it in such a way that it appears to be an iOS or Android app.
-In actuality it is a mobile-friendly website.
+The actual technology is a backbone of Drupal 8 styled with Bootstrap, although a user is unlikely to be aware of that, since we significantly simplified the user interface, and installed it in such a way that it appears to be an iOS or Android app. In actuality it is a mobile-friendly website.
 
-The facilities information is presented on an integrated mobile-friendly map using GeoJSON, MapBox, and a javascript rendering
-technology such as Leaflet distributed with MapBox, an open-source mapping system. The API provided by the state is accessed via
-jquery.
+The facilities information is presented on an integrated mobile-friendly map using GeoJSON, MapBox, Leaflet, an open-source mapping system, together with an interactive, responsive table using the Datables library. The API provided by the state is accessed via jQuery.
 
 # Following the USDS Playbook
 
-We follow the USDS Playbook closely.  As documentation of this, we us the explicit checklist published by the
-USDS with specific evidence and answers for each relevant checklist item:
+We follow the USDS Playbook closely.  As documentation of this, we us the explicit checklist published by the USDS with specific evidence and answers for each relevant checklist item:
 
 [USDS checklist](https://github.com/CivicActions/agile-california/blob/master/documentation/usds-checklist.md)
 
 # The Explicit RFI Requirements
 
-The RFI calls out items (a-q) below as requiring explicit reference. We have not duplicated the headings, but only our evidence for
-having completed each of the required items.
+The RFI calls out items (a-q) below as requiring explicit reference. We have not duplicated the headings, but only our evidence for having completed each of the required items.
 
 a. A Product Owner was given overall responsibility (Robert L. Read).
 
@@ -127,16 +98,13 @@ g. Each of the the first 5 sprints involved user feedback that immediately influ
 
 h. Using responsive open-source technology, we tested with both mobile phones and desktop environments.
 
-i. We used technologies:
+i. We used the following core technologies:
 
-1. [GeoJSON](http://geojson.org/)
+1. [Drupal 8](https://www.drupal.org/8)
 2. [MapBox](https://www.mapbox.com/)
-3. [BootStrap](http://getbootstrap.com/)
-4. [Jenkins](https://jenkins.io/)
-5. [Docker](https://www.docker.com/)
-6. [Drupal 8](https://www.drupal.org/8)
-7. [Jquery](https://jquery.com/)
+3. [Bootstrap](http://getbootstrap.com/)
 
+Additionally we used [Ubuntu](http://www.ubuntu.com) (as the Docker Machine host operating system), [Docker](https://www.docker.com/products/docker-engine), [Docker Compose](https://www.docker.com/products/docker-compose), container operating systems (minimal [Debian](https://www.debian.org/)), [Apache httpd](https://httpd.apache.org/), [MariaDB](https://mariadb.org/), monitoring ([uptime](https://github.com/fzaninotto/uptime)), testing ([Selenium Builder](https://github.com/SeleniumBuilder/se-builder), [se-interpreter](https://github.com/Zarkonnen/se-interpreter)), deployment tools ([Docker Machine](https://www.docker.com/products/docker-machine), [AWS CLI](https://github.com/aws/aws-cli), [CloudFlare CLI](https://github.com/danielpigott/cloudflare-cli)), automation ([Jenkins](https://jenkins.io/), [Bowline](https://github.com/davenuman/bowline)), [PHP](https://secure.php.net/), PHP libraries ([Symfony](https://symfony.com/)) and frontend frameworks ([Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/), [Mapbox](https://www.mapbox.com/), [Datatables](https://datatables.net/)).
 
 j. We deployed the prototype to Amazon Web Services (AWS), a FedRAMP compliant IaaS provider, additionally CloudFlare was used for CDN, SSL and DNS automation.
 
