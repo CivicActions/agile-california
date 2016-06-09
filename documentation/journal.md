@@ -20,7 +20,7 @@ Sprint 1
 
  - Daily Stand up
  - Interviewed 3 foster parents ***(Attachment B 2.c, USDS Play #1)***
- - Establish budget ***(USDS Play #5)***. A matrix of stated availabilty (determined with consideration of skillsets and project roles) can be found [here](https://docs.google.com/spreadsheets/d/1lCsBoJf4DgThtw6jkY5AQBrFEQdssw9FyoKQoYSpbtQ/edit#gid=467546033)
+ - Establish budget ***(USDS Play #5)***. A matrix of stated availabilty (determined with consideration of skillsets and project roles) can be found [here](https://github.com/CivicActions/agile-california/blob/master/documentation/stated-availability-budget.png)
 
 **Day  3: May 20, 2016**
  - Daily Stand up
