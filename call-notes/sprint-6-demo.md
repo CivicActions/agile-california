@@ -16,7 +16,7 @@ Amy:
 RR: This is our final demo - 
 - May not be able to implement changes, but this is important feedback regardless. Completing the circle of our interactions
 
-#Rani Demo
+###Rani Demo
 
 OB: Demonstration of profile
 RW: this information is not public? 
@@ -40,7 +40,7 @@ RW: Looks great
 
 * * * 
 
-#Amy Demo 
+###Amy Demo 
 
 OB: Demo of mobile video
 - Demo of Profile 
