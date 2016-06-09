@@ -229,9 +229,9 @@ There must be a single product owner who has the authority and responsibility to
 #### Actions
 1. [Product owner was identified as Robert L. Read](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md).
 2. Stakeholders in this instance were all team members, and all agreed to authority as outlined was granted to product owner on day 1 of Sprint.
-3. See Read's [biography](https://civicactions.com/team/rob-read).
+3. Product owner has a PhD in Computer Science and Director-level team management experience.
 4. We early established a labor budget matrix of peoples skills against their availability.
-5. Again, see [biography](https://civicactions.com/team/rob-read).
+5. N/A
 
 #### key questions
 - Who is the product owner?
