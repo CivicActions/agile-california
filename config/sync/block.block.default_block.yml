@@ -1,0 +1,26 @@
+uuid: 66e7b85c-6815-492d-9ae7-81af09b06a43
+langcode: en
+status: true
+dependencies:
+  module:
+    - chhs_message
+    - system
+  theme:
+    - bootstrap
+id: default_block
+theme: bootstrap
+region: sidebar_second
+weight: null
+provider: null
+plugin: default_block
+settings:
+  id: broken
+  label: 'Demo accounts'
+  provider: chhs_message
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /user/login
+    negate: false
+    context_mapping: {  }

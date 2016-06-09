@@ -10,7 +10,7 @@ field_name: field_zip
 entity_type: profile
 bundle: social_worker
 label: 'Zip code'
-description: ''
+description: 'NOTE: Some good zip codes for testing purposes are 92867, 94621 and 92867.'
 required: true
 translatable: true
 default_value: {  }

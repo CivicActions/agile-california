@@ -142,7 +142,7 @@ content:
     weight: 9
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'e.g. 92867'
     third_party_settings: {  }
     type: string_textfield
 hidden: {  }
