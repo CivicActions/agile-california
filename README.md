@@ -33,8 +33,8 @@ mobile devices.
 We demonstrated wireframes to users in [Sprint 3](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md#sprint-3).
 
 The users taught us things not anticipated by the RFI. For example, visitation status changes and finding safe and convenient places for dropoff seems to be even more important than finding official Residential Facilities (from the state's data).
-Using this fact, we created a "spike" [solution](https://github.com/CivicActions/agile-california/tree/master/geojson-spike) to test our ability to render a map.
 Nonetheless we implemented the map of official residential facilities and made future plans to provide a visitation negotiation system.
+We created a "spike" [solution](https://github.com/CivicActions/agile-california/tree/master/geojson-spike) to test our ability to render a map before integrating it into our main code.
 
 As our understanding grew we kept our [story map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md) up to date.
 
@@ -58,7 +58,7 @@ In sum, our team spent over four hours discussing this product with potential us
 
 ## The Technology
 
-Building on experience, we began in the very first Sprint to implement a automatic delivery system with fully automated testing and fully automated deployment of the candidate build. This used "infrastructure as code" instantiating a new server instance for each deploy, then using Docker and Bowline to orchestrate containers. We have a Slack command that anyone
+Building on experience, we began in the very first Sprint to implement a automatic deployment system with fully automated testing and fully automated deployment of the candidate build. This used "infrastructure as code" instantiating a new server instance for each deploy, then using Docker and Bowline to orchestrate containers. We have a Slack command that anyone
 can use to initiate a Jenkins build.
 
 The actual technology is a backbone of Drupal 8 styled with Bootstrap, although a user is unlikely to be aware of that, since we significantly simplified the user interface, and installed it in such a way that it appears to be an iOS or Android app. In actuality it is a mobile-friendly website.
@@ -88,7 +88,8 @@ d. We used the following Human Centered Design techniques:
 2. [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
 3. [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
 4. [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
-4. [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
+5. [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
+6. [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
 
 e. We leveraged Bootstrap as an open-source style and made a few header and footer design choices. 
 
