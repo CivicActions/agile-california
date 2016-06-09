@@ -12,6 +12,7 @@ dependencies:
     - comment
     - datetime
     - text
+    - user
 id: message_entity.default.default
 targetEntityType: message_entity
 bundle: default
@@ -56,10 +57,9 @@ content:
     third_party_settings: {  }
   user_id:
     label: hidden
-    type: entity_reference_label
+    type: author
     weight: 1
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
 hidden:
   flag_read: true
