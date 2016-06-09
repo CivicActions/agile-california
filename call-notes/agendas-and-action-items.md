@@ -1,7 +1,10 @@
 #6/9 Call Agenda
-- Process for ensuring the site is up
-- Scheduling retrospective for entire project
-- Tying up Loose ends
+- USDS Playbook checklist proofread 
+- Confirm code freeze & timing of submission
+- Link in readme to style guide documentation
+- Build out the roles doc 
+- Elizabeth to open up trello retro boards
+- Final screenshot of waffle
 
 #6/8 Action items
 - Heather to work on logo, and then backlog 
