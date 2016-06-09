@@ -1,0 +1,29 @@
+\$ ./start-monitoring 
+Starting monitoring_smtp_1
+Starting updb
+Starting upweb
+Starting upmon
+*   Trying ::1...
+* Connected to localhost (::1) port 8082 (#0)
+* Server auth using Basic with user 'monitoring'
+> PUT /api/checks HTTP/1.1
+> Host: localhost:8082
+> Authorization: Basic bW9uaXRvcmluZzpkZW1v
+> User-Agent: curl/7.48.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 185
+> 
+* upload completely sent off: 185 out of 185 bytes
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 244
+< Set-Cookie: uptime=s%3Aj%3A%7B%7D.aiAAyzC5uO9zLx7mA6ktptZqp1nsNRD0LwooL99wxiQ; Path=/; Expires=Fri, 10 Jun 2016 00:22:10 GMT; HttpOnly
+< Date: Thu, 09 Jun 2016 23:22:10 GMT
+< Connection: keep-alive
+< 
+* Connection #0 to host localhost left intact
+{"__v":0,"type":"https","name":"Agile CA","url":"https://agile-ca.civicactions.com/user/login","_id":"5759fa2222a2140100000001","downtime":0,"uptime":0,"isPaused":false,"tags":[],"errorCount":0,"alertTreshold":1,"maxTime":1500,"interval":60000}]2;monitoring$ ./start-monitoring 
+\$ 
+]2;monitoring$ ./start-monitoring 

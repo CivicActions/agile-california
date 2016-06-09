@@ -1,0 +1,65 @@
+\$ . bin?/activate 
+Bowline activated. Enter 'bowline' command for basic information
+]2;agile-california$ . bin/activate 
+\$ (agile-california) $ build
+# STARTING CONTAINERS
+ Exit Status: 0
+# INSTALLING COMPOSER LIBRARIES
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Available commands:  deactivate
+activate  bowline  check     create-demo-users	destroy  drush	fix-perms  import	    invoke_proxy  phpcs  run-tests	stop
+backup	  build    composer  deploy		drupal	 enter	hoist	   initial-install  phpcbf	  run	 settings_init
+
+Containers: 
+db   ~  172.17.0.3
+php  ~  172.17.0.4
+web  ~  172.17.0.5  http://172.17.0.5/
+Proxy:
+	Not active. (use 'invoke_proxy' to start)
+]2;agile-california$ build
+\$ (agile-california) $ initial-install 
+Installing Drupal 8
+Running 'drush si -y --sites-subdir=default config_installer' inside container, using uri: http://172.17.0.5/
+You are about to DROP all tables in your 'drupal' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a while. Consider using the --notify global option.                                                                      [ok]
+sh: /usr/sbin/sendmail: No such file or directory
+Installation complete.  User name: admin  User password: bM7mGvMDNG                                                                                               [ok]
+Unable to send email. Contact the site administrator if the problem persists.                                                                                     [error]
+Congratulations, you installed Drupal!                                                                                                                            [status]
+Creating initial demo users
+Creating/recreating demo users
+Added role biological_parent role to biological-parent                                                                                                            [success]
+Added role foster_parent role to foster-parent                                                                                                                    [success]
+Added role case_worker role to case-worker                                                                                                                        [success]
+Added role case_manager role to case-manager                                                                                                                      [success]
+]2;agile-california$ initial-install 
+\$ (agile-california) $ drush st
+Running 'drush st' inside container, using uri: http://172.17.0.5/
+ Drupal version                  :  8.1.1                                 
+ Site URI                        :  http://172.17.0.5/                    
+ Database driver                 :  mysql                                 
+ Database hostname               :  dbhost                                
+ Database username               :  dbuser                                
+ Database name                   :  drupal                                
+ Drupal bootstrap                :  Successful                            
+ Drupal user                     :                                        
+ Default theme                   :  bootstrap                             
+ Administration theme            :  seven                                 
+ PHP executable                  :  /opt/rh/php55/root/usr/bin/php        
+ PHP configuration               :  /opt/rh/php55/root/etc/php.ini        
+ PHP OS                          :  Linux                                 
+ Drush script                    :  /var/www/vendor/drush/drush/drush.php 
+ Drush version                   :  8.1.2                                 
+ Drush temp directory            :  /tmp                                  
+ Drush configuration             :                                        
+ Drush alias files               :                                        
+ Install profile                 :  standard                              
+ Drupal root                     :  /var/www/docroot                      
+ Drupal Settings File            :  sites/default/settings.php            
+ Site path                       :  sites/default                         
+ File directory path             :  sites/default/files                   
+ Temporary file directory path   :  /tmp                                  
+ Sync config path                :  ../config/sync                        

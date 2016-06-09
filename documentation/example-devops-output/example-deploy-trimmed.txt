@@ -1,0 +1,531 @@
+Started by remote host 54.209.231.248
+Building on master in workspace /var/jenkins_home/jobs/agile-california-deploy/workspace
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository https://github.com/CivicActions/agile-california.git
+ > git init /var/jenkins_home/jobs/agile-california-deploy/workspace/agile-california # timeout=10
+Fetching upstream changes from https://github.com/CivicActions/agile-california.git
+ > git --version # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/CivicActions/agile-california.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/CivicActions/agile-california.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/CivicActions/agile-california.git # timeout=10
+Fetching upstream changes from https://github.com/CivicActions/agile-california.git
+ > git -c core.askpass=true fetch --tags --progress https://github.com/CivicActions/agile-california.git +refs/heads/*:refs/remotes/origin/*
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision 54629986d0e0f2d3c8c361ce75c1a00d41bee403 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 54629986d0e0f2d3c8c361ce75c1a00d41bee403
+ > git rev-list 32336b0d9dec7787e1a6903a9580cd6400ee93ab # timeout=10
+SSH: Connecting from host [jenkins]
+SSH: Connecting with configuration [docker-host] ...
+SSH: EXEC: STDOUT/STDERR from command [cd /var/jenkins_home/jobs/agile-california-deploy/workspace/agile-california
+source ../.env
+./bin/deploy agile-ca civicactions.com] ...
+[deploy] Attempting to create host 5462998-agile-ca.civicactions.com
+Running pre-create checks...
+Creating machine...
+(5462998-agile-ca.civicactions.com) Launching instance...
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with ubuntu(systemd)...
+Installing Docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env 5462998-agile-ca.civicactions.com
+[deploy] Candidate Docker machine created. Waiting a few seconds before getting the IP and ID
+[deploy] Machine created at IP=54.218.10.222, INSTANCE_ID=i-368351ed.
+[deploy] Setting tag to 'candidate' for i-368351ed.
+Cloning into '/var/jenkins_home/jobs/agile-california-deploy/workspace/agile-california'...
+Note: checking out '5462998'.
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+  git checkout -b <new-branch-name>
+HEAD is now at 5462998... Adding back GA ID.
+Bowline activated. Enter 'bowline' command for basic information
+# STARTING CONTAINERS
+Pulling db (mariadb:10.0)...
+10.0: Pulling from library/mariadb
+51f5c6a04d83: Pulling fs layer
+...
+34570137ab6b: Extracting [==================================================>]    118 B/118 B
+34570137ab6b: Pull complete
+Digest: sha256:c5b25e41237e360c6554bff170ab7f7768cb2703f7cbc76966b249cdb57ebdd7
+Status: Downloaded newer image for mariadb:10.0
+Creating agilecalifornia_db_1...
+Pulling php (davenuman/bowline-centos:latest)...
+latest: Pulling from davenuman/bowline-centos
+a3ed95caeb02: Pulling fs layer
+...
+2650b6ebca76: Extracting [==================================================>]    480 B/480 B
+2650b6ebca76: Pull complete
+Digest: sha256:672c6d4e20f2c25553c71b22001b849120f406ea47474c21824ff3e5f5b4c80b
+Status: Downloaded newer image for davenuman/bowline-centos:latest
+Creating agilecalifornia_php_1...
+Creating agilecalifornia_web_1...
+ Exit Status: 0
+# INSTALLING COMPOSER LIBRARIES
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+  - Installing composer/installers (v1.0.25)
+    Downloading: Connecting...    Downloading: 0%               Downloading: 5%    Downloading: 10%    Downloading: 25%    Downloading: 30%    Downloading: 35%    Downloading: 40%    Downloading: 45%    Downloading: 100%
+...
+  - Installing drush/drush (8.1.2)
+    Downloading: Connecting...    Downloading: 100%         
+symfony/event-dispatcher suggests installing symfony/http-kernel ()
+symfony/dependency-injection suggests installing symfony/expression-language (For using expressions in service container configuration)
+symfony/dependency-injection suggests installing symfony/proxy-manager-bridge (Generate service proxies to lazy load them)
+phpseclib/phpseclib suggests installing ext-gmp (Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.)
+phpseclib/phpseclib suggests installing ext-libsodium (SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.)
+phpseclib/phpseclib suggests installing ext-mcrypt (Install the Mcrypt extension in order to speed up a few other cryptographic operations.)
+alchemy/zippy suggests installing guzzle/guzzle (To use the GuzzleTeleporter)
+symfony/var-dumper suggests installing ext-symfony_debug ()
+psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+pear/console_table suggests installing pear/Console_Color2 (>=0.1.2)
+drush/drush suggests installing drush/config-extra (Provides configuration workflow commands, such as config-merge.)
+Generating autoload files
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Available commands:  deactivate
+activate  composer	     drush	initial-install  run-tests
+backup	  create-demo-users  enter	invoke_proxy	 settings_init
+bowline   deploy	     fix-perms	phpcbf		 stop
+build	  destroy	     hoist	phpcs
+check	  drupal	     import	run
+Containers: 
+db   ~  172.17.0.2
+php  ~  172.17.0.3
+web  ~  172.17.0.4  http://172.17.0.4/
+Proxy:
+	Not active. (use 'invoke_proxy' to start)
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Installing Drupal 8
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Running 'drush si -y --sites-subdir=default config_installer' inside container, using uri: http://172.17.0.4/
+You are about to DROP all tables in your 'drupal' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a while. Consider using the [ok]
+--notify global option.
+sh: /usr/sbin/sendmail: No such file or directory
+Installation complete.  User name: admin  User password: XXXXXXXXX [ok]
+Unable to send email. Contact the site administrator if the problem  [error]
+persists.
+Congratulations, you installed Drupal!                               [status]
+Creating initial demo users
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Creating/recreating demo users
+Added role biological_parent role to biological-parent               [success]
+Added role foster_parent role to foster-parent                       [success]
+Added role case_worker role to case-worker                           [success]
+Added role case_manager role to case-manager                         [success]
+seleniumfirefox uses an image, skipping
+seleniumchrome uses an image, skipping
+Building seinterpreter...
+Step 1 : FROM node
+latest: Pulling from library/node
+51f5c6a04d83: Already exists
+...
+7d91187ae10f: Extracting [==================================================>] 13.07 MB/13.07 MB
+7d91187ae10f: Pull complete
+Digest: sha256:4e826ac9fec6ea4c7c9f51f34960aebfeb9abe6d5a9dfeec2515685e14a70cfb
+Status: Downloaded newer image for node:latest
+ ---> 72d4ec634f1f
+Step 2 : RUN npm install -g se-interpreter
+ ---> Running in 33202f9701fd
+npm info it worked if it ends with ok
+npm info using npm@3.9.3
+...
+npm info lifecycle se-interpreter@1.0.8~postinstall: se-interpreter@1.0.8
+/usr/local/lib
+`-- se-interpreter@1.0.8 
+...
+    +-- underscore.string@3.0.3 
+    `-- vargs@0.1.0 
+npm info ok 
+ ---> f5b9371b3dbf
+Removing intermediate container 33202f9701fd
+Successfully built f5b9371b3dbf
+No stopped containers
+Pulling seleniumfirefox (selenium/standalone-firefox:latest)...
+latest: Pulling from selenium/standalone-firefox
+0be59000882d: Pulling fs layer
+...
+f3b510785958: Extracting [==================================================>]    485 B/485 B
+f3b510785958: Pull complete
+Digest: sha256:aabd03c7c13a0b250df5d2db373e654956bb7178f2d6d156e2264b1dc6e0557c
+Status: Downloaded newer image for selenium/standalone-firefox:latest
+Creating tests_seleniumfirefox_1...
+Pulling seleniumchrome (selenium/standalone-chrome:latest)...
+latest: Pulling from selenium/standalone-chrome
+0be59000882d: Already exists
+...
+83c47ceab7e8: Extracting [==================================================>]    486 B/486 B
+83c47ceab7e8: Pull complete
+Digest: sha256:e969d514f565e6df698b9353db349ab6d9c16ee8bac57024103bb611a4e661a4
+Status: Downloaded newer image for selenium/standalone-chrome:latest
+Creating tests_seleniumchrome_1...
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Creating/recreating demo users
+Added role biological_parent role to biological-parent               [success]
+Added role foster_parent role to foster-parent                       [success]
+Added role case_worker role to case-worker                           [success]
+Added role case_manager role to case-manager                         [success]
+SE-Interpreter 1.0.8
+base-url: Starting test (chrome) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed(chrome) 
+switch-to-mobile: Starting test (chrome) switch-to-mobile
+switch-to-mobile: Success {"type":"setWindowSize","width":"360","height":"640"}
+switch-to-mobile: Test passed(chrome) 
+mobile-open-navbar: Starting test (chrome) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed(chrome) 
+foster-parent-login: Starting test (chrome) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed(chrome) 
+foster-parent-profile: Starting test (chrome) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed(chrome) 
+mobile-open-navbar: Starting test (chrome) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed(chrome) 
+foster-parent-map: Starting test (chrome) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed(chrome) 
+7/7 tests ran successfully. Exiting
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Creating/recreating demo users
+Added role biological_parent role to biological-parent               [success]
+Added role foster_parent role to foster-parent                       [success]
+Added role case_worker role to case-worker                           [success]
+Added role case_manager role to case-manager                         [success]
+SE-Interpreter 1.0.8
+base-url: Starting test (chrome) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed(chrome) 
+switch-to-desktop: Starting test (chrome) switch-to-desktop
+switch-to-desktop: Success {"type":"setWindowSize","width":"1366","height":"768"}
+switch-to-desktop: Test passed(chrome) 
+foster-parent-login: Starting test (chrome) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed(chrome) 
+foster-parent-profile: Starting test (chrome) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed(chrome) 
+foster-parent-map: Starting test (chrome) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed(chrome) 
+5/5 tests ran successfully. Exiting
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Creating/recreating demo users
+Added role biological_parent role to biological-parent               [success]
+Added role foster_parent role to foster-parent                       [success]
+Added role case_worker role to case-worker                           [success]
+Added role case_manager role to case-manager                         [success]
+SE-Interpreter 1.0.8
+base-url: Starting test (firefox) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed(firefox) 
+switch-to-mobile: Starting test (firefox) switch-to-mobile
+switch-to-mobile: Success {"type":"setWindowSize","width":"360","height":"640"}
+switch-to-mobile: Test passed(firefox) 
+mobile-open-navbar: Starting test (firefox) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed(firefox) 
+foster-parent-login: Starting test (firefox) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed(firefox) 
+foster-parent-profile: Starting test (firefox) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed(firefox) 
+mobile-open-navbar: Starting test (firefox) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed(firefox) 
+foster-parent-map: Starting test (firefox) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed(firefox) 
+7/7 tests ran successfully. Exiting
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Creating/recreating demo users
+Added role biological_parent role to biological-parent               [success]
+Added role foster_parent role to foster-parent                       [success]
+Added role case_worker role to case-worker                           [success]
+Added role case_manager role to case-manager                         [success]
+SE-Interpreter 1.0.8
+base-url: Starting test (firefox) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed
+switch-to-desktop: Starting test (firefox) switch-to-desktop
+switch-to-desktop: Success {"type":"setWindowSize","width":"1366","height":"768"}
+switch-to-desktop: Test passed
+foster-parent-login: Starting test (firefox) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed
+foster-parent-profile: Starting test (firefox) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed
+foster-parent-map: Starting test (firefox) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed
+5/5 tests ran successfully. Exiting
+Setting up Composer....
+chown: invalid group: 'www-data:www-data'
+chown: invalid group: 'www-data:www-data'
+You are already using composer version 1.1.2 (stable channel).
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
+Creating/recreating demo users
+Added role biological_parent role to biological-parent               [success]
+Added role foster_parent role to foster-parent                       [success]
+Added role case_worker role to case-worker                           [success]
+Added role case_manager role to case-manager                         [success]
+Stopping tests_seleniumchrome_1...
+Stopping tests_seleniumfirefox_1...
+fgrep: chrome.log: No such file or directory
+fgrep: firefox.log: No such file or directory
+[deploy] Tests PASS, activating candidate build.
+[deploy] Removing instances tagged as 'old': 471d5c8-agile-ca.civicactions.com
+About to remove 471d5c8-agile-ca.civicactions.com
+Successfully removed 471d5c8-agile-ca.civicactions.com
+[deploy] Setting tag from 'active' to 'old' for i-a5e4377e.
+[deploy] Setting tag from 'candidate' to 'active' for i-368351ed.
+Deleting agile-ca.civicactions.com
+Finished
+Added A record for agile-ca
+Enabled cloudflare for agile-ca.civicactions.com
+[deploy] Deployed to https://agile-ca.civicactions.com
+Cache purged for domain civicactions.com
+[deploy] Purging CloudFlare cache for civicactions.com.
+[deploy] Deploy success.
+SSH: EXEC: completed after 1,356,267 ms
+SSH: Disconnecting configuration [docker-host] ...
+SSH: Transferred 0 file(s)
+Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
+[workspace] $ /bin/sh -xe /tmp/hudson3449507312418058042.sh
+Finished: SUCCESS
+

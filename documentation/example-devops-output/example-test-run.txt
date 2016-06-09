@@ -1,0 +1,294 @@
+\$ . bin/activate 
+Bowline activated. Enter 'bowline' command for basic information
+]2;agile-california$ . bin/activate 
+\$ (agile-california) $ run-tests 
+seleniumfirefox uses an image, skipping
+seleniumchrome uses an image, skipping
+Building seinterpreter
+Step 1 : FROM node
+ ---> a6b9ffdcf522
+Step 2 : RUN npm install -g se-interpreter
+ ---> Using cache
+ ---> f1488567dca5
+Successfully built f1488567dca5
+WARNING: Not including one-off containers created by `docker-compose run`.
+To include them, use `docker-compose rm --all`.
+This will be the default behavior in the next version of Compose.
+
+Going to remove tests_seleniumchrome_1, tests_seleniumfirefox_1
+Removing tests_seleniumchrome_1 ... 
+Removing tests_seleniumfirefox_1 ... 
+Removing tests_seleniumfirefox_1 ... doneRemoving tests_seleniumchrome_1 ... doneCreating tests_seleniumfirefox_1
+Creating tests_seleniumchrome_1
+Creating/recreating demo users
+Added role biological_parent role to biological-parent                                                                                                            [success]
+Added role foster_parent role to foster-parent                                                                                                                    [success]
+Added role case_worker role to case-worker                                                                                                                        [success]
+Added role case_manager role to case-manager                                                                                                                      [success]
+SE-Interpreter 1.0.7
+base-url: Starting test (chrome) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed
+switch-to-mobile: Starting test (chrome) switch-to-mobile
+switch-to-mobile: Success {"type":"setWindowSize","width":"360","height":"640"}
+switch-to-mobile: Test passed
+mobile-open-navbar: Starting test (chrome) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed
+foster-parent-login: Starting test (chrome) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed
+foster-parent-profile: Starting test (chrome) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed
+mobile-open-navbar: Starting test (chrome) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed
+foster-parent-map: Starting test (chrome) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed
+7/7 tests ran successfully. Exiting
+Creating/recreating demo users
+Added role biological_parent role to biological-parent                                                                                                            [success]
+Added role foster_parent role to foster-parent                                                                                                                    [success]
+Added role case_worker role to case-worker                                                                                                                        [success]
+Added role case_manager role to case-manager                                                                                                                      [success]
+SE-Interpreter 1.0.7
+base-url: Starting test (chrome) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed
+switch-to-desktop: Starting test (chrome) switch-to-desktop
+switch-to-desktop: Success {"type":"setWindowSize","width":"1366","height":"768"}
+switch-to-desktop: Test passed
+foster-parent-login: Starting test (chrome) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed
+foster-parent-profile: Starting test (chrome) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed
+foster-parent-map: Starting test (chrome) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed
+5/5 tests ran successfully. Exiting
+Creating/recreating demo users
+Added role biological_parent role to biological-parent                                                                                                            [success]
+Added role foster_parent role to foster-parent                                                                                                                    [success]
+Added role case_worker role to case-worker                                                                                                                        [success]
+Added role case_manager role to case-manager                                                                                                                      [success]
+SE-Interpreter 1.0.7
+base-url: Starting test (firefox) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed
+switch-to-mobile: Starting test (firefox) switch-to-mobile
+switch-to-mobile: Success {"type":"setWindowSize","width":"360","height":"640"}
+switch-to-mobile: Test passed
+mobile-open-navbar: Starting test (firefox) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed
+foster-parent-login: Starting test (firefox) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed
+foster-parent-profile: Starting test (firefox) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed
+mobile-open-navbar: Starting test (firefox) mobile-open-navbar
+mobile-open-navbar: Success {"type":"clickElement","locator":{"type":"css selector","value":".navbar-toggle"}}
+mobile-open-navbar: Success {"type":"waitForElementPresent","locator":{"type":"css selector","value":".navbar-nav"}}
+mobile-open-navbar: Test passed
+foster-parent-map: Starting test (firefox) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed
+7/7 tests ran successfully. Exiting
+Creating/recreating demo users
+Added role biological_parent role to biological-parent                                                                                                            [success]
+Added role foster_parent role to foster-parent                                                                                                                    [success]
+Added role case_worker role to case-worker                                                                                                                        [success]
+Added role case_manager role to case-manager                                                                                                                      [success]
+SE-Interpreter 1.0.7
+base-url: Starting test (firefox) base-url
+base-url: Success {"type":"get","url":"http://web/"}
+base-url: Test passed
+switch-to-desktop: Starting test (firefox) switch-to-desktop
+switch-to-desktop: Success {"type":"setWindowSize","width":"1366","height":"768"}
+switch-to-desktop: Test passed
+foster-parent-login: Starting test (firefox) foster-parent-login
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"link text","value":"Log in"}}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-name"},"text":"foster-parent"}
+foster-parent-login: Success {"type":"setElementText","locator":{"type":"id","value":"edit-pass"},"text":"demo"}
+foster-parent-login: Success {"type":"clickElement","locator":{"type":"id","value":"edit-submit"}}
+foster-parent-login: Test passed
+foster-parent-profile: Starting test (firefox) foster-parent-profile
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Foster parent profile"}}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Fostering"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-foster-agencies-0-value"},"text":"Agency 1"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-foster-agency-value"}}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"id","value":"edit-field-preferred-ages-2"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-number-of-biological-child-0-value"},"text":"1"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Basic information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-first-name-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-first-name-0-value"},"text":"First"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-last-name-0-value"},"text":"Last"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-county']//option[11]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-zip-0-value"},"text":"92867"}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-about-me-0-value"},"text":"Bio"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"link text","value":"Contact information"}}
+foster-parent-profile: Success {"type":"waitForElementPresent","locator":{"type":"id","value":"edit-field-phone-0-value"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-phone-0-value"},"text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"setElementSelected","locator":{"type":"xpath","value":"//select[@id='edit-field-preferred-contact-method']//option[2]"}}
+foster-parent-profile: Success {"type":"setElementText","locator":{"type":"id","value":"edit-field-best-times-0-value"},"text":"Now"}
+foster-parent-profile: Success {"type":"clickElement","locator":{"type":"id","value":"edit-set-default"}}
+foster-parent-profile: Success {"type":"waitForTextPresent","text":"Foster parent profile profile has been created."}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"First"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Last"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"El Dorado County"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"0-2 years"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Agency 1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"1"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Bio"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"123-1234-1234"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Call"}
+foster-parent-profile: Success {"type":"verifyTextPresent","text":"Now"}
+foster-parent-profile: Test passed
+foster-parent-map: Starting test (firefox) foster-parent-map
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"link text","value":"Facilities Map"}}
+foster-parent-map: Success {"type":"clickElement","locator":{"type":"xpath","value":"//div[@class='leaflet-marker-pane']/img[3]"}}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":".leaflet-popup-pane .marker-title"},"text":"HANNAH'S CHILDRENS HOMES"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"ADVANTAGE FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(2)"},"text":"FOSTER FAMILY AGENCY"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(3)"},"text":"LICENSED"}
+foster-parent-map: Success {"type":"setElementText","locator":{"type":"xpath","value":"//div[@id='faclist_filter']/label/input"},"text":"nuevo"}
+foster-parent-map: Success {"type":"verifyText","locator":{"type":"css selector","value":"#faclist tbody tr:first-child td:nth-child(1)"},"text":"NUEVO AMANECER LATINO FFA"}
+foster-parent-map: Test passed
+5/5 tests ran successfully. Exiting
+Creating/recreating demo users
+Added role biological_parent role to biological-parent                                                                                                            [success]
+Added role foster_parent role to foster-parent                                                                                                                    [success]
+Added role case_worker role to case-worker                                                                                                                        [success]
+Added role case_manager role to case-manager                                                                                                                      [success]
+Stopping tests_seleniumchrome_1 ... 
+Stopping tests_seleniumfirefox_1 ... 
+Stopping tests_seleniumchrome_1 ... doneStopping tests_seleniumfirefox_1 ... done]2;agile-california$ run-tests 
