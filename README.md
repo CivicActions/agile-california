@@ -46,6 +46,8 @@ We also learned that classifying messages as being related to visitation or medi
 We got a *big surprise* when the State clarified that the primary user was the biological parent, not the foster parent! So, following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change by asking our users to tell us what they believed biological parents
 would want (visitation arrangement, contact info). Our prototype now has roles for biological parents, foster parents, and case workers.
 
+At present, our prototype displays messages site-wide to all logged in demo users. Our intent for the tool, again informed by user research, is that it would become a platform where users would log in, select whichever parent or caseworker associated with their account they wish to communicate with, and send and receive messages directly, privately, with that person. 
+
 On June 1st our CEO [reached out](https://civicactions.com/blog/an-open-invitation-to-collaborate/) to other firms seeking to be part of the RFI by inviting them to work with us,
 reuse our work-in-progress software, and even to share in our most valuable resource, our access to actual foster parents.
 This reiterates our "fiercely open" way of doing business.
