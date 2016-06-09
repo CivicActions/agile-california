@@ -99,7 +99,7 @@ Using a government service shouldnâ€™t be stressful, confusing, or daunting. Itâ
 4. Drupal has excellent accessibility out of the box and we took care to ensure our development retained or enhanced this - for example in the Inbox, we display "unread" and "urgent" statuses in text (rather than relying on color only) to make this information accessible.
 5. Users may edit some profile fields, save, and then return later to complete their profiles. The other user activities (viewing or sending a message and viewing facilities on a map) are simple, one-step processes.
 6. Language is kept to a minimum so the focus can remain on the content of user profiles, messages, and maps. We've minimized or removed unnecessary text.
-7. We are currently only an online service.
+7. The solution we built is currently only an online service.
 
 #### Key questions
 - What primary tasks are the user trying to accomplish?
@@ -111,7 +111,7 @@ Using a government service shouldnâ€™t be stressful, confusing, or daunting. Itâ
 #### Answers to key questions
 
 1. Primarily, users wants to be able to send and receive messages, and to be able to indicate whether a message is urgent and needs immediate attention. Secondarily, the users want to find residential facilities within or near to their zip code, and to maintain an up-to-date profile that contains information relevant to other users of the system. For example, parents want to share information about themselves that will be helpful to caseworkers, such as how many children they have in their home, and caseworkers want to share information that will be helpful to parents, such as shift hours.
-2. The language is plain.
+2. The language is as plain and universal as possible.
 3. English only at present, but using Drupal it would be straightforward to extend the interface and content to multiple languages.
 4. We use tool tips, suggested text, and/or field-level help text for most fields on the site.
 5. We haven't attempted to harmonize with other government services, since this is a standalone application. We aimed for a modern, Bootstrap-style responsive design.
@@ -134,9 +134,9 @@ We should use an incremental, fast-paced style of software development to reduce
 9. Use code reviews to ensure quality
 
 #### Actions
-1. See url [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/), which was made live on the second day of our project, solved a core user need by day 7 and was shared with users as an MVP by day 10.
-2. We did usability tests with foster parents and case workers as well as staff (who were not involved in design or development) in each sprint.
-3. Daily scrums, targeted sub-group meetings, chat (Slack), and Sprint rituals (retrospectives, Sprint planning meetings, backlog grooming meetings) have all constituted the central pillars of our team communication.
+1. Our prototype, [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/), was made live on the second day of our project, solved a core user need by day 7 and was shared with users as an MVP by day 10.
+2. We did usability tests with foster parents and caseworkers as well as staff (who were not involved in design or development) in each sprint.
+3. Daily scrums, targeted sub-group meetings, chat (Slack), and Sprint rituals (retrospectives, sprint planning meetings, backlog grooming meetings) constituted the central pillars of our team communication.
 4. We had an egalitarian team of 4-7 with no management layers. The Product Owner was a coding member of the team.
 5. Features are pushed to the live site multiple times each day, as evidenced by the log in Github and Slack.
 6. We religiously kept our feature backlog up-to-date every day using Waffle on top of GitHub Issues.
