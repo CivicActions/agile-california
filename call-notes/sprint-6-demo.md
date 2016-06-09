@@ -1,9 +1,9 @@
 ##Final user demos - June 8 
 
-30 min with Rani Wesley (case-worker) and 30 min with Amy Macalguim (foster parent) 
+30 min with Case worker (who requested anonymity) and 30 min with Amy Macalguim (foster parent) 
 
 ##Lead feedback: 
-Rani: 
+Case worker: 
 - Would need spanish language site for many parents 
 - Most useful function of map would be to help bio parents and foster parents arrange drop off locations (eg park, restaurant. not foster home). 
 - Would be helpful when searching residential facilities to be able to see type of facility (level 10 group home, eg) 
@@ -16,27 +16,27 @@ Amy:
 RR: This is our final demo - 
 - May not be able to implement changes, but this is important feedback regardless. Completing the circle of our interactions
 
-###Rani Demo
+###Case worker Demo
 
 OB: Demonstration of profile
-RW: this information is not public? 
+CW: this information is not public? 
 OB: Access is managed through separate child profile 
-RW: We are going to need Spanish translation as well 
+CW: We are going to need Spanish translation as well 
 
 OB: Demo of map 
 RR: More often a biological parent would need to arrange drop to foster parent? 
 - or residential facility? 
-RW: no reason to know facility that I know 
+CW: no reason to know facility that I know 
 - drop location yes
 - visits are often not where child is living, tho, this is confidential 
 RR: present options for parks, restaurants, etc, places for safe drop off? 
 
-RW: See type of facility? Level 10 group home, eg? 
+CW: See type of facility? Level 10 group home, eg? 
 OB: depends on dataset that is available from the state 
 
 OB: Demo of inbox 
 - note this is a single case-worker account 
-RW: Looks great 
+CW: Looks great 
 
 * * * 
 
