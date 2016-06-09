@@ -3,6 +3,7 @@
 - Confirm code freeze & timing of submission
 - Link in readme to style guide documentation
 - How to handle / link labor matrix
+- Obvious where audio files are
 - Build out the roles doc 
 - Elizabeth to open up trello retro boards
 - Final screenshot of waffle
