@@ -1,7 +1,7 @@
 
 [Retrospective trello board](https://trello.com/b/cn0AuaG3/agile-ca-sprint-1-retrospective)
 
-
+[Screenshot](https://github.com/CivicActions/agile-california/blob/master/call-notes/retrospective-pngs/Sprint%201%20Retrospective.png)
 
 
 **What do we need to do differently?**
