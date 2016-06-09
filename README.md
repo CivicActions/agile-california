@@ -13,11 +13,11 @@ Watch a screencast of the user experience here:
 ## How We Built the Prototype
 
 We created a multi-disciplinary team and immediately decided to iterate through [six sprints](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md) in the
-scrum methodology, carefully compressed from the normal two-week cycle down to a ligtning-fast two-days-per sprint.
+scrum methodology, carefully compressed from the normal two-week cycle down to a ligtning-fast two days per sprint.
 A Product Owner was assigned as the overall voice of the users. We successfully made a connection with [Foster Club](https://www.fosterclub.com/groups/california), a group that put us in contact with real foster parents and case workers, who generously assisted us each step of our iterative developent.
 
-Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis, as our understanding of user needs evolved through interaction with our actual users, as guided by our Agile Coach.
-We maintained a disciplined process, having formal demos and retrospectives with each sprint, and a complete story board manipulated with [Waffle](https://waffle.io/)
+Using Slack, we maintained a closely cooperative team that could react on a daily and hourly basis, as our understanding of user needs evolved through interaction with our actual users, and as guided by our Agile Coach.
+We maintained a disciplined process, holding (formal demos)[https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-interviews/log-of-sprint-demos.md] and [retrospectives](https://github.com/CivicActions/agile-california/tree/master/call-notes) with each sprint, and a complete story board manipulated with [Waffle](https://waffle.io/)
 overlaying our [GitHub](https://github.com/CivicActions/agile-california) Issues and Stories.
 
 As we have done before, we [closely followed the USDS checklist](https://github.com/CivicActions/agile-california/blob/master/documentation/usds-checklist.md).
@@ -55,6 +55,8 @@ This reiterates our "fiercely open" way of doing business.
 
 By [Sprint 5](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md#sprint-5) we had a functional prototype demoed to both a foster parent and a case worker.
 A foster parent provided user testing of our deployed prototype and [extensive feedback](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/usability-testing/2016-6-03-notes-from-foster-parent-usabiliy-tester.md) during Sprint 6.
+
+In sum, our team spent over four hours discussing this product with potential users, both in our [initial interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews) and in our [sprint demos](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-interviews/log-of-sprint-demos.md).
 
 ## The Technology
 
