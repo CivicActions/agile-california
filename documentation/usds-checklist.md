@@ -17,18 +17,13 @@ We must begin digital projects by exploring and pinpointing the needs of the peo
 
 #### Actions
 1. On the second day of the project we performed [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
-of 4 foster parents and/or case workers, two of which we continued to use as testers and remained involved in all of our Sprint Demos.
-2. We used interviews to gather user stories and to inform prioritization, as well as to provide feedback on designs, prototypes and throughout development. We did no quantitative work in this short prototype,
-but got feedback which influenced each of our six, two-day sprints.
-3. Several of our users tested against our deployed site and gave [valuable feedback](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/usability-testing) which turned into stories and informed prioritization of subsequent work.
+with four foster parents and/or case workers, two of which we continued to engage as reviewers/testers. These two individuals were invited to all of our Sprint Demos.
+2. We conducted interviews to gather user stories and to inform prioritization, and we engaged users in additional demos and discussions to gather feedback on designs and prototypes. We did no quantitative work in this short project, but the qualitative feedback we collected influenced each of our six, two-day sprints.
+3. Several of our users usability tested our deployed site and gave [valuable feedback](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/usability-testing) which became stories and informed prioritization of subsequent work.
 4. We kept extensive [documentation](https://github.com/CivicActions/agile-california/tree/master/documentation/ux) of our user interactions and our conclusions. 
-5. Results of our discussions with users, and determinations based on these discussions, are consistently shared
-with the team in our Git repository, and in our Slack channel. Because our repository is completely open,
-our findings may be useful to the California Health and Human Services Agency leadership even if our firm is not selected.
-6. Our user stories and our backlog were kept is GitHub [Issues](https://github.com/CivicActions/agile-california/issues?q=label%3A"user+story"+sort%3Acreated-asc) managed via [Waffle](https://waffle.io/CivicActions/agile-california?label=user%20story).
-We managed this backlog every day as we made progress on stories and got more user feedback.
-7. In addition to interviews, as soon as we had wirefames we invited actual users to our sprintly demos, where they
-gave valuable feedback.  They also directly performed usability testing of our AWS deployed prototype.
+5. Results of our discussions with users, and determinations based on these discussions, were consistently shared with the team in our Git repository and our Slack channel. Our repository is completely open and our findings may be useful to the California Health and Human Services Agency leadership even if our company is not selected.
+6. Our user stories and our backlog were kept in GitHub [Issues](https://github.com/CivicActions/agile-california/issues?q=label%3A"user+story"+sort%3Acreated-asc) and managed via [Waffle](https://waffle.io/CivicActions/agile-california?label=user%20story). We managed this backlog every day as we made progress on stories and got more user feedback.
+7. We invited users to all of our sprint demos and they provided valuable feedback at every stage of the project, from ideation to wireframes to coded prototype. They also performed usability testing of our AWS deployed prototype.
 
 #### Key questions
 1. Who are your primary users?
@@ -42,14 +37,14 @@ gave valuable feedback.  They also directly performed usability testing of our A
 
 #### Answers to key questions
 
-1. At the beginning of the project we thought it was Foster Parents, but the State answered our questions explaining it is Biological Parents, as well as case workers with whom they must communicate.
-2. Communication between parents (both foster and biological) and caseworkers is costly and cumbersome, and finding dropoff and visitation sites difficult.
-3. The case worker wants to be able to handle a large case load, the parent wants to communicate more clearly around the status of their children.
+1. At the start of the project we understood the primary users to be foster parents and case workers. After submitting questions to the State, we learned that biological parents were in fact the intended primary users. We adjusted our focus accordingly.
+2. Communication between parents (both foster and biological) and caseworkers is costly and cumbersome, and finding drop-off and visitation sites difficult. The service we designed would address both of these user needs.
+3. Parents want simpler, more immediate communication about the status of their children, and caseworkers need to be able to effectively handle a large caseload.
 4. We have not yet addressed the problem of people who don't use smart phones - a potential future enhancement would be to integrate bidirectional SMS capability into the Inbox.
 5. The following user research methods were used: [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews), [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes), [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md), [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md), [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md), [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes).
-6. That parents want streamlined communication, and that changes to visitation status and arrange dropoff locations are big deal.
-7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all of our UX finding.
-8. During each of the 6 sprints.
+6. Key findings were that parents want streamlined communication, and that changes to visitation status and arrange drop-off locations are a big deal to them.
+7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all of our UX findings.
+8. We tested with real people during each of our 6 sprints.
 
 <a name="Play2"></a>
 ## Play 2
@@ -64,10 +59,10 @@ We need to understand the different ways people will interact with our services,
 4. Develop metrics that will measure how well the service is meeting user needs at each step of the service
 
 #### Actions
-1. In order to understand at what points the system would be useful, we [interviewed several parents and case workers](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews) to get a clearer picture of their needs and how they would prefer to interact with the system. What we learned is that foster parents, case workers, and biological parents will need to interact with the system in a variety of circumstances - sometimes under duress (i.e. a foster parent is being contacted by a bio parent for visitation but foster parent doesn't know visitation status, and needs to contact case worker, or a foster parent is ill and needs to seek a respite facility to drop a child off while they recover). Therefore, the system needs to be flexible enough to be accessed on-the-go. We built a completely responsive site so that users can access from desktop and mobile device, and would propose building a separate mobile app so that users can get immediate notifications as to whether they have a new message, and other advanced features. 
-2. In addition to conducting direct user interviews, we constructed empathy maps and personas that helped us further synthesize the feedback from parents and case workers to understand their main pain points and what they had the most to gain from a better system. Once we understood the most critical pain points for each user, we prioritized building features to resolve these issues and focused our efforts around what we were hearing. 
-3. Foster parents and biological parents would both be given literature to orient them towards the website and instructions to download mobile app. Case workers would be provided links and instructions in an organization-wide training. 
-4. We will install Google Analytics and plan to perform user surveys and direct observation to watch users navigating through the site and app.
+1. We [interviewed several parents and case workers](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews) to get a clearer picture of their needs and how they would prefer to interact with the system. We learned that foster parents, case workers, and biological parents will need to interact with the system in a variety of circumstances - sometimes under duress (i.e. a foster parent is being contacted by a bio parent for visitation but foster parent doesn't know visitation status and needs to contact case worker). Therefore, the system needs to be flexible enough to be accessed on-the-go. We built a completely responsive site and would propose building a separate mobile app in the future so users can get immediate notifications about new messages. 
+2. In addition to conducting direct user interviews, we constructed empathy maps and personas that helped us further synthesize the feedback from parents and case workers. This process uncovered users' main pain points and helped us to understand what they could gain from a better system. Once we understood the most critical pain points for each user, we prioritized building features to resolve these issues. 
+3. Biological parents and foster parents would be given literature to orient them towards the website and instructions to download the (future) mobile app. Case workers would be provided links and instructions in an organization-wide training.
+4. We installed Google Analytics and would plan to perform user surveys and direct observation to watch users navigating through the site and app.
 
 #### Key questions
 - What are the different ways (both online and offline) that people currently accomplish the task the digital service is designed to help with?
@@ -77,10 +72,10 @@ We need to understand the different ways people will interact with our services,
 
 #### Answers to key questions
 
-1. Currently, most parents and case workers interact through phone calls or text messaging. More infrequently, they will use email. 
-2. The most critical pain point which we heard from multiple parents was that they often had to call case workers multiple times, and often wait long periods of time without a response, in order to get vital information such as the visitation status of the child. These delays cause strife between the biological parent, foster parent, case worker, and the system. We heard that there was no clear method to escalate concerns in the case of an urgent need. Case workers complained about having too large of a workload and not having enough time to address concerns, and often getting the same request over and over again. We spent the bulk of our time creating and refining a messaging system with the ability to escalate messages in priority, to provide a paper trail showing when parents have contacted case worker in case of long delays in response times, and also give case workers the ability to point to previous responses so they don't have to duplicate replies. 
-3. The power of this project lies in facilitating communication between an overburdened county employee and equally stressed biological and foster families, who we repeatedly heard were just trying "to do their primary job, which is take care of the children". This system would reduce the need for frequent calls made to case worker, without waiting to hear a response. A case worker could reply instantly, from wherever he or she may be, and even copy and paste answers to save time. 
-4. Metrics that will indicate how well the service is working would be: reduced number of calls between case workers/parents, a good percentage of the number of families/case workers overall as site visitors, the number of returning visitors (to measure how many users must be finding the website/app useful), a low bounce rate (how many users abandoned the system), user surveys indicating overall satisfaction with the system, and user observation revealing that users are able to successfully navigate through the app and perform critical functions.
+1. Currently, most parents and case workers interact through phone calls or text messaging. More infrequently, they use email.
+2. The most critical pain point for parents is that they often have to call caseworkers multiple times, waiting long periods of time without a response, to get vital information such as the visitation status of a child. These delays cause strife between the biological parent, foster parent, caseworker, and system. We learned that there is no clear method to escalate concerns in the case of an urgent need. Caseworkers, who often get the same request over and over again, complained about having too large of a workload and not enough time to address concerns. We spent the bulk of our time creating and refining a messaging system with the ability to escalate messages in priority, to provide a paper trail showing when parents have contacted caseworkers, and to give case workers the ability to point to previous responses so they don't have to duplicate replies. 
+3. The power of this project lies in facilitating communication between an overburdened county employee and equally stressed biological and foster families, who we repeatedly heard were just trying "to do their primary job," which is take care of children. This system would reduce the need for frequent parent calls to caseworkers. A caseworker could reply instantly, from wherever he or she may be, and even copy and paste answers to save time. 
+4. Metrics to indicate how well the service is working would be: reduced number of calls between case workers/parents; percentage of the number of families/case workers overall as site visitors; number of returning visitors (to measure how many users must be finding the website/app useful); and bounce rate (how many users abandoned the system). Additionally, user surveys and further usability testing would provide qualitative information about whether users are able to successfully navigate through the app and perform critical functions.
 
 <a name="Play3"></a>
 ## Play 3
