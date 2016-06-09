@@ -38,6 +38,32 @@ drush st
 **Important:** the nginx proxy will not start if you have something else using port 80. You must either stop your other service (recommended) or edit the port in `lib/proxy/fig.yml` file to something other than 80.
 
 ## Post-Install: Test and document your development sandbox
+pment and testing
+
+## Requirements
+1. [Docker](https://www.docker.com/)
+  - Make sure you can successfully run docker commands without sudo. See [Ubuntu example](https://docs.docker.com/installation/ubuntulinux/#giving-non-root-access).
+1. [Docker Compose](http://docs.docker.com/compose/)
+
+See also the [wiki](https://github.com/davenuman/bowline/wiki) for [platform-specific instructions](https://github.com/davenuman/bowline/wiki/Platform-specific-instructions).
+
+## Install Instructions
+
+Use the following command to install bowline into your new or existing Drupal project directory.
+
+``` bash
+wget 'https://raw.githubusercontent.com/davenuman/bowline/master/lib/bowline/install.sh' -O bowline-install.sh ; cat bowline-install.sh ; read -n1 -p "Run above script? (y/n)" ; if [ "$REPLY" = "y" ]; then bash bowline-install.sh; fi
+```
+
+## Activate
+
+Activate bowline, adding the bowline environment to your bash session (The "dot space" is intentional, not a typo):
+docker-re
+
+q
+q
+q
+
 1. Review [sandbox.md](sandbox.md ) which is indented to become your instructions for your development team. It will need to be modified to the specifics of your project.
 1. Replace the content of this readme.md file with appropriate description of your project.
 
