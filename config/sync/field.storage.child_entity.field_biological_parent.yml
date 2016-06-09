@@ -1,12 +1,12 @@
-uuid: 9806dcb7-26fe-416e-a7dc-8221ecf26552
+uuid: 4ef237fa-d5ab-4ff9-b9c1-ea14e88bb282
 langcode: en
 status: true
 dependencies:
   module:
     - chhs_child
     - user
-id: child_entity.field_foster_parent
-field_name: field_foster_parent
+id: child_entity.field_biological_parent
+field_name: field_biological_parent
 entity_type: child_entity
 type: entity_reference
 settings:

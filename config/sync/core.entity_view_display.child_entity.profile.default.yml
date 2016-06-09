@@ -4,22 +4,40 @@ status: true
 dependencies:
   config:
     - chhs_child.child_entity_type.profile
+    - field.field.child_entity.profile.field_biological_parent
     - field.field.child_entity.profile.field_case_worker
+    - field.field.child_entity.profile.field_date_of_birth
     - field.field.child_entity.profile.field_foster_parent
   module:
+    - datetime
     - user
 id: child_entity.profile.default
 targetEntityType: child_entity
 bundle: profile
 mode: default
 content:
-  field_case_worker:
+  field_biological_parent:
     weight: 1
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+  field_case_worker:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_date_of_birth:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
   field_foster_parent:
     weight: 2
     label: above
@@ -37,7 +55,7 @@ content:
   user_id:
     label: hidden
     type: author
-    weight: 3
+    weight: 5
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

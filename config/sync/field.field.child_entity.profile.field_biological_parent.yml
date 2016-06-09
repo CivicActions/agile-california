@@ -1,15 +1,15 @@
-uuid: a76b60ac-4e06-4f05-b93f-565c2191cde2
+uuid: 790203f5-a258-4e73-a604-88f86e7433e0
 langcode: en
 status: true
 dependencies:
   config:
     - chhs_child.child_entity_type.profile
-    - field.storage.child_entity.field_case_worker
-id: child_entity.profile.field_case_worker
-field_name: field_case_worker
+    - field.storage.child_entity.field_biological_parent
+id: child_entity.profile.field_biological_parent
+field_name: field_biological_parent
 entity_type: child_entity
 bundle: profile
-label: 'Case Worker'
+label: 'Biological Parents'
 description: ''
 required: false
 translatable: false
@@ -18,13 +18,13 @@ default_value_callback: ''
 settings:
   handler: 'default:user'
   handler_settings:
-    include_anonymous: false
+    include_anonymous: true
     filter:
       type: role
       role:
-        case_worker: case_worker
-        biological_parent: '0'
+        biological_parent: biological_parent
         foster_parent: '0'
+        case_worker: '0'
         case_manager: '0'
         administrator: '0'
     target_bundles: null

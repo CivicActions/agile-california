@@ -9,7 +9,7 @@ id: child_entity.profile.field_foster_parent
 field_name: field_foster_parent
 entity_type: child_entity
 bundle: profile
-label: 'Foster Parent'
+label: 'Foster Parents'
 description: ''
 required: false
 translatable: false
@@ -23,11 +23,13 @@ settings:
       type: role
       role:
         foster_parent: foster_parent
-        administrator: '0'
+        biological_parent: '0'
         case_worker: '0'
         case_manager: '0'
+        administrator: '0'
     target_bundles: null
     sort:
-      field: _none
+      field: name
+      direction: ASC
     auto_create: false
 field_type: entity_reference

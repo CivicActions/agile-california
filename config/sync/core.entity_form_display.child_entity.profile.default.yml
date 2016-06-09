@@ -4,23 +4,40 @@ status: true
 dependencies:
   config:
     - chhs_child.child_entity_type.profile
+    - field.field.child_entity.profile.field_biological_parent
     - field.field.child_entity.profile.field_case_worker
+    - field.field.child_entity.profile.field_date_of_birth
     - field.field.child_entity.profile.field_foster_parent
+  module:
+    - datetime
 id: child_entity.profile.default
 targetEntityType: child_entity
 bundle: profile
 mode: default
 content:
-  field_case_worker:
-    weight: 2
+  field_biological_parent:
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-  field_foster_parent:
+  field_case_worker:
     weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_date_of_birth:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_foster_parent:
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -29,7 +46,7 @@ content:
     type: entity_reference_autocomplete
   langcode:
     type: language_select
-    weight: 1
+    weight: 5
     settings: {  }
     third_party_settings: {  }
   name:
@@ -41,7 +58,7 @@ content:
     third_party_settings: {  }
   user_id:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60

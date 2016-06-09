@@ -1,0 +1,21 @@
+uuid: 57907dd5-837a-4626-a3b1-e09f0c43d5b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - chhs_child.child_entity_type.profile
+    - field.storage.child_entity.field_date_of_birth
+  module:
+    - datetime
+id: child_entity.profile.field_date_of_birth
+field_name: field_date_of_birth
+entity_type: child_entity
+bundle: profile
+label: 'Date of birth'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
