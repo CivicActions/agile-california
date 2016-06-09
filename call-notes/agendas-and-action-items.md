@@ -1,3 +1,8 @@
+#6/9 Call Agenda
+- Process for ensuring the site is up
+- Scheduling retrospective for entire project
+- Tying up Loose ends
+
 #6/8 Action items
 - Heather to work on logo, and then backlog 
 - Owen to work on backlog before demos, and then documentation
