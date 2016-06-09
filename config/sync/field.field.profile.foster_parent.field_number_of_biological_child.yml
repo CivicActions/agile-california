@@ -9,7 +9,7 @@ id: profile.foster_parent.field_number_of_biological_child
 field_name: field_number_of_biological_child
 entity_type: profile
 bundle: foster_parent
-label: 'Number of biological children in household'
+label: 'Number of biological/adopted children in household'
 description: ''
 required: false
 translatable: false
