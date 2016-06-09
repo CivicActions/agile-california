@@ -230,7 +230,7 @@ There must be a single product owner who has the authority and responsibility to
 1. [Product owner was identified as Robert L. Read](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md).
 2. Stakeholders in this instance were all team members, and all agreed to authority as outlined was granted to product owner on day 1 of Sprint.
 3. See Read's [biography](https://civicactions.com/team/rob-read).
-4. We early established a labor budget matrix of peoples skills against their availability.
+4. We early established a [labor budget matrix](https://docs.google.com/spreadsheets/d/1lCsBoJf4DgThtw6jkY5AQBrFEQdssw9FyoKQoYSpbtQ/edit#gid=467546033) of peoples skills against their availability.
 5. Again, see [biography](https://civicactions.com/team/rob-read).
 
 #### Key questions
