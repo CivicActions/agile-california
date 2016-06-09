@@ -20,7 +20,7 @@ Sprint 1
 
  - Daily Stand up
  - Interviewed 3 foster parents ***(Attachment B 2.c, USDS Play #1)***
- - establish budget ***(USDS Play #5)***
+ - Establish budget ***(USDS Play #5)***. A matrix of stated availabilty (determined with consideration of skillsets and project roles) can be found [here](https://docs.google.com/spreadsheets/d/1lCsBoJf4DgThtw6jkY5AQBrFEQdssw9FyoKQoYSpbtQ/edit#gid=467546033)
 
 **Day  3: May 20, 2016**
  - Daily Stand up
@@ -137,5 +137,14 @@ Sprint 6
 - Team considered building a periodic reset to site, and elected against, given that a manual reset could be performed as needed and at any time. 
 
 **Day  15: June 8, 2016**
+- Daily standup 
+- Approval for continued work on backlog by Owen and Heather 
+- Preparation for user demo (Amy and case worker) by Rob and Owen, 4pmET
+- Final resolution of logo and mobile interface 
+- Continued work on documentation 
 
 **Day  16: June 9, 2016**
+- Daily standup
+- Development freeze
+- Finalize documentation 
+
