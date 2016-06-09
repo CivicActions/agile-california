@@ -6,7 +6,7 @@
 
 We must begin digital projects by exploring and pinpointing the needs of the people who will use the service, and the ways the service will fit into their lives. Whether the users are members of the public or government employees, policy makers must include real people in their design process from the beginning. The needs of people — not constraints of government structures or silos — should inform technical and design decisions. We need to continually test the products we build with real people to keep us honest about what is important.
 
-#### checklist
+#### Checklist
 1. Early in the project, spend time with current and prospective users of the service
 2. Use a range of qualitative and quantitative research methods to determine people’s goals, needs, and behaviors; be thoughtful about the time spent
 3. Test prototypes of solutions with real people, in the field if possible
@@ -30,7 +30,7 @@ We managed this backlog every day as we made progress on stories and got more us
 7. In addition to interviews, as soon as we had wirefames we invited actual users to our sprintly demos, where they
 gave valuable feedback.  They also directly performed usability testing of our AWS deployed prototype.
 
-#### key questions
+#### Key questions
 1. Who are your primary users?
 2. What user needs will this service address?
 3. Why does the user want or need this service?
@@ -40,7 +40,7 @@ gave valuable feedback.  They also directly performed usability testing of our A
 7. How were the findings documented? Where can future team members access the documentation?
 8. How often are you testing with real people?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. At the beginning of the project we thought it was Foster Parents, but the State answered our questions explaining it is Biological Parents, as well as case workers with whom they must communicate.
 2. Communication between parents (both foster and biological) and caseworkers is costly and cumbersome, and finding dropoff and visitation sites difficult.
@@ -57,7 +57,7 @@ gave valuable feedback.  They also directly performed usability testing of our A
 
 We need to understand the different ways people will interact with our services, including the actions they take online, through a mobile application, on a phone, or in person. Every encounter — whether it's online or offline — should move the user closer towards their goal.
 
-#### checklist
+#### Checklist
 1. Understand the different points at which people will interact with the service – both online and in person
 2. Identify pain points in the current way users interact with the service, and prioritize these according to user needs
 3. Design the digital parts of the service so that they are integrated with the offline touch points people use to interact with the service
@@ -69,13 +69,13 @@ We need to understand the different ways people will interact with our services,
 3. Foster parents and biological parents would both be given literature to orient them towards the website and instructions to download mobile app. Case workers would be provided links and instructions in an organization-wide training. 
 4. We will install Google Analytics and plan to perform user surveys and direct observation to watch users navigating through the site and app.
 
-#### key questions
+#### Key questions
 - What are the different ways (both online and offline) that people currently accomplish the task the digital service is designed to help with?
 - Where are user pain points in the current way people accomplish the task?
 - Where does this specific project fit into the larger way people currently obtain the service being offered?
 - What metrics will best indicate how well the service is working for its users?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. Currently, most parents and case workers interact through phone calls or text messaging. More infrequently, they will use email. 
 2. The most critical pain point which we heard from multiple parents was that they often had to call case workers multiple times, and often wait long periods of time without a response, in order to get vital information such as the visitation status of the child. These delays cause strife between the biological parent, foster parent, case worker, and the system. We heard that there was no clear method to escalate concerns in the case of an urgent need. Case workers complained about having too large of a workload and not having enough time to address concerns, and often getting the same request over and over again. We spent the bulk of our time creating and refining a messaging system with the ability to escalate messages in priority, to provide a paper trail showing when parents have contacted case worker in case of long delays in response times, and also give case workers the ability to point to previous responses so they don't have to duplicate replies. 
@@ -88,7 +88,7 @@ We need to understand the different ways people will interact with our services,
 
 Using a government service shouldn’t be stressful, confusing, or daunting. It’s our job to build services that are simple and intuitive enough that users succeed the first time, unaided.
 
-#### checklist
+#### Checklist
 1. Create or use an existing, simple, and flexible design style guide for the service
 2. Use the design style guide consistently for related digital services
 3. Give users clear information about where they are in each step of the process
@@ -106,14 +106,14 @@ Using a government service shouldn’t be stressful, confusing, or daunting. It�
 6. Language is kept to a minimum so the focus can remain on the content of user profiles, messages, and maps. We've minimized or removed unnecessary text.
 7. We are currently only an online service.
 
-#### key questions
+#### Key questions
 - What primary tasks are the user trying to accomplish?
 - Is the language as plain and universal as possible?
 - What languages is your service offered in?
 - If a user needs help while using the service, how do they go about getting it?
 - How does the service’s design visually relate to other government services?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. Primarily, users wants to be able to send and receive messages, and to be able to indicate whether a message is urgent and needs immediate attention. Secondarily, the users want to find residential facilities within or near to their zip code, and to maintain an up-to-date profile that contains information relevant to other users of the system. For example, parents want to share information about themselves that will be helpful to caseworkers, such as how many children they have in their home, and caseworkers want to share information that will be helpful to parents, such as shift hours.
 2. The language is plain.
@@ -127,7 +127,7 @@ Using a government service shouldn’t be stressful, confusing, or daunting. It�
 
 We should use an incremental, fast-paced style of software development to reduce the risk of failure. We want to get working software into users’ hands as early as possible to give the design and development team opportunities to adjust based on user feedback about the service. A critical capability is being able to automatically test and deploy the service so that new features can be added often and be put into production easily.
 
-#### checklist
+#### Checklist
 1. Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible, no longer than three months from the beginning of the project, using a “beta” or “test” period if needed
 2. Run usability tests frequently to see how well the service works and identify improvements that should be made
 3. Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools
@@ -149,7 +149,7 @@ We should use an incremental, fast-paced style of software development to reduce
 8. We used [GitHub issues](https://github.com/CivicActions/agile-california/issues?utf8=✓&q=is%3Aissue) for all bugs and story writing, which was done by all team members.
 9. Our Technical Architect performed code review with the two other coders of each [pull request](https://github.com/CivicActions/agile-california/pulls?utf8=%E2%9C%93&q=is%3Apr).
 
-#### key questions
+#### Key questions
 - How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
 - How long does it take for a production deployment?
 - How many days or weeks are in each iteration/sprint?
@@ -160,7 +160,7 @@ We should use an incremental, fast-paced style of software development to reduce
 - How do you collect user feedback during development? How is that feedback used to improve the service?
 - At each stage of usability testing, which gaps were identified in addressing user needs?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. MVP was shown to test users after Sprint 4.
 2. Including the time to run all tests, we deploy in less than 15 minutes. The deploy is fully automated with no manual steps required (beyond triggering the deploy).
@@ -180,7 +180,7 @@ To improve our chances of success when contracting out development work, we need
 
 [The TechFAR Handbook](https://playbook.cio.gov/techfar/) provides a detailed explanation of the flexibilities in the Federal Acquisition Regulation (FAR) that can help agencies implement this play.
 
-#### checklist
+#### Checklist
 1. Budget includes research, discovery, and prototyping activities
 2. Contract is structured to request frequent deliverables, not multi-month milestones
 3. Contract is structured to hold vendors accountable to deliverables
@@ -202,12 +202,12 @@ To improve our chances of success when contracting out development work, we need
 8. N/A
 9. N/A
 
-#### key questions
+#### Key questions
 - What is the scope of the project? What are the key deliverables?
 - What are the milestones? How frequent are they?
 - What are the performance metrics defined in the contract (e.g., response time, system uptime, time period to address priority issues)?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. See RFI and related documents.
 2. See RFI and related documents.
@@ -219,7 +219,7 @@ To improve our chances of success when contracting out development work, we need
 
 There must be a single product owner who has the authority and responsibility to assign tasks and work elements; make business, product, and technical decisions; and be accountable for the success or failure of the overall service. This product owner is ultimately responsible for how well the service meets needs of its users, which is how a service should be evaluated. The product owner is responsible for ensuring that features are built and managing the feature and bug backlogs.
 
-#### checklist
+#### Checklist
 1. A product owner was assigned.
 2. All stakeholders agree that the product owner has the authority to assign tasks and make decisions about features and technical implementation details.
 3. The product owner has a product management background with technical experience to assess alternatives and weigh tradeoffs.
@@ -233,12 +233,12 @@ There must be a single product owner who has the authority and responsibility to
 4. We early established a labor budget matrix of peoples skills against their availability.
 5. Again, see [biography](https://civicactions.com/team/rob-read).
 
-#### key questions
+#### Key questions
 - Who is the product owner?
 - What organizational changes have been made to ensure the product owner has sufficient authority over and support for the project?
 - What does it take for the product owner to add or remove a feature from the service?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. [A single product owner, Robert L. Read, was assigned](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md).
 2. Although CivicActions maintains a professional and highly collaborative environment, the Product Owner was empowered to make prioritizaion decisions and assign tasks.
@@ -250,7 +250,7 @@ There must be a single product owner who has the authority and responsibility to
 
 We need talented people working in government who have experience creating modern digital services. This includes bringing in seasoned product managers, engineers, and designers. When outside help is needed, our teams should work with contracting officers who understand how to evaluate third-party technical competency so our teams can be paired with contractors who are good at both building and delivering effective digital services. The makeup and experience requirements of the team will vary depending on the scope of the project.
 
-#### checklist
+#### Checklist
 1. Member(s) of the team have experience building popular, high-traffic digital services
 2. Member(s) of the team have experience designing mobile and web applications
 3. Member(s) of the team have experience using automated testing frameworks
@@ -276,7 +276,7 @@ We need talented people working in government who have experience creating moder
 
 The technology decisions we make need to enable development teams to work efficiently and enable services to scale easily and cost-effectively. Our choices for hosting infrastructure, databases, software frameworks, programming languages and the rest of the technology stack should seek to avoid vendor lock-in and match what successful modern consumer and enterprise software companies would choose today. In particular, digital services teams should consider using open source, cloud-based, and commodity solutions across the technology stack, because of their widespread adoption and support by successful consumer and enterprise technology companies in the private sector.
 
-#### checklist
+#### Checklist
 1. Choose software frameworks that are commonly used by private-sector companies creating similar services
 2. Whenever possible, ensure that software can be deployed on a variety of commodity hardware types
 3. Ensure that each project has clear, understandable instructions for setting up a local development environment, and that team members can be quickly added or removed from projects
@@ -288,12 +288,12 @@ The technology decisions we make need to enable development teams to work effici
 3. We have [reproducible sandbox installation instructions](https://github.com/CivicActions/agile-california/blob/master/documentation/devops-manual.md) with minimal dependencies (self hosting), and continuous integration of unit test framework.
 4. The Docker Machine host operating system ([Ubuntu](http://www.ubuntu.com/)), [Docker](https://www.docker.com/products/docker-engine), [Docker Compose](https://www.docker.com/products/docker-compose), container operating systems (minimal [Debian](https://www.debian.org/)), [Apache httpd](https://httpd.apache.org/), [MariaDB](https://mariadb.org/), monitoring ([uptime](https://github.com/fzaninotto/uptime)), testing ([Selenium Builder](https://github.com/SeleniumBuilder/se-builder), [se-interpreter](https://github.com/Zarkonnen/se-interpreter)), deployment tools ([Docker Machine](https://www.docker.com/products/docker-machine), [AWS CLI](https://github.com/aws/aws-cli), [CloudFlare CLI](https://github.com/danielpigott/cloudflare-cli)), automation ([Jenkins](https://jenkins.io/), [Bowline](https://github.com/davenuman/bowline)), [PHP](https://secure.php.net/), PHP libraries ([Symfony](https://symfony.com/)) and frontend frameworks ([Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/), [Mapbox](https://www.mapbox.com/), [Datatables](https://datatables.net/)) are all open source licensed.
 
-#### key questions
+#### Key questions
 - What is your development stack and why did you choose it?
 - Which databases are you using and why did you choose them?
 - How long does it take for a new team member to start developing?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. Drupal 8 was a backbone that provided out-of-the-box user management and configurable profiles. MapBox and GeoJSON allowed easy utilization of the API offered by the state for finding residential facilities. Docker and Docker Compose for development, due to need for rapid developer onboarding, as well as for allowing full consistency with production environment. JQuery and Bootstrap on the front end. We choose all of these components as light-weight and suited to rapid development and feedback cycles for a simple application.
 2. We installed Drupal 8 on top of MariaDB 10 as a standard default database solution.
@@ -305,7 +305,7 @@ The technology decisions we make need to enable development teams to work effici
 
 Our services should be deployed on flexible infrastructure, where resources can be provisioned in real-time to meet spikes traffic and user demand. Our digital services are crippled when we host them in data centers that market themselves as “cloud hosting” but require us to manage and maintain hardware directly. This outdated practice wastes time, weakens our disaster recovery plans, and results in significantly higher costs.
 
-#### checklist
+#### Checklist
 1. Resources are provisioned on demand
 2. Resources scale based on real-time user demand
 3. Resources are provisioned through an API
@@ -324,7 +324,7 @@ Our services should be deployed on flexible infrastructure, where resources can 
 7. AWS uses commodity hardware.
 
 
-#### key questions
+#### Key questions
 -	Where is your service hosted?
 -	What hardware does your service use to run?
 -	What is the demand or usage pattern for your service?
@@ -339,7 +339,7 @@ Our services should be deployed on flexible infrastructure, where resources can 
 -	What data redundancy do you have built into the system, and what would be the impact of a catastrophic data loss?
 -	How often do you need to contact a person from your hosting provider to get resources or to fix an issue?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. Amazon Web Services, US West (Oregon) data center, although this can be changed with a deployment parameter, and additional regions can be added with geographic DNS balancing.
 2. t2.micro. See [Instance Types](http://aws.amazon.com/ec2/instance-types/) for more details. This is also configurable with a deployment parameter.
@@ -361,7 +361,7 @@ Our services should be deployed on flexible infrastructure, where resources can 
 
 Today, developers write automated scripts that can verify thousands of scenarios in minutes and then deploy updated code into production environments multiple times a day. They use automated performance tests which simulate surges in traffic to identify performance bottlenecks. While manual tests and quality assurance are still necessary, automated tests provide consistent and reliable protection against unintentional regressions, and make it possible for developers to confidently release frequent updates to the service.
 
-#### checklist
+#### Checklist
 1. Create automated tests that verify all user-facing functionality
 2. Create unit and integration tests to verify modules and components
 3. Run tests automatically as part of the build process
@@ -375,7 +375,7 @@ Today, developers write automated scripts that can verify thousands of scenarios
 4. We use automated deployment that can be initiated with a single slack command to automatically create a new AWS EC2 server instance and deploy the entire stack onto it.
 5. No - in this rapid prototype, we have not invested in performance testing. Our monitoring system and Google Analytics can provide response time data.
 
-#### key questions
+#### Key questions
 - What percentage of the code base is covered by automated tests?
 - How long does it take to build, test, and deploy a typical bug fix?
 - How long does it take to build, test, and deploy a new feature into production?
@@ -387,7 +387,7 @@ Today, developers write automated scripts that can verify thousands of scenarios
 - How does the service perform when you exceed the expected target usage volume? Does it degrade gracefully or catastrophically?
 - What is your scaling strategy when demand increases suddenly?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. Perhaps 40%.
 2. A very very minor fix can be coded, built, tested, and deployed in 25 minutes (5 minutes development, 5 minutes code review, 8 minutes automated testing and 7 minutes for automated build and deployment). Coding time is often longer, of course.
@@ -408,7 +408,7 @@ Our digital services have to protect sensitive information and keep systems secu
 
 The following checklist provides a starting point, but teams should work closely with their privacy specialist and security engineer to meet the needs of the specific service.
 
-#### checklist
+#### Checklist
 1. Contact the appropriate privacy or legal officer of the department or agency to determine whether a System of Records Notice (SORN), Privacy Impact Assessment, or other review should be conducted
 2. Determine, in consultation with a records officer, what data is collected and why, how it is used or shared, how it is stored and secured, and how long it is kept
 3. Determine, in consultation with a privacy specialist, whether and how users are notified about how personal information is collected and used, including whether a privacy policy is needed and where it should appear, and how users will be notified in the event of a security breach
@@ -424,7 +424,7 @@ The following checklist provides a starting point, but teams should work closely
 5. AWS infrastructure is FedRAMP certified, including in the region we are using.
 6. CivicActions uses Docker and other Infrastructure as Code tools to automate and control the creation, configuration and deployment of development and production environments.
 
-#### key questions
+#### Key questions
 - Does the service collect personal information from the user?  How is the user notified of this collection?
 - Does it collect more information than necessary? Could the data be used in ways an average user wouldn't expect?
 - How does a user access, correct, delete, or remove personal information?
@@ -432,7 +432,7 @@ The following checklist provides a starting point, but teams should work closely
 - How and how often is the service tested for security vulnerabilities?
 - How can someone from the public report a security issue?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. The service does collect personal information (via profile forms), but only on a demonstration basis (the data is periodically wiped).
 2. The fields selected were all added in response to specific use cases provided by site users and as many fields as possible were left optional. Sensitive fields (e.g. zip code) were not displayed.
@@ -447,7 +447,7 @@ The following checklist provides a starting point, but teams should work closely
 
 At every stage of a project, we should measure how well our service is working for our users. This includes measuring how well a system performs and how people are interacting with it in real-time. Our teams and agency leadership should carefully watch these metrics to find issues and identify which bug fixes and improvements should be prioritized. Along with monitoring tools, a feedback mechanism should be in place for people to report issues directly.
 
-#### checklist
+#### Checklist
 1. Monitor system-level resource utilization in real time
 2. Monitor system performance in real-time (e.g. response time, latency, throughput, and error rates)
 3. Ensure monitoring can measure median, 95th percentile, and 98th percentile performance
@@ -467,7 +467,7 @@ At every stage of a project, we should measure how well our service is working f
 7. There was not enough time or traffic to gather sufficient data to provide a useful report.
 8. Google Analytics provides this functionality, but there was not enough time or traffic to gather sufficient data to perform multivariate testing.
 
-#### key questions
+#### Key questions
 - What are the key metrics for the service?
 - How have these metrics performed over the life of the service?
 - Which system monitoring tools are in place?
@@ -482,7 +482,7 @@ At every stage of a project, we should measure how well our service is working f
 - What tools or technologies are used for A/B testing?
 - How do you measure customer satisfaction?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. User interactions with each major feature (profiles, messaging, mapping), messages sent per unit time.
 2. There was not enough time or traffic to gather sufficient data to assess this.
@@ -504,7 +504,7 @@ At every stage of a project, we should measure how well our service is working f
 
 When we collaborate in the open and publish our data publicly, we can improve Government together. By building services more openly and publishing open data, we simplify the public’s access to government services and information, allow the public to contribute easily, and enable reuse by entrepreneurs, nonprofits, other agencies, and the public.
 
-#### checklist
+#### Checklist
 1. Offer users a mechanism to report bugs and issues, and be responsive to these reports
 2. Provide datasets to the public, in their entirety, through bulk downloads and APIs (application programming interfaces)
 3. Ensure that data from the service is explicitly in the public domain, and that rights are waived globally via an international public domain dedication, such as the “Creative Commons Zero” waiver
@@ -526,14 +526,14 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 8. We have done this as required by the RFI and our principles. https://github.com/CivicActions/agile-california
 9. We have done fiercely with our blog posts.
 
-#### key questions
+#### Key questions
 - How are you collecting user feedback for bugs and issues?
 - If there is an API, what capabilities does it provide? Who uses it? How is it documented?
 - If the codebase has not been released under an open source license, explain why.
 - What components are made available to the public as open source?
 - What datasets are made available to the public?
 
-#### answers to key questions
+#### Answers to key questions
 
 1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open Github repository.
 2. N/A
