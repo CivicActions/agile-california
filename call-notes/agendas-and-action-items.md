@@ -1,9 +1,20 @@
+#6/9 Action items
+- Jen to add info re: style guide to readme
+- Owen to lock repo at 5pmPT 
+- Steve to submit proposal PDF by 5pmET 
+- Steve to copy labor matrix into Git
+- Rob to review rest of google drive folder to make sure that all documentation is in Git 
+- Heather to bring all audio files into git, and then link in respective markdown files 
+- Steve to build out roles doc in Git 
+- Elizabeth to open up trello 
+- Steve to take one final, tearful screenshot of waffle board 
+
 #6/9 Call Agenda
 - USDS Playbook checklist proofread 
 - Confirm code freeze & timing of submission
 - Link in readme to style guide documentation
 - How to handle / link labor matrix
-- Obvious where audio files are
+- Obvious where audio files are?
 - Build out the roles doc 
 - Elizabeth to open up trello retro boards
 - Final screenshot of waffle
