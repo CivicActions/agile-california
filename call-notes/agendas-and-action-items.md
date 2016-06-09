@@ -2,6 +2,7 @@
 - USDS Playbook checklist proofread 
 - Confirm code freeze & timing of submission
 - Link in readme to style guide documentation
+- How to handle / link labor matrix
 - Build out the roles doc 
 - Elizabeth to open up trello retro boards
 - Final screenshot of waffle
