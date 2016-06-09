@@ -1,7 +1,7 @@
 {
   "type": "https",
   "name": "Agile CA",
-  "url": "http://agile-ca.civicactions.com/user",
+  "url": "https://agile-ca.civicactions.com/user/login",
   "isPaused": false,
   "tags": [],
   "alertTreshold": 1,
