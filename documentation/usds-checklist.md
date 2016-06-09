@@ -342,25 +342,22 @@ Our services should be deployed on flexible infrastructure, where resources can 
 #### answers to key questions
 
 1. Amazon Web Services, US West (Oregon) data center, although this can be changed with a deployment parameter, and additional regions can be added with geographic DNS balancing.
-2. t2.micro for both frontend and backend. See [Instance Types](http://aws.amazon.com/ec2/instance-types/) for more details. This is also configurable with a deployment parameter.
+2. t2.micro. See [Instance Types](http://aws.amazon.com/ec2/instance-types/) for more details. This is also configurable with a deployment parameter.
 3. N/A - we do not yet have enough users to measure.
-4. The CloudFlare CDN is robust enough to handle a substantial surge in traffic. Also, we can scale our docker containers if necessary.
+4. The CloudFlare CDN is robust enough to handle a substantial surge in traffic.
 5. With cloud computing we can scale up our capacity as much as we want.
 6. Provisioning our server instances is automated and takes under 20 minutes for a full deployment (frontend and backend).
-7. Using the docker-compose product we can easily scale any of our containers. (For example, the command `docker-compose scale web=2` would double our front end containers.)
+7. Using the docker-compose product we can easily scale any of our containers. (For example, the command `docker-compose scale web=2` would double the number of deployed web containers). We can further scale across multiple AWS instances by externalizing the master database to a scalable backend (e.g. AWS RDS), adding additional instances with the deploy script then load balancing by adding the additional instance IPs to Cloudflare.
 8. Amazon pricing, which has some fixed and some usage rates.
 9. We are using the West Coast AWS region data center. The CloudFlare CDN mirrors the site in many servers worldwide.
 10. Assuming Github is online, we could be back online in a different region within 20 to 30 minutes.
-11. Our app is not storing any critical data - all data is loaded automatically on build, or accessed dynamically.
-12. We are storing no non-derivative data. There cannot be a catastrophic data loss.  A data loss would force us to repopulate the AHRQ data in our database in order to efficiently provide comparative prescription volume, this could be done by simply rerunning the deploy command.
+11. Our app is not storing any critical data at the prototype stage - all data is loaded automatically on build, or accessed dynamically.
+12. We are storing no non-derivative data at the prototype stage. Redundancy could be added simply by adding an additional region to the deploy script.
 13. We are using the AWS and CloudFlare APIs and web interfaces so we do not need to contact our provider for resources.
-
 
 <a name="Play10"></a>
 ## Play 10
 ### Automate testing and deployments
-
-
 
 Today, developers write automated scripts that can verify thousands of scenarios in minutes and then deploy updated code into production environments multiple times a day. They use automated performance tests which simulate surges in traffic to identify performance bottlenecks. While manual tests and quality assurance are still necessary, automated tests provide consistent and reliable protection against unintentional regressions, and make it possible for developers to confidently release frequent updates to the service.
 
@@ -376,10 +373,7 @@ Today, developers write automated scripts that can verify thousands of scenarios
 2. We used Jenkins to run the automated tests on each candidate deploy and notify us immediately on Slack if tests passed of failed. Tests were automated using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner and run in Firefox and Chrome browsers.
 3. The build process runs on every git push, and includes automated tests.
 4. We use automated deployment that can be initiated with a single slack command to automatically deploy both the backend and the frontend (as separate AWS instances).
-5. No - in this rapid prototype, we have not invested in performance testing.
-
-
-
+5. No - in this rapid prototype, we have not invested in performance testing. Our monitoring system and Google Analytics can provide response time data.
 
 #### key questions
 - What percentage of the code base is covered by automated tests?
@@ -396,9 +390,9 @@ Today, developers write automated scripts that can verify thousands of scenarios
 #### answers to key questions
 
 1. Perhaps 40%.
-2. A very very minor fix can be coded, built, tested, and deployed in 10 minutes (3 minutes to test and 7 minutes for build and deployment time.)  Coding time is often longer, of course.
-3. Our total process from conception to deployment can take as little as 3 hours.  Once fully coded, the build time is the same as for bugs.
-4. The build/test process runs on every push. We probably made 3 code pushes each day.
+2. A very very minor fix can be coded, built, tested, and deployed in 25 minutes (5 minutes development, 5 minutes code review, 8 minutes automated testing and 7 minutes for automated build and deployment). Coding time is often longer, of course.
+3. Our total process from conception to deployment can take as little as 3 hours. Once fully coded, the build time is the same as for bugs.
+4. The build/test process runs on demand. We made over 100 code deploys to production, around 6 per-day.
 5. We are using Jenkins as our central tool, which uses docker, docker-compose, and docker-machine to manage the containers.
 6. We are using Jenkins as our central tool, which uses docker, docker-compose, and docker-machine to manage the containers, as well as report and chart test results.
 7. We think there are as many as 50,000 foster kids in California. This would be a relatively modest user base.
@@ -409,8 +403,6 @@ Today, developers write automated scripts that can verify thousands of scenarios
 <a name="Play11"></a>
 ## Play 11
 ### Manage security and privacy through reusable processes
-
-
 
 Our digital services have to protect sensitive information and keep systems secure. This is typically a process of continuous review and improvement which should be built into the development and maintenance of the service. At the start of designing a new service or feature, the team lead should engage the appropriate privacy, security, and legal officer(s) to discuss the type of information collected, how it should be secured, how long it is kept, and how it may be used and shared. The sustained engagement of a privacy specialist helps ensure that personal data is properly managed. In addition, a key process to building a secure service is comprehensively testing and certifying the components in each layer of the technology stack for security vulnerabilities, and then to re-use these same pre-certified components for multiple services.
 
@@ -429,9 +421,8 @@ The following checklist provides a starting point, but teams should work closely
 2. NA
 3. NA
 4. NA
-5. AWS infrastructure is FedRAMP certified.
+5. AWS infrastructure is FedRAMP certified, including in the region we are using.
 6. CivicActions uses Docker and other Infrastructure as Code tools to automate and control the configuration and deployment of development and production environments.
-
 
 #### key questions
 - Does the service collect personal information from the user?  How is the user notified of this collection?
@@ -443,18 +434,16 @@ The following checklist provides a starting point, but teams should work closely
 
 #### answers to key questions
 
-1. N/A
-2. N/A
+1. The service does collect personal information (via profile forms), but only on a demonstration basis (the data is periodically wiped).
+2. The fields selected were all added in response to specific use cases provided by site users and as many fields as possible were left optional. Sensitive fields (e.g. zip code) were not displayed.
 3. We should provide a way to remove data upon leaving the product but we have not.
 4. No
 5. This would depend on California policies.
-6. N/A
+6. We do not have a process for this during the prototype phase.
 
 <a name="Play12"></a>
 ## Play 12
 ### Use data to drive decisions
-
-
 
 At every stage of a project, we should measure how well our service is working for our users. This includes measuring how well a system performs and how people are interacting with it in real-time. Our teams and agency leadership should carefully watch these metrics to find issues and identify which bug fixes and improvements should be prioritized. Along with monitoring tools, a feedback mechanism should be in place for people to report issues directly.
 
@@ -477,7 +466,6 @@ At every stage of a project, we should measure how well our service is working f
 6. There was not enough time or traffic to gather sufficient data to provide a useful report.
 7. There was not enough time or traffic to gather sufficient data to provide a useful report.
 8. Google Analytics provides this functionality, but there was not enough time or traffic to gather sufficient data to perform multivariate testing.
-
 
 #### key questions
 - What are the key metrics for the service?
@@ -510,11 +498,9 @@ At every stage of a project, we should measure how well our service is working f
 12. Our MVP is rapidly evolving and we are not ready for A/B testing at this time.
 13. We have interviewed users consistently throughout our development process in order to garner their feedback on the product. And we have included a way for users to submit suggestions, issues and ideas from the site. Future plans include surveys.
 
-
 <a name="Play13"></a>
 ## Play 13
 ### Default to open
-
 
 When we collaborate in the open and publish our data publicly, we can improve Government together. By building services more openly and publishing open data, we simplify the public’s access to government services and information, allow the public to contribute easily, and enable reuse by entrepreneurs, nonprofits, other agencies, and the public.
 
@@ -530,14 +516,14 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 9. When appropriate, share your development process and progress publicly
 
 #### Actions
-1. We have an open repository which allows issues to be created, and recently implemented an in-product survey.
-2. We have no datasets, but we explictly [invited](https://civicactions.com/blog/an-open-invitation-to-collaborate/) our competitors to share our code.
-3. NA
-4. NA
-5. NA --- the government can do this, but we do not.  We have place our code in the public domain.  If we paid for any sub-contracting, we would of course do this.
-6. NA --- we have chosen to publish as the government does, in the public domain.  A GPL or other share-alike system would allow us to do this. We hope the government demands such licensing where legally entitled to in the future.
-7. Our users asked for a way for the court to announce changes in status. In theory we could implement this as an API, but we have no power to get the California court system to use it.
-8. Obviously we have done this as required by the RFI and our principles. https://github.com/CivicActions/agile-california
+1. We have an open repository which allows issues to be created by the public, and have been capturing bugs from our users as part of our user testing processes.
+2. We have no datasets yet, but we explicitly [invited](https://civicactions.com/blog/an-open-invitation-to-collaborate/) our competitors to share our code.
+3. N/A
+4. N/A
+5. N/A - the government can do this, but we do not. We have placed our code in the public domain. If we paid for any sub-contracting, we would of course do this.
+6. N/A - we have chosen to publish as the government does, in the public domain. A GPL or other share-alike system would allow us to do this. We hope the government demands such licensing where legally entitled to in the future.
+7. Our users asked for a way for the court to announce changes in foster child status or location moves. In theory we could implement this as an API, but we have no power to get the California court system to use it.
+8. We have done this as required by the RFI and our principles. https://github.com/CivicActions/agile-california
 9. We have done fiercely with our blog posts.
 
 #### key questions
@@ -549,10 +535,8 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 
 #### answers to key questions
 
-1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open github repository.
+1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open Github repository.
 2. N/A
 3. It is open source.
 4. All.
 5. None in addition to what we are repackaging.
-
-
