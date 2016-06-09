@@ -1,3 +1,11 @@
+#6/9 Call Agenda
+- USDS Playbook checklist proofread 
+- Confirm code freeze & timing of submission
+- Link in readme to style guide documentation
+- Build out the roles doc 
+- Elizabeth to open up trello retro boards
+- Final screenshot of waffle
+
 #6/8 Action items
 - Heather to work on logo, and then backlog 
 - Owen to work on backlog before demos, and then documentation
