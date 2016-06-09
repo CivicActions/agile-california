@@ -41,13 +41,11 @@ As our understanding grew we kept our [story map](https://github.com/CivicAction
 We designed our profile based on specific feedback about what is important to both biological parents and foster parents.
 For example, we learned that a very important profile feature is "preferred time of contact", so we added that to our profiles of parents and case workers. Our users told us it was better to leave this an informal text message than to use a time-based field.
 
-We learned that marking messages in the inbox of urgent was very important, so we render urgent messages in red.
+We learned that marking inbox messages "urgent" was very important, so we render urgent messages in red, and that seeing read/unread status of messages helped clarify the status of caseworker communication, so we implemented this as well. 
 We also learned that classifying messages as being related to visitation or medical incidents is extremely important, so we wrote user stories to capture that and placed them into our constantly-evolving [backlog](https://github.com/CivicActions/agile-california/issues), but were not able to complete them.
 
-We got a *big surprise* when the State clarified that the primary user was the biological parent, not the foster parent!
-
-Following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change by beginning to ask our users to tell us what they believed biological parents
-would want. Our prototype now has roles for biological parents, foster parents, and case workers.
+We got a *big surprise* when the State clarified that the primary user was the biological parent, not the foster parent! So, following the [Agile Manifesto](http://www.agilemanifesto.org/), we immediately embraced change by asking our users to tell us what they believed biological parents
+would want (visitation arrangement, contact info). Our prototype now has roles for biological parents, foster parents, and case workers.
 
 On June 1st our CEO [reached out](https://civicactions.com/blog/an-open-invitation-to-collaborate/) to other firms seeking to be part of the RFI by inviting them to work with us,
 reuse our work-in-progress software, and even to share in our most valuable resource, our access to actual foster parents.
@@ -79,12 +77,12 @@ The RFI calls out items (a-q) below as requiring explicit reference. We have not
 
 a. A Product Owner was given overall responsibility (Robert L. Read).
 
-b. Team consisted 7 persons in roles: Product Owner, Agile Coach, Technical Architect, Back End Web Designer, Front End Web Designer, and Interaction Designer/User
-Researcher/Usability Tester, and Delivery Manger.  Engineers also doubled as DevOps engineers.
+b. Our team consisted of seven persons in the following roles: Product Owner, Agile Coach, Technical Architect, Back End Web Designer, Front End Web Designer, Interaction Designer/User
+Researcher/Usability Tester, and Delivery Manager.  Engineers also doubled as DevOps engineers. More information about the roles we designated, and the personnel we assigned to these roles, can be found in our [project roles](https://github.com/CivicActions/agile-california/blob/master/documentation/project-roles.md) file. 
 
-c. Interviewed 4 actual users, designed wireframes and empathy maps with them, demoed to them, and performed usability testing with one of them.
+c. We interviewed four actual users, designed wireframes and empathy maps with them, demoed to them, and performed usability testing with one of them.
 
-d. Used:
+d. We used the following Human Centered Design techniques:
 
 1. [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
 2. [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
@@ -94,11 +92,11 @@ d. Used:
 
 e. We leveraged Bootstrap as an open-source style and made a few header and footer design choices. 
 
-f. An actual foster parent performed usability testing. We used ourselves as additional user testers.
+f. A foster parent test user performed usability testing. We used ourselves as additional user testers.
 
-g. Each of the the first 5 sprints involved user feedback that immediately influenced our design.
+g. Each of the the first 5 sprints involved user feedback that immediately influenced our design. Further, our own [Retrospectives](https://github.com/CivicActions/agile-california/tree/master/call-notes) captured our learnings from each sprint and our plans to modify future sprints in light of these learnings. 
 
-h. Using responsive open-source technology, we tested with both mobile phones and desktop environments.
+h. Using fully responsive open-source technology, we tested with both mobile phones and desktop environments.
 
 i. We used the following core technologies:
 
@@ -108,13 +106,13 @@ i. We used the following core technologies:
 
 Additionally we used [Ubuntu](http://www.ubuntu.com) (as the Docker Machine host operating system), [Docker](https://www.docker.com/products/docker-engine), [Docker Compose](https://www.docker.com/products/docker-compose), container operating systems (minimal [Debian](https://www.debian.org/)), [Apache httpd](https://httpd.apache.org/), [MariaDB](https://mariadb.org/), monitoring ([uptime](https://github.com/fzaninotto/uptime)), testing ([Selenium Builder](https://github.com/SeleniumBuilder/se-builder), [se-interpreter](https://github.com/Zarkonnen/se-interpreter)), deployment tools ([Docker Machine](https://www.docker.com/products/docker-machine), [AWS CLI](https://github.com/aws/aws-cli), [CloudFlare CLI](https://github.com/danielpigott/cloudflare-cli)), automation ([Jenkins](https://jenkins.io/), [Bowline](https://github.com/davenuman/bowline)), [PHP](https://secure.php.net/), PHP libraries ([Symfony](https://symfony.com/)) and frontend frameworks ([Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/), [Mapbox](https://www.mapbox.com/), [Datatables](https://datatables.net/)).
 
-j. We deployed the prototype to Amazon Web Services (AWS), a FedRAMP compliant IaaS provider, additionally CloudFlare was used for CDN, SSL and DNS automation.
+j. We deployed the prototype to Amazon Web Services (AWS), a FedRAMP compliant IaaS provider. Additionally, CloudFlare was used for CDN, SSL and DNS automation.
 
-k. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework. Tests run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, and test profile and mapping functionality.
+k. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework. Tests were run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, to test our profile and mapping functionality.
 
 l. We used Jenkins to run the automated tests on each candidate deploy and notify us immediately on Slack if tests passed of failed. Tests were automated using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner and run in Firefox and Chrome browsers.
 
-m. We used an Infrastructure as Code (IaC) methodology to manage all infrastructure and configuration. Upon triggering a deploy with a Slack command Jenkins runs a [deploy script](https://github.com/CivicActions/agile-california/blob/master/bin/deploy) that creates a new "candidate" AWS EC2 server instance with Docker Machine, brings up Docker containers to host the site, installs the site software, runs the test suite and (if the tests pass) switches DNS to make the candidate live. The immediate prior live container is retained online in case it is needed for fail back. This entire process happens with no manual interaction and encapsulates all the configuration (deploy script, Docker Compose configuration and site configuration) in the project Git repository.
+m. We used an Infrastructure as Code (IaC) methodology to manage all infrastructure and configuration. Upon triggering a deploy with a Slack command, Jenkins runs a [deploy script](https://github.com/CivicActions/agile-california/blob/master/bin/deploy) that creates a new "candidate" AWS EC2 server instance with Docker Machine, brings up Docker containers to host the site, installs the site software, runs the test suite and (if the tests pass) switches DNS to make the candidate live. The immediate prior live container is retained online in case it is needed for fail back. This entire process happens with no manual interaction and encapsulates all the configuration (deploy script, Docker Compose configuration and site configuration) in the project Git repository.
 
 n. We set up continuous monitoring of application status and response time using open source [uptime](https://github.com/fzaninotto/uptime) software. This produces summary/historical reports and charts, and will send e-mail alerts if an issue is detected.
 
