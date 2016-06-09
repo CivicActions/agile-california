@@ -89,7 +89,7 @@ d. We used the following Human Centered Design techniques:
 5. [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
 6. [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
 
-e. We leveraged Bootstrap as an open-source style and made a few header and footer design choices. 
+e. We leveraged Bootstrap as an open-source style and made a few header and footer design choices. We outlined our [reasoning for this choice here](https://github.com/CivicActions/agile-california/blob/master/documentation/style-guide.md). We chose to include the CHHS logo and favicon so that the prototype would include branding as established by the California Health and Human Services organization.
 
 f. A foster parent test user performed usability testing. We used ourselves as additional user testers.
 
