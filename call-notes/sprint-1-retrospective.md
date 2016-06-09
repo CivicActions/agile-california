@@ -1,4 +1,9 @@
 
+[Retrospective trello board](https://trello.com/b/cn0AuaG3/agile-ca-sprint-1-retrospective)
+
+[Screenshot](https://github.com/CivicActions/agile-california/blob/master/call-notes/retrospective-pngs/Sprint%201%20Retrospective.png)
+
+
 **What do we need to do differently?**
 
  1. might be nice to get to recording hypotheses, even roughing out prototypes at this point. I think we have some good ideas already
@@ -12,4 +17,4 @@
  9. use LoWErCase OnLY for file names, pick a single date format.
  10. Try and keep commit messages useful (since they are part of our deliverable)
 
-Original retrospective board: https://trello.com/b/cn0AuaG3/agile-ca-sprint-1-retrospective
+<img src=“https://github.com/CivicActions/agile-california/blob/master/call-notes/retrospective-pngs/Sprint%201%20Retrospective.png“>

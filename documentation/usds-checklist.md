@@ -1,6 +1,6 @@
-# USDS Playbook Checklist and Evaluation Form
+# USDS Playbook Checklist and Evaluation Form for CHHS Foster Hub Prototype
 
-<a name="abcd"></a>
+<a name="Play1"></a>
 ## Play: 1
 ### Understand what people need
 
@@ -18,22 +18,17 @@ We must begin digital projects by exploring and pinpointing the needs of the peo
 #### Actions
 1. On the second day of the project we performed [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
 of 4 foster parents and/or case workers, two of which we continued to use as testers and remained involved in all of our Sprint Demos.
-2. We used interviews to gather user stories and to inform prioritization, as well as to provide feedback on designs, prototypes
-and throughout development. We did no quantititative work in this short prototype,
+2. We used interviews to gather user stories and to inform prioritization, as well as to provide feedback on designs, prototypes and throughout development. We did no quantitative work in this short prototype,
 but got feedback which influenced each of our six, two-day sprints.
-3. Several of our users tested against our deployed site and gave
-[valuable feedback](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/usability-testing) which turned into stories.
-4. We kept extensive [documentation](https://github.com/CivicActions/agile-california/tree/master/documentation/ux) of
-our user interactions and our conclusions. 
+3. Several of our users tested against our deployed site and gave [valuable feedback](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/usability-testing) which turned into stories and informed prioritization of subsequent work.
+4. We kept extensive [documentation](https://github.com/CivicActions/agile-california/tree/master/documentation/ux) of our user interactions and our conclusions. 
 5. Results of our discussions with users, and determinations based on these discussions, are consistently shared
-with the team in our repo, and in our Slack channel. Because our repo is completely open,
-our findings may be useful to the California Health and Human Services Agency even if our firm is not selectld.
-6. Our user stories and our backlog were kept is GitHub [Issues](https://github.com/CivicActions/agile-california/issues) managed via Waffle.
+with the team in our Git repository, and in our Slack channel. Because our repository is completely open,
+our findings may be useful to the California Health and Human Services Agency leadership even if our firm is not selected.
+6. Our user stories and our backlog were kept is GitHub [Issues](https://github.com/CivicActions/agile-california/issues?q=label%3A"user+story"+sort%3Acreated-asc) managed via [Waffle](https://waffle.io/CivicActions/agile-california?label=user%20story).
 We managed this backlog every day as we made progress on stories and got more user feedback.
 7. In addition to interviews, as soon as we had wirefames we invited actual users to our sprintly demos, where they
 gave valuable feedback.  They also directly performed usability testing of our AWS deployed prototype.
-
-
 
 #### key questions
 1. Who are your primary users?
@@ -47,28 +42,18 @@ gave valuable feedback.  They also directly performed usability testing of our A
 
 #### answers to key questions
 
-1. At the beginning of the project we thought it was Foster Parents, but the State answered our questions explaining it is Biological Parents,
-as well as case workers with whom they must communicate.
-2. Communication between parents and caseworkers is costly and cumbersome, and finding dropoff and visitation sites difficult.
-3. The case worker wants to be able to handle a large case load, the parent wants to communicate more clearly to lear the status of their children.
-4. We have not yet addressed the problem of people who don't use smart phones.
-5. User interviews, personae, story maps, empathy maps.
- + [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews)
- + [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
- + [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md)
- + [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md)
- + [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md)
- + [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes)
+1. At the beginning of the project we thought it was Foster Parents, but the State answered our questions explaining it is Biological Parents, as well as case workers with whom they must communicate.
+2. Communication between parents (both foster and biological) and caseworkers is costly and cumbersome, and finding dropoff and visitation sites difficult.
+3. The case worker wants to be able to handle a large case load, the parent wants to communicate more clearly around the status of their children.
+4. We have not yet addressed the problem of people who don't use smart phones - a potential future enhancement would be to integrate bidirectional SMS capability into the Inbox.
+5. The following user research methods were used: [User Interviews](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews), [Design Studio](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes), [Personae](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/user-personas.md), [Empathy Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-research/foster-parent-empathy-map.md), [Story Map](https://github.com/CivicActions/agile-california/blob/master/documentation/ux/user-story-map/user-story-map.md), [Wireframes](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/wireframes).
 6. That parents want streamlined communication, and that changes to visitation status and arrange dropoff locations are big deal.
-7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all
-of our ux finding.
-8. During each sprint.
+7. All of our work is publicly [documented]((https://github.com/CivicActions/agile-california/blob/master/documentation) including our all of our UX finding.
+8. During each of the 6 sprints.
 
 <a name="Play2"></a>
 ## Play 2
 ### Address the whole experience, from start to finish
-
-
 
 We need to understand the different ways people will interact with our services, including the actions they take online, through a mobile application, on a phone, or in person. Every encounter — whether it's online or offline — should move the user closer towards their goal.
 
@@ -79,8 +64,8 @@ We need to understand the different ways people will interact with our services,
 4. Develop metrics that will measure how well the service is meeting user needs at each step of the service
 
 #### Actions
-1. In order to understand at what points the system would be useful, we interviewed several parents and case workers to get a clearer picture of their needs and how they would prefer to interact with the system. What we learned is that foster parents, case workers, and biological parents will need to interact with the system in a variety of circumstances-- sometimes under duress (i.e. a foster parent is being contacted by a bio parent for visitation but foster parent doesn't know visitation status, and needs to contact case worker, or a foster parent is ill and needs to seek a respite facility to drop a child off while they recover). Therefore, the system needs to be flexible enough to be accessed on-the-go. We built a completely responsive site so that users can access from desktop and mobile device, and would propose building a separate mobile app so that users can get immediate notifications as to whether they have a new message, and other advanced features. 
-2. In addition to conducting direct user interviews, we constructed empathy maps that helped us further synthesize the feedback from parents and case workers to understand their main pain points and what they had the most to gain from a better system. Once we understood the most critical pain points for each user, we prioritized building features to resolve these issues and focused our efforts around what we were hearing. 
+1. In order to understand at what points the system would be useful, we [interviewed several parents and case workers](https://github.com/CivicActions/agile-california/tree/master/documentation/ux/user-interviews) to get a clearer picture of their needs and how they would prefer to interact with the system. What we learned is that foster parents, case workers, and biological parents will need to interact with the system in a variety of circumstances - sometimes under duress (i.e. a foster parent is being contacted by a bio parent for visitation but foster parent doesn't know visitation status, and needs to contact case worker, or a foster parent is ill and needs to seek a respite facility to drop a child off while they recover). Therefore, the system needs to be flexible enough to be accessed on-the-go. We built a completely responsive site so that users can access from desktop and mobile device, and would propose building a separate mobile app so that users can get immediate notifications as to whether they have a new message, and other advanced features. 
+2. In addition to conducting direct user interviews, we constructed empathy maps and personas that helped us further synthesize the feedback from parents and case workers to understand their main pain points and what they had the most to gain from a better system. Once we understood the most critical pain points for each user, we prioritized building features to resolve these issues and focused our efforts around what we were hearing. 
 3. Foster parents and biological parents would both be given literature to orient them towards the website and instructions to download mobile app. Case workers would be provided links and instructions in an organization-wide training. 
 4. We will install Google Analytics and plan to perform user surveys and direct observation to watch users navigating through the site and app.
 
@@ -101,8 +86,6 @@ We need to understand the different ways people will interact with our services,
 ## Play 3
 ### Make it simple and intuitive
 
-
-
 Using a government service shouldn’t be stressful, confusing, or daunting. It’s our job to build services that are simple and intuitive enough that users succeed the first time, unaided.
 
 #### checklist
@@ -116,9 +99,9 @@ Using a government service shouldn’t be stressful, confusing, or daunting. It�
 
 #### Actions
 1. We used [Bootstrap](http://getbootstrap.com/) as a user interface baseline and grid framework.
-2. This is a very simple application and Bootstrap is used consistently.
+2. This is a very simple application and Bootstrap is used consistently for all page components.
 3. The application enables users (both parents and caseworkers) to view and send messages, view nearby residential facilities on a map, and edit a personal profile. Upon sending a new message or replying to an existing one, the message posts in the thread and a confirmation message displays, giving immediate visual feedback. When a user updates their profile, a confirmation message displays to indicate that changes have been saved. Breadcrumbs are also visible to assist with navigation of the site.
-4. In the Inbox, we display "unread" and "urgent" statuses in text (rather than relying on color) to make this information accessible.
+4. Drupal has excellent accessibility out of the box and we took care to ensure our development retained or enhanced this - for example in the Inbox, we display "unread" and "urgent" statuses in text (rather than relying on color only) to make this information accessible.
 5. Users may edit some profile fields, save, and then return later to complete their profiles. The other user activities (viewing or sending a message and viewing facilities on a map) are simple, one-step processes.
 6. Language is kept to a minimum so the focus can remain on the content of user profiles, messages, and maps. We've minimized or removed unnecessary text.
 7. We are currently only an online service.
@@ -134,15 +117,13 @@ Using a government service shouldn’t be stressful, confusing, or daunting. It�
 
 1. Primarily, users wants to be able to send and receive messages, and to be able to indicate whether a message is urgent and needs immediate attention. Secondarily, the users want to find residential facilities within or near to their zip code, and to maintain an up-to-date profile that contains information relevant to other users of the system. For example, parents want to share information about themselves that will be helpful to caseworkers, such as how many children they have in their home, and caseworkers want to share information that will be helpful to parents, such as shift hours.
 2. The language is plain.
-3. English only at present.
+3. English only at present, but using Drupal it would be straightforward to extend the interface and content to multiple languages.
 4. We use tool tips, suggested text, and/or field-level help text for most fields on the site.
 5. We haven't attempted to harmonize with other government services, since this is a standalone application. We aimed for a modern, Bootstrap-style responsive design.
 
 <a name="Play4"></a>
 ## Play 4
 ### Build the service using agile and iterative practices
-
-
 
 We should use an incremental, fast-paced style of software development to reduce the risk of failure. We want to get working software into users’ hands as early as possible to give the design and development team opportunities to adjust based on user feedback about the service. A critical capability is being able to automatically test and deploy the service so that new features can be added often and be put into production easily.
 
@@ -158,15 +139,15 @@ We should use an incremental, fast-paced style of software development to reduce
 9. Use code reviews to ensure quality
 
 #### Actions
-1. See url [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/), which was made live early n our project. 
-2. We did usability tests in each sprint.
+1. See url [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/), which was made live on the second day of our project, solved a core user need by day 7 and was shared with users as an MVP by day 10.
+2. We did usability tests with foster parents and case workers as well as staff (who were not involved in design or development) in each sprint.
 3. Daily scrums, targeted sub-group meetings, chat (Slack), and Sprint rituals (retrospectives, Sprint planning meetings, backlog grooming meetings) have all constituted the central pillars of our team communication.
 4. We had an egalitarian team of 4-7 with no management layers. The Product Owner was a coding member of the team.
 5. Features are pushed to the live site multiple times each day, as evidenced by the log in Github and Slack.
 6. We religiously kept our feature backlog up-to-date every day using Waffle on top of GitHub Issues.
 7. Using Github for this - all project members and user-testers/stakeholders have access and the repository is also public.
-8. We used GitHub issues for all bugs and story writing, which was done by all team members.
-9. Our Technical Architect performed code review with the two other coders of each pull request.
+8. We used [GitHub issues](https://github.com/CivicActions/agile-california/issues?utf8=✓&q=is%3Aissue) for all bugs and story writing, which was done by all team members.
+9. Our Technical Architect performed code review with the two other coders of each [pull request](https://github.com/CivicActions/agile-california/pulls?utf8=%E2%9C%93&q=is%3Apr).
 
 #### key questions
 - How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
@@ -182,21 +163,18 @@ We should use an incremental, fast-paced style of software development to reduce
 #### answers to key questions
 
 1. MVP was shown to test users after Sprint 4.
-2. Including tests, we deploy in less than 10 minutes.
+2. Including the time to run all tests, we deploy in less than 15 minutes. The deploy is fully automated with no manual steps required (beyond triggering the deploy).
 3. Used very rapid Sprints of 2 Sprints per week, or 2.5 days per Sprint.
 4. Git
-5. Github issue queue
-6. Waffle.io, on top of GitHub Issues.
+5. [Github issue queue](https://github.com/CivicActions/agile-california/issues?utf8=✓&q=is%3Aissue)
+6. [Waffle.io, on top of GitHub Issues](https://waffle.io/CivicActions/agile-california).
 7. Everyday, with Waffle.io.
 8. Every demo (twice per week) we have formal interaction with users, who also did additional testing, amounting to approximately 3 feedback sessions per week.
-9. We identified fundamental needs unmet by existing technology, especially around communication, and specializations of communication
-around fostering, such as medical incidents and visitation.
+9. We identified fundamental needs unmet by existing technology, especially around communication, and specializations of communication around fostering, such as medical incidents and visitation.
 
 <a name="Play5"></a>
 ## Play 5
 ### Structure budgets and contracts to support delivery
-
-
 
 To improve our chances of success when contracting out development work, we need to work with experienced budgeting and contracting officers. In cases where we use third parties to help build a service, a well-defined contract can facilitate good development practices like conducting a research and prototyping phase, refining product requirements as the service is built, evaluating open source alternatives, ensuring frequent delivery milestones, and allowing the flexibility to purchase cloud computing resources.
 
@@ -239,8 +217,6 @@ To improve our chances of success when contracting out development work, we need
 ## Play 6
 ### Assign one leader and hold that person accountable
 
-
-
 There must be a single product owner who has the authority and responsibility to assign tasks and work elements; make business, product, and technical decisions; and be accountable for the success or failure of the overall service. This product owner is ultimately responsible for how well the service meets needs of its users, which is how a service should be evaluated. The product owner is responsible for ensuring that features are built and managing the feature and bug backlogs.
 
 #### checklist
@@ -250,15 +226,12 @@ There must be a single product owner who has the authority and responsibility to
 4. The product owner has a work plan that includes budget estimates and identifies funding sources
 5. The product owner has a strong relationship with the contracting officer
 
-
 #### Actions
-1. Product owner was identified as Robert L. Read. 
-2. Stakeholders in this instance were all teammembers, and all agreed to authority as outlined was granted to product owner on day 1 of Sprint.
+1. [Product owner was identified as Robert L. Read](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md).
+2. Stakeholders in this instance were all team members, and all agreed to authority as outlined was granted to product owner on day 1 of Sprint.
 3. See Read's [biography](https://civicactions.com/team/rob-read).
 4. We early established a labor budget matrix of peoples skills against their availability.
 5. Again, see [biography](https://civicactions.com/team/rob-read).
-
-
 
 #### key questions
 - Who is the product owner?
@@ -267,16 +240,13 @@ There must be a single product owner who has the authority and responsibility to
 
 #### answers to key questions
 
-1. A single product owner, Robert L. Read, was assigned.
-2. Although CivicActions maintains a polite and professional environment, the Product Owner was empowered to make prioritizaion decisions and assign tasks.
+1. [A single product owner, Robert L. Read, was assigned](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md).
+2. Although CivicActions maintains a professional and highly collaborative environment, the Product Owner was empowered to make prioritizaion decisions and assign tasks.
 3. The product owner required no additional authority, but based all decision on user feedback.
-
 
 <a name="Play7"></a>
 ## Play 7
 ### Bring in experienced teams
-
-
 
 We need talented people working in government who have experience creating modern digital services. This includes bringing in seasoned product managers, engineers, and designers. When outside help is needed, our teams should work with contracting officers who understand how to evaluate third-party technical competency so our teams can be paired with contractors who are good at both building and delivering effective digital services. The makeup and experience requirements of the team will vary depending on the scope of the project.
 
@@ -291,21 +261,18 @@ We need talented people working in government who have experience creating moder
 8. The appropriate privacy, civil liberties, and/or legal advisor for the department or agency is a partner
 
 #### Actions
-1. Yes -- though our "high-traffic" credentials might not be at a Google or Facebook level, we do have experience scaling complex, interactive digital services for hudreds of thousands of users.
-2. Yes
-3. Yes
-4. Yes
-5. Yes
+1. Yes - though our "high-traffic" credentials might not be at a Google or Facebook level, we do have experience scaling complex, interactive, personalized digital services for hundreds of thousands of users.
+2. Yes - all of our developers have web/mobile application development experience.
+3. Yes - all projects our team work on include a level of automated testing.
+4. Yes - we automate all testing and deployment tasks and configure the tasks to provide immediate feedback for the team.
+5. Yes - we have security and compliance experts on staff (although did not undertake a security and compliance process for this prototype).
 6. N/A
 7. N/A
 8. N/A
 
-
 <a name="Play8"></a>
 ## Play 8
 ### Choose a modern technology stack
-
-
 
 The technology decisions we make need to enable development teams to work efficiently and enable services to scale easily and cost-effectively. Our choices for hosting infrastructure, databases, software frameworks, programming languages and the rest of the technology stack should seek to avoid vendor lock-in and match what successful modern consumer and enterprise software companies would choose today. In particular, digital services teams should consider using open source, cloud-based, and commodity solutions across the technology stack, because of their widespread adoption and support by successful consumer and enterprise technology companies in the private sector.
 
@@ -316,32 +283,25 @@ The technology decisions we make need to enable development teams to work effici
 4. [Consider open source software solutions](http://www.whitehouse.gov/sites/default/files/omb/assets/egov_docs/memotociostechnologyneutrality.pdf) at every layer of the stack
 
 #### Actions
-1. We used Drupal 8, with MapBox as our mapping tool, and Bootstrap as our styling tool.
+1. We used [Drupal 8](https://www.drupal.com/showcases), with [MapBox](https://www.mapbox.com/showcase/) as our mapping tool, and [Bootstrap](https://expo.getbootstrap.com/) as our styling tool - these links demonstrate some major private-sector companies that use these technologies.
 2. We used Bootstrap in order to be Responsive, and tested with desktops, iPhones, and Android operating systems.
-3. We have reproducible sandbox installation instructions with minimal dependencies (self hosting), and continuous integration of unit test framework.
-4. The Docker host operating system (Ubuntu), Docker, container operating systems (minimal Debian), Nginx, PHP, MySQL and frontend frameworks are all open source licenced.
-
-
+3. We have [reproducible sandbox installation instructions](https://github.com/CivicActions/agile-california/blob/master/documentation/devops-manual.md) with minimal dependencies (self hosting), and continuous integration of unit test framework.
+4. The Docker Machine host operating system ([Ubuntu](http://www.ubuntu.com/)), [Docker](https://www.docker.com/products/docker-engine), [Docker Compose](https://www.docker.com/products/docker-compose), container operating systems (minimal [Debian](https://www.debian.org/)), [Apache httpd](https://httpd.apache.org/), [MariaDB](https://mariadb.org/), monitoring ([uptime](https://github.com/fzaninotto/uptime)), testing ([Selenium Builder](https://github.com/SeleniumBuilder/se-builder), [se-interpreter](https://github.com/Zarkonnen/se-interpreter)), deployment tools ([Docker Machine](https://www.docker.com/products/docker-machine), [AWS CLI](https://github.com/aws/aws-cli), [CloudFlare CLI](https://github.com/danielpigott/cloudflare-cli)), automation ([Jenkins](https://jenkins.io/), [Bowline](https://github.com/davenuman/bowline)), [PHP](https://secure.php.net/), PHP libraries ([Symfony](https://symfony.com/)) and frontend frameworks ([Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/), [Mapbox](https://www.mapbox.com/), [Datatables](https://datatables.net/)) are all open source licensed.
 
 #### key questions
 - What is your development stack and why did you choose it?
 - Which databases are you using and why did you choose them?
 - How long does it take for a new team member to start developing?
 
-
 #### answers to key questions
 
-1. Drupal 8 was a backbone that provided out-of-the-box user management and configurable profiles. MapBox and GeoJSON allowed easy utilization
-of the API offfered by the state for finding residentail facilityes. Docker and Docker Compose for development, due to need for rapid developer onboarding, as well as for allowing full consistency with production environment.
-API-centric for flexibility and reusability. JQuery and Bootstrap on the front end. We choose all of these components as light-weight and suited to a simple application that required not session or identity management.
+1. Drupal 8 was a backbone that provided out-of-the-box user management and configurable profiles. MapBox and GeoJSON allowed easy utilization of the API offered by the state for finding residential facilities. Docker and Docker Compose for development, due to need for rapid developer onboarding, as well as for allowing full consistency with production environment. JQuery and Bootstrap on the front end. We choose all of these components as light-weight and suited to rapid development and feedback cycles for a simple application.
 2. We installed Drupal 8 on top of MariaDB 10 as a standard default database solution.
-3. In this simple app, a Drupal developer will need no more than a day to start contributing.  One team member contributed the MapBox code in single day, which was then integrated into Drupal in a second day.
+3. In this simple app, a Drupal developer will need no more than a day to start contributing. One team member contributed the MapBox code in single day, which was then integrated into Drupal in a second day.
 
 <a name="Play9"></a>
 ## Play 9
 ### Deploy in a flexible hosting environment
-
-
 
 Our services should be deployed on flexible infrastructure, where resources can be provisioned in real-time to meet spikes traffic and user demand. Our digital services are crippled when we host them in data centers that market themselves as “cloud hosting” but require us to manage and maintain hardware directly. This outdated practice wastes time, weakens our disaster recovery plans, and results in significantly higher costs.
 
@@ -382,25 +342,22 @@ Our services should be deployed on flexible infrastructure, where resources can 
 #### answers to key questions
 
 1. Amazon Web Services, US West (Oregon) data center, although this can be changed with a deployment parameter, and additional regions can be added with geographic DNS balancing.
-2. t2.micro for both frontend and backend. See [Instance Types](http://aws.amazon.com/ec2/instance-types/) for more details. This is also configurable with a deployment parameter.
+2. t2.micro. See [Instance Types](http://aws.amazon.com/ec2/instance-types/) for more details. This is also configurable with a deployment parameter.
 3. N/A - we do not yet have enough users to measure.
-4. The CloudFlare CDN is robust enough to handle a substantial surge in traffic. Also, we can scale our docker containers if necessary.
+4. The CloudFlare CDN is robust enough to handle a substantial surge in traffic.
 5. With cloud computing we can scale up our capacity as much as we want.
 6. Provisioning our server instances is automated and takes under 20 minutes for a full deployment (frontend and backend).
-7. Using the docker-compose product we can easily scale any of our containers. (For example, the command `docker-compose scale web=2` would double our front end containers.)
+7. Using the docker-compose product we can easily scale any of our containers. (For example, the command `docker-compose scale web=2` would double the number of deployed web containers). We can further scale across multiple AWS instances by externalizing the master database to a scalable backend (e.g. AWS RDS), adding additional instances with the deploy script then load balancing by adding the additional instance IPs to Cloudflare.
 8. Amazon pricing, which has some fixed and some usage rates.
 9. We are using the West Coast AWS region data center. The CloudFlare CDN mirrors the site in many servers worldwide.
 10. Assuming Github is online, we could be back online in a different region within 20 to 30 minutes.
-11. Our app is not storing any critical data - all data is loaded automatically on build, or accessed dynamically.
-12. We are storing no non-derivative data. There cannot be a catastrophic data loss.  A data loss would force us to repopulate the AHRQ data in our database in order to efficiently provide comparative prescription volume, this could be done by simply rerunning the deploy command.
+11. Our app is not storing any critical data at the prototype stage - all data is loaded automatically on build, or accessed dynamically.
+12. We are storing no non-derivative data at the prototype stage. Redundancy could be added simply by adding an additional region to the deploy script.
 13. We are using the AWS and CloudFlare APIs and web interfaces so we do not need to contact our provider for resources.
-
 
 <a name="Play10"></a>
 ## Play 10
 ### Automate testing and deployments
-
-
 
 Today, developers write automated scripts that can verify thousands of scenarios in minutes and then deploy updated code into production environments multiple times a day. They use automated performance tests which simulate surges in traffic to identify performance bottlenecks. While manual tests and quality assurance are still necessary, automated tests provide consistent and reliable protection against unintentional regressions, and make it possible for developers to confidently release frequent updates to the service.
 
@@ -415,11 +372,8 @@ Today, developers write automated scripts that can verify thousands of scenarios
 1. End-to-end tests for mobile and desktop viewports were developed using the open-source [Selenium Builder](https://github.com/SeleniumBuilder/se-builder) testing framework. Tests run in fully managed Docker based [Google Chrome](https://hub.docker.com/r/selenium/standalone-chrome/) and [Mozilla Firefox](https://hub.docker.com/r/selenium/standalone-firefox/) Selenium driven browsers, and test profile and mapping functionality.
 2. We used Jenkins to run the automated tests on each candidate deploy and notify us immediately on Slack if tests passed of failed. Tests were automated using the [se-interpreter](https://github.com/Zarkonnen/se-interpreter) runner and run in Firefox and Chrome browsers.
 3. The build process runs on every git push, and includes automated tests.
-4. We use automated deployment that can be initiated with a single slack command to automatically deploy both the backend and the frontend (as separate AWS instances).
-5. No - in this rapid prototype, we have not invested in performance testing.
-
-
-
+4. We use automated deployment that can be initiated with a single slack command to automatically create a new AWS EC2 server instance and deploy the entire stack onto it.
+5. No - in this rapid prototype, we have not invested in performance testing. Our monitoring system and Google Analytics can provide response time data.
 
 #### key questions
 - What percentage of the code base is covered by automated tests?
@@ -436,9 +390,9 @@ Today, developers write automated scripts that can verify thousands of scenarios
 #### answers to key questions
 
 1. Perhaps 40%.
-2. A very very minor fix can be coded, built, tested, and deployed in 10 minutes (3 minutes to test and 7 minutes for build and deployment time.)  Coding time is often longer, of course.
-3. Our total process from conception to deployment can take as little as 3 hours.  Once fully coded, the build time is the same as for bugs.
-4. The build/test process runs on every push. We probably made 3 code pushes each day.
+2. A very very minor fix can be coded, built, tested, and deployed in 25 minutes (5 minutes development, 5 minutes code review, 8 minutes automated testing and 7 minutes for automated build and deployment). Coding time is often longer, of course.
+3. Our total process from conception to deployment can take as little as 3 hours. Once fully coded, the build time is the same as for bugs.
+4. The build/test process runs on demand. We made over 100 code deploys to production, around 6 per-day.
 5. We are using Jenkins as our central tool, which uses docker, docker-compose, and docker-machine to manage the containers.
 6. We are using Jenkins as our central tool, which uses docker, docker-compose, and docker-machine to manage the containers, as well as report and chart test results.
 7. We think there are as many as 50,000 foster kids in California. This would be a relatively modest user base.
@@ -449,8 +403,6 @@ Today, developers write automated scripts that can verify thousands of scenarios
 <a name="Play11"></a>
 ## Play 11
 ### Manage security and privacy through reusable processes
-
-
 
 Our digital services have to protect sensitive information and keep systems secure. This is typically a process of continuous review and improvement which should be built into the development and maintenance of the service. At the start of designing a new service or feature, the team lead should engage the appropriate privacy, security, and legal officer(s) to discuss the type of information collected, how it should be secured, how long it is kept, and how it may be used and shared. The sustained engagement of a privacy specialist helps ensure that personal data is properly managed. In addition, a key process to building a secure service is comprehensively testing and certifying the components in each layer of the technology stack for security vulnerabilities, and then to re-use these same pre-certified components for multiple services.
 
@@ -469,9 +421,8 @@ The following checklist provides a starting point, but teams should work closely
 2. NA
 3. NA
 4. NA
-5. AWS infrastructure is FedRAMP certified.
-6. CivicActions uses Docker and other Infrastructure as Code tools to automate and control the configuration and deployment of development and production environments.
-
+5. AWS infrastructure is FedRAMP certified, including in the region we are using.
+6. CivicActions uses Docker and other Infrastructure as Code tools to automate and control the creation, configuration and deployment of development and production environments.
 
 #### key questions
 - Does the service collect personal information from the user?  How is the user notified of this collection?
@@ -483,18 +434,16 @@ The following checklist provides a starting point, but teams should work closely
 
 #### answers to key questions
 
-1. N/A
-2. N/A
+1. The service does collect personal information (via profile forms), but only on a demonstration basis (the data is periodically wiped).
+2. The fields selected were all added in response to specific use cases provided by site users and as many fields as possible were left optional. Sensitive fields (e.g. zip code) were not displayed.
 3. We should provide a way to remove data upon leaving the product but we have not.
 4. No
 5. This would depend on California policies.
-6. N/A
+6. We do not have a process for this during the prototype phase.
 
 <a name="Play12"></a>
 ## Play 12
 ### Use data to drive decisions
-
-
 
 At every stage of a project, we should measure how well our service is working for our users. This includes measuring how well a system performs and how people are interacting with it in real-time. Our teams and agency leadership should carefully watch these metrics to find issues and identify which bug fixes and improvements should be prioritized. Along with monitoring tools, a feedback mechanism should be in place for people to report issues directly.
 
@@ -517,7 +466,6 @@ At every stage of a project, we should measure how well our service is working f
 6. There was not enough time or traffic to gather sufficient data to provide a useful report.
 7. There was not enough time or traffic to gather sufficient data to provide a useful report.
 8. Google Analytics provides this functionality, but there was not enough time or traffic to gather sufficient data to perform multivariate testing.
-
 
 #### key questions
 - What are the key metrics for the service?
@@ -550,11 +498,9 @@ At every stage of a project, we should measure how well our service is working f
 12. Our MVP is rapidly evolving and we are not ready for A/B testing at this time.
 13. We have interviewed users consistently throughout our development process in order to garner their feedback on the product. And we have included a way for users to submit suggestions, issues and ideas from the site. Future plans include surveys.
 
-
 <a name="Play13"></a>
 ## Play 13
 ### Default to open
-
 
 When we collaborate in the open and publish our data publicly, we can improve Government together. By building services more openly and publishing open data, we simplify the public’s access to government services and information, allow the public to contribute easily, and enable reuse by entrepreneurs, nonprofits, other agencies, and the public.
 
@@ -570,14 +516,14 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 9. When appropriate, share your development process and progress publicly
 
 #### Actions
-1. We have an open repository which allows issues to be created, and recently implemented an in-product survey.
-2. We have no datasets, but we explictly [invited](https://civicactions.com/blog/an-open-invitation-to-collaborate/) our competitors to share our code.
-3. NA
-4. NA
-5. NA --- the government can do this, but we do not.  We have place our code in the public domain.  If we paid for any sub-contracting, we would of course do this.
-6. NA --- we have chosen to publish as the government does, in the public domain.  A GPL or other share-alike system would allow us to do this. We hope the government demands such licensing where legally entitled to in the future.
-7. Our users asked for a way for the court to announce changes in status. In theory we could implement this as an API, but we have no power to get the California court system to use it.
-8. Obviously we have done this as required by the RFI and our principles. https://github.com/CivicActions/agile-california
+1. We have an open repository which allows issues to be created by the public, and have been capturing bugs from our users as part of our user testing processes.
+2. We have no datasets yet, but we explicitly [invited](https://civicactions.com/blog/an-open-invitation-to-collaborate/) our competitors to share our code.
+3. N/A
+4. N/A
+5. N/A - the government can do this, but we do not. We have placed our code in the public domain. If we paid for any sub-contracting, we would of course do this.
+6. N/A - we have chosen to publish as the government does, in the public domain. A GPL or other share-alike system would allow us to do this. We hope the government demands such licensing where legally entitled to in the future.
+7. Our users asked for a way for the court to announce changes in foster child status or location moves. In theory we could implement this as an API, but we have no power to get the California court system to use it.
+8. We have done this as required by the RFI and our principles. https://github.com/CivicActions/agile-california
 9. We have done fiercely with our blog posts.
 
 #### key questions
@@ -589,10 +535,8 @@ When we collaborate in the open and publish our data publicly, we can improve Go
 
 #### answers to key questions
 
-1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open github repository.
+1. Of course at first we did direct interviews, then as the MVP matured, direct, observed user testing. We have an open Github repository.
 2. N/A
 3. It is open source.
-4. All.
+4. All components. Licenses are documented in associated [LICENSE.md](https://github.com/CivicActions/agile-california/blob/master/LICENSE.md).
 5. None in addition to what we are repackaging.
-
-
