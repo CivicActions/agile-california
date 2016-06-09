@@ -7,6 +7,7 @@
 namespace Drupal\chhs_map\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Url;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
@@ -30,15 +31,26 @@ class ChhsMapController extends ControllerBase {
       }
     }
     if ($zip) {
-      return array(
+      $update_zip = Url::fromRoute('entity.profile.type.' . $profile_access . '.user_profile_form',
+        array('user' => $account->id(), 'profile_type' => $profile_access),
+        array('query' => array('destination' => 'map')));
+      $build = array(
         '#type' => 'markup',
-        '#prefix' => '<div class="map--info">' . t('Showing facilities near %zip', array('%zip' => $zip)) . ':</div>',
+        '#prefix' => '<div class="map--info">' . t('Showing facilities near %zip (<a href=":updatezip">update zip</a>)', array('%zip' => $zip, ':updatezip' => $update_zip->toString())) . ':</div>',
         '#markup' => '<div class="map--map" id="facmap"></div><table class="map--list" id="faclist"></table>',
         '#attached' => array(
           'library' => array('chhs_map/map-js'),
           'drupalSettings' => array('chhs_map' => array('zip' => $zip)),
         ),
+        '#cache' => [
+          'contexts' => [
+            'user',
+          ],
+        ],
       );
+      $renderer = \Drupal::service('renderer');
+      $renderer->addCacheableDependency($build, \Drupal\user\Entity\User::load($account->id()));
+      return $build;
     }
     if ($profile_access) {
       drupal_set_message(t('Please configure your Zip code on your profile to see nearby facilities.'));
