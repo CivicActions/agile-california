@@ -225,7 +225,7 @@ There must be a single product owner who has the authority and responsibility to
 1. [Product owner was identified as Robert L. Read](https://github.com/CivicActions/agile-california/blob/master/documentation/journal.md).
 2. Stakeholders in this instance were all team members, and all agreed to authority as outlined was granted to product owner on day 1 of Sprint.
 3. Product owner has a PhD in Computer Science and Director-level team management experience.
-4. We early established a [labor budget matrix](https://docs.google.com/spreadsheets/d/1lCsBoJf4DgThtw6jkY5AQBrFEQdssw9FyoKQoYSpbtQ/edit#gid=467546033) of peoples skills against their availability.
+4. We early established a [labor budget matrix](https://github.com/CivicActions/agile-california/blob/master/documentation/stated-availability-budget.png) of peoples skills against their availability.
 
 #### Key questions
 - Who is the product owner?
