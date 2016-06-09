@@ -6,7 +6,7 @@ Watch a screencast of the user experience here:
 
 [https://youtu.be/A76b5W14Nvo] (https://youtu.be/A76b5W14Nvo)
 
-# CHHS Foster Hub - The CivicActions Submission to CHHS RFI #75001 Agile Development Pre-Qualified (ADPQ)
+# CHHS Foster Hub - The CivicActions Submission to CHHS RFI #75001 Agile Development Pre-Qualified (ADPQ) Vendor Pool
 
 ## How We Built the Prototype
 
