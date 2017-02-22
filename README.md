@@ -2,6 +2,10 @@ Try our prototype:
 
 [http://agile-ca.civicactions.com/](http://agile-ca.civicactions.com/)
 
+Webinar on our learnings "How CivicActions Earned a Spot on the California Agile Government Pool" (2017-02-21)
+
+[https://www.youtube.com/watch?v=Qf5bs_bKoRY] (https://www.youtube.com/watch?v=Qf5bs_bKoRY)
+
 Watch a screencast of the user experience here: 
 
 [https://youtu.be/A76b5W14Nvo] (https://youtu.be/A76b5W14Nvo)
