@@ -10,6 +10,11 @@ Watch a screencast of the user experience here:
 
 [https://youtu.be/A76b5W14Nvo] (https://youtu.be/A76b5W14Nvo)
 
+Government Technology article on our process "3 Tips for Joining California's Agile Government Vendor Pool" (2017-02-22)
+
+[http://www.govtech.com/civic/3-Tips-for-Joining-Californias-Agile-Government-Vendor-Pool.html] (http://www.govtech.com/civic/3-Tips-for-Joining-Californias-Agile-Government-Vendor-Pool.html)
+
+
 # CHHS Foster Hub - The CivicActions Submission to CHHS RFI #75001 Agile Development Pre-Qualified (ADPQ) Vendor Pool
 
 ## How We Built the Prototype
